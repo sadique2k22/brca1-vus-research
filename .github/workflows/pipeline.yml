@@ -90,6 +90,9 @@ jobs:
       - name: Phase 6 literature review (MaveDB + ClinVar + PubMed)
         run: python scripts/phase6_literature.py
 
+      - name: Phase 6.5 — full Findlay integration
+        run: python scripts/phase6_5_findlay.py
+
       - name: Commit generated results
         run: |
           git config user.name "github-actions[bot]"

@@ -1,0 +1,32 @@
+# Central configuration. Edit values here — do NOT hard-code parameters in scripts.
+# (DRAFT — gene/transcript fields are TBD until gene selection is approved.)
+
+gene: TBD
+disease: TBD
+mane_transcript: TBD
+
+assembly: GRCh38
+
+clinvar:
+  access_date: "2026-08-19"
+  build: "260818-0035.1"
+  url: "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/"
+  include_significance: ["Uncertain significance"]
+  include_consequence: ["missense variant"]
+
+gnomad:
+  version: "4.1"
+  fields: ["AF", "AF_popmax", "AC", "AN", "nhomalt", "faf95"]
+
+predictors:
+  - revel
+  - cadd
+  - bayesdel
+  - sift
+  - polyphen
+
+thresholds:
+  # Documented, sourced values — used to describe evidence patterns only (never a verdict).
+  ba1_af: 0.05          # ACMG/AMP BA1 — Richards et al. 2015 (PMID 25741868)
+  revel_pp3: 0.932      # ClinGen-calibrated PP3 — Pejaver et al. 2022 (PMID 36413997)
+  revel_bp4: 0.290      # ClinGen-calibrated BP4 — Pejaver et al. 2022 (PMID 36413997)

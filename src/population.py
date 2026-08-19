@@ -34,6 +34,10 @@ def _run_query(aliases, cache_file, retries=3):
         try:
             r = requests.post(GNOMAD_URL, json={"query": query},
                               headers={"Content-Type": "application/json"}, timeout=120)
+            if r.status_code == 429:
+                wait = int(r.headers.get("Retry-After", 5))
+                time.sleep(wait)
+                raise RuntimeError("rate limited")
             r.raise_for_status()
             data = r.json()
             msgs = [e.get("message", "") for e in (data.get("errors") or [])]
@@ -44,13 +48,14 @@ def _run_query(aliases, cache_file, retries=3):
         except Exception:
             if attempt == retries - 1:
                 result = {"_failed": True}
-            time.sleep(2 ** attempt)
-    with open(cache_file, "w") as fh:
-        json.dump(result, fh)
+            time.sleep(5 * (2 ** attempt))
+    if not result.get("_failed"):
+        with open(cache_file, "w") as fh:
+            json.dump(result, fh)
     return result
 
 
-def query_gnomad(variant_ids, cache_dir, batch=BATCH, pause=1.0):
+def query_gnomad(variant_ids, cache_dir, batch=BATCH, pause=2.0):
     """Query gnomAD for variant IDs; return {variant_id: record}. Cached + resumable.
 
     'Variant not found' (genuine absence) maps to {} -> 'absent'; only real failures

@@ -36,31 +36,35 @@ def download(url, path):
 def extract(zip_path, out_tsv, chrom=CHROM, lo=REGION_LO, hi=REGION_HI):
     with zipfile.ZipFile(zip_path) as zf:
         names = zf.namelist()
-        # pick the single data file (skip directories)
         entry = next((n for n in names if not n.endswith("/")), None)
         print(f"Zip entries: {names[:5]}; using '{entry}'")
         with zf.open(entry) as raw:
-            header = raw.readline().decode("utf-8", "replace").rstrip("\n").split("\t")
+            header_line = raw.readline().decode("utf-8", "replace").rstrip("\n")
+            delim = "," if "," in header_line else "\t"
+            header = [h.strip() for h in header_line.split(delim)]
             cols = {c: i for i, c in enumerate(header)}
-            pos_col = next((c for c in ("grch38_pos", "pos", "hg19_pos") if c in cols), None)
-            if pos_col is None:
-                raise SystemExit(f"REVEL position column not found in header: {header}")
-            chrom_col = cols.get("chr", cols.get("chrom", 0))
+            print(f"REVEL header ({delim}-separated): {header}")
+            if "grch38_pos" not in cols:
+                raise SystemExit(f"grch38_pos column not found in header: {header}")
+            pos_col = cols["grch38_pos"]
+            chrom_col = cols.get("chr", 0)
+            ref_col = cols["ref"]
+            alt_col = cols["alt"]
+            score_col = cols["REVEL"]
             os.makedirs(os.path.dirname(out_tsv), exist_ok=True)
             n_kept = 0
             with open(out_tsv, "w") as out:
-                out.write("\t".join(header) + "\n")
+                out.write("chr\tgrch38_pos\tref\talt\tREVEL\n")
                 for line in raw:
-                    parts = line.decode("utf-8", "replace").rstrip("\n").split("\t")
-                    if len(parts) <= pos_col:
+                    parts = line.decode("utf-8", "replace").rstrip("\n").split(delim)
+                    if len(parts) <= max(chrom_col, pos_col, ref_col, alt_col, score_col):
                         continue
-                    if parts[chrom_col] != chrom:
+                    if parts[chrom_col].lstrip("chr") != chrom:
                         continue
                     pos = parts[pos_col]
                     if pos.isdigit() and lo <= int(pos) <= hi:
-                        out.write("\t".join(parts) + "\n")
+                        out.write(f"{chrom}\t{pos}\t{parts[ref_col]}\t{parts[alt_col]}\t{parts[score_col]}\n")
                         n_kept += 1
-            print(f"Header: {header}")
             print(f"Extracted {n_kept} REVEL rows for chr{chrom}:{lo}-{hi} -> {out_tsv}")
 
 

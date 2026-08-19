@@ -71,6 +71,10 @@ streaming + chunked processing, disk caching of API responses, no duplicate larg
 
 ## How the analysis will proceed
 
+The compute pipeline runs on **GitHub Actions** (`.github/workflows/pipeline.yml`), not on
+the resource-constrained phone: download → parse → filter → normalize → annotate →
+analyze → render figures, then auto-commit results + upload artifacts.
+
 1. **Retrieve ClinVar** (`variant_summary.txt.gz`) and stream-filter to BRCA1 missense VUS
    (single-gene subset, never loading the full table into memory).
 2. **Normalize & validate** variants (GRCh38 coords, HGVS, alleles) with two-pass

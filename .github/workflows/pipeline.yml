@@ -1,0 +1,93 @@
+name: pipeline
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate config
+        run: python scripts/validate_config.py
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Cache ClinVar raw download
+        id: cache-clinvar
+        uses: actions/cache@v4
+        with:
+          path: data/raw/clinvar/variant_summary.txt.gz
+          key: clinvar-260818-0035.1
+
+      - name: Download ClinVar (verify sha256)
+        if: steps.cache-clinvar.outputs.cache-hit != 'true'
+        run: |
+          URL=$(python -c "import json;print(json.load(open('data/raw/clinvar/metadata.json'))['source_url'])")
+          SHA=$(python -c "import json;print(json.load(open('data/raw/clinvar/metadata.json'))['sha256'])")
+          curl -sSL --retry 3 -o data/raw/clinvar/variant_summary.txt.gz "$URL"
+          echo "$SHA  data/raw/clinvar/variant_summary.txt.gz" | sha256sum -c -
+
+      - name: Parse BRCA1 subset
+        run: python src/clinvar.py
+
+      - name: Filter VUS + missense
+        run: python scripts/clinvar_audit.py
+
+      - name: Normalize transcripts (VEP)
+        run: python scripts/transcript_normalize.py
+
+      - name: Commit generated results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f \
+            data/processed/ \
+            results/reports/ \
+            results/tables/ \
+            results/figures/ \
+            data/intermediate/brca1_vus_missense_normalized.tsv \
+            data/intermediate/unresolved_normalization.tsv \
+            data/intermediate/clinvar_brca1_summary.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "ci: update generated results [skip ci]" || true
+            git push || true
+          fi
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: |
+            data/processed/
+            results/reports/
+            results/tables/
+            results/figures/
+            data/intermediate/brca1_vus_missense_normalized.tsv
+            data/intermediate/unresolved_normalization.tsv
+          if-no-files-found: ignore

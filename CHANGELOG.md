@@ -74,3 +74,14 @@ Format: date — summary (author/agent).
 - Outputs: `data/processed/clinvar_vus_missense.tsv`, `results/reports/clinvar_audit.md`.
 - **Fixed .gitignore** (was silently excluding reports/metadata/processed data from git).
 - No gnomAD annotation / predictors run (stopped per instructions).
+
+## 2026-08-19 — Phase 4A (transcript & variant normalization; CI pivot)
+- Transcript investigation (NCBI RefSeq, Ensembl): NM_007294.3 vs .4 = identical CDS
+  (5592 nt, NP_009225.1); .3→.4 is 5' UTR-only. NM_001408514.1 = distinct isoform
+  (NP_001395443.1). All 1,904 missense VUS are already on NM_007294.4 (approved).
+- `src/annotation.py` (VEP REST client, cached, retry), `src/variants.py` normalization
+  helpers, `scripts/transcript_normalize.py`, `tests/test_normalize.py` (21 tests pass).
+- **Pivot to GitHub Actions**: `requirements.txt` + `.github/workflows/pipeline.yml`
+  (download→parse→filter→normalize→commit-results + artifacts). Compute runs in CI, not
+  on the phone.
+- Public repo `sadique2k22/brca1-vus-research`; auto-commit results + artifacts.

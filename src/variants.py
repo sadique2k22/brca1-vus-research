@@ -98,3 +98,51 @@ def filter_vus_missense(records):
                   "not a single-nucleotide amino-acid substitution"))
 
     return miss, steps
+
+
+# ---- Normalization helpers (Phase 4A) ----
+
+VALID_BASES = {"A", "C", "G", "T"}
+
+# BRCA1 MANE Select / ENIGMA-ClinGen VCEP transcript (protocol v1.0 section 4)
+NORMALIZED_TRANSCRIPT = "NM_007294.4"
+MANE_ENST = "ENST00000357654"
+
+
+def validate_alleles(ref, alt):
+    """Return (ok, reason). ok iff ref/alt are single valid bases and differ."""
+    if not ref or not alt:
+        return False, "empty allele"
+    if ref == alt:
+        return False, "ref == alt"
+    if ref not in VALID_BASES or alt not in VALID_BASES:
+        return False, "non-single-base or invalid allele"
+    return True, ""
+
+
+def build_variant_string(chrom, start, stop, ref, alt):
+    """VEP REST region-input string, e.g. '17 43082542 43082542 G/C 1'."""
+    return f"{chrom} {start} {stop} {ref}/{alt} 1"
+
+
+def extract_protein_substitution(hgvsp):
+    """Extract the amino-acid substitution token (e.g. 'Leu1407Val') from a VEP hgvsp
+    string like 'ENSP00000350283.3:p.Leu1407Val' (tolerant of parentheses/prefixes)."""
+    if not hgvsp:
+        return None
+    idx = hgvsp.rfind("p.")
+    tok = hgvsp[idx + 2:] if idx >= 0 else hgvsp
+    return tok.strip("()[] \t")
+
+
+def canonical_representation(chrom, pos, ref, alt):
+    return f"chr{chrom}:{pos}:{ref}>{alt}"
+
+
+def extract_c_change(s):
+    """Extract the cDNA change token (e.g. '4219C>G') from an HGVS c. string."""
+    if not s:
+        return None
+    m = re.search(r':c\.([^)\s]+)', s) or re.search(r'c\.([^)\s]+)', s)
+    return m.group(1) if m else None
+

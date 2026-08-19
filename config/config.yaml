@@ -30,3 +30,10 @@ thresholds:
   ba1_af: 0.05          # ACMG/AMP BA1 "above 5%" — Richards et al. 2015 (PMID 25741868); use BS1 for dominant genes
   revel_pp3: 0.932      # ClinGen-calibrated PP3 — Pejaver et al. 2022 (PMID 36413997)
   revel_bp4: 0.290      # ClinGen-calibrated BP4 — Pejaver et al. 2022 (PMID 36413997)
+
+# Hard resource caps for this mobile (Android/proot) environment.
+resources:
+  storage_cap_gb: 50     # TOTAL project storage ceiling — do not exceed
+  ram_cap_gb: 2          # peak process memory budget (only ~2.3 GB free on device)
+  temp_cap_gb: 5         # transient working files (use data/, NOT /tmp which is RAM-backed)
+  max_workers: 4         # parallelism cap (thermal throttling already active)

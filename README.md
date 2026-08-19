@@ -65,8 +65,9 @@ Key constraints (full detail in `results/reports/environment_report.md`):
 
 **Resource rules (enforced):** API-first annotation (VEP REST / gnomAD GraphQL / CADD web),
 streaming + chunked processing, disk caching of API responses, no duplicate large files.
-**Prohibited without explicit approval:** whole-genome gnomAD, dbNSFP, full VEP cache,
-full CADD scores.
+**Hard cap: 50 GB total project storage** (recorded in `config/config.yaml`).
+**Prohibited (exceed cap):** whole-genome gnomAD, full CADD scores.
+**Discouraged (need explicit approval):** dbNSFP, full VEP cache.
 
 ## Getting started
 

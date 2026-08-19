@@ -33,3 +33,10 @@ Format: date — summary (author/agent).
   `/tmp` avoided (RAM-backed), dbNSFP/VEP-cache/whole-genome-gnomAD prohibited.
 - Resource estimate: workflow SAFE under 2 GB RAM / 5 GB temp / 10 GB storage if streamed.
 - No software installed; no large downloads.
+
+## 2026-08-19 — Phase 0.4 (storage cap)
+- User set a **50 GB total project storage cap**; recorded in `config/config.yaml`
+  (`resources.storage_cap_gb: 50`) and updated `environment_report.md` + README.
+- Revised dataset limits: gnomAD whole-genome / full CADD still prohibited (exceed cap);
+  VEP cache & dbNSFP now "fits but discouraged"; standalone REVEL feasible within budget.
+- Baseline workflow stays < 1 GB (~2% of cap).

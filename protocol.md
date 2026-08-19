@@ -1,221 +1,244 @@
-# Study Protocol (DRAFT — Phase 0.1, post-audit revision)
+# Study Protocol — Computational Investigation of Missense VUS in BRCA1
 
-> **Status:** DRAFT. Fields marked `TBD` are unresolved and will be fixed **only after**
-> the gene-selection decision is approved. This document is the single source of truth for
-> how the analysis is performed. Any deviation must be recorded in `CHANGELOG.md`.
->
-> **Revision note (2026-08-19):** revised after a self-audit. Key changes: (1) transcript
-> selection defers to the gene-specific VCEP-specified transcript + exact RefSeq version
-> (not "MANE Select by default"); (2) explicit handling of "Conflicting interpretations"
-> and multi-consequence variants; (3) ClinVar coordinate-build must be verified at download;
-> (4) predictor/frequency thresholds defer to the gene-specific specification; (5) hard
-> anti-fabrication and provenance rules; (6) correction of a mis-cited PMID (see report).
+**Version:** 1.0 (FROZEN)
+**Date frozen:** 2026-08-19
+**Status:** Final. Any deviation must be recorded in `CHANGELOG.md` and re-versioned.
 
-## 1. Selected gene
+---
 
-`TBD` — pending approval of the Phase 0 recommendation. Candidates: ATM, TP53, BRCA1,
-BRCA2, MLH1, MSH2 (comparison table in the Phase 0 report).
+## 0. Document control
 
-## 2. Disease / phenotype
+- Protocol version 1.0 supersedes all Phase 0 drafts (0.1–0.4).
+- Machine-readable parameters live in `config/config.yaml` (no secrets/keys).
+- Consistency check: `results/reports/protocol_consistency_check.md`.
 
-`TBD` — set at gene selection.
+## 1. Decision register
 
-## 3. Transcript
+### 1.1 Decisions already made (user-approved)
+| # | Decision | Value |
+|---|---|---|
+| D1 | Gene | **BRCA1** (approved 2026-08-19) |
+| D2 | Predictor panel | **REVEL, CADD, SIFT, PolyPhen-2** (approved 2026-08-19) |
+| D3 | Genome assembly | GRCh38 |
+| D4 | Storage cap | 50 GB total |
+| D5 | Mobile execution model | API-first, streaming/chunked, 1–4 workers, no Docker |
 
-`TBD` (gene-dependent). **Rule:** use the transcript **specified by the gene's ClinGen /
-ENIGMA / InSiGHT variant-curation specification**, recording the **exact RefSeq accession
-and version** (e.g. `NM_007294.3` vs `NM_007294.4` differ in amino-acid numbering).
-MANE Select is consulted only as a cross-check and is **not** an automatic default: the
-VCEP transcript and the MANE Select transcript (and their versions) can differ, and that
-difference changes HGVS p. numbering and downstream variant matching.
+### 1.2 Assumptions (documented, ours — not external sources)
+| # | Assumption |
+|---|---|
+| A1 | ≥2 non-missing predictor scores required for a variant to be categorizable (see §8) |
+| A2 | "Frequent" = gnomAD filtering AF (faf95) ≥ 0.001 (the BRCA1 BS1 threshold) |
+| A3 | Findings are hypothesis-generating; no clinical verdict is issued |
+| A4 | `config/` (singular) directory is retained (matches committed repo; see unresolved) |
 
-## 4. Genome assembly
+### 1.3 Externally sourced methodological choices
+See §17 (Sources) — every threshold, transcript, and rule below is traceable to a cited
+source with PMID/DOI, URL, access date, and version/release.
 
-**GRCh38** (primary). **Verify, do not assume:** at download time confirm which assembly
-each ClinVar coordinate column is on (ClinVar `variant_summary.txt` has both GRCh37 and
-GRCh38 columns; gnomAD v4 is GRCh38, v2.1 is GRCh37). GRCh37 may be retained for legacy
-cross-reference only; assemblies are **never** mixed silently.
+### 1.4 Parameters that remain unknown (resolved at execution, not now)
+| # | Parameter | Resolution rule |
+|---|---|---|
+| U1 | gnomAD exact release | verify latest v4 release at access, then pin + record |
+| U2 | Predictor score source + version (REVEL file, CADD, VEP REST db) | pin at annotation step, record version |
+| U3 | Exact count of BRCA1 missense VUS | determined by parsed `variant_summary.txt`, not API estimate |
+| U4 | CADD/SIFT/PolyPhen-2 exact calibrated bins | transcribed from Pejaver 2022 Table 2 at annotation step |
+| U5 | OMIM IDs | recorded/verified during literature step |
 
-## 5. ClinVar dataset
+## 2. Research question & objectives
 
-- Source: NCBI ClinVar (official).
-- Access date / build: **2026-08-19**, ClinVar build **260818-0035.1** (from eutils `einfo`).
-- Files (downloaded to `data/raw/`, logged with URL, date, version, sha256):
-  - `variant_summary.txt.gz` (authoritative table; parsed, not approximated).
-- Record granularity: **Variation ID (VID)**, not submission. A single Variation can carry
-  multiple submissions and multiple conditions; use the aggregate germline classification,
-  and explicitly inspect multi-condition/significance records rather than assume independence.
-- **"Conflicting interpretations"** is a *distinct* ClinVar significance value (not the same
-  as "Uncertain significance"); it is counted and reported separately, never silently
-  merged into VUS.
-- Phase 0 API counts are approximate and are superseded by the parsed table.
+**Primary question:** How consistently do population-frequency evidence (gnomAD) and
+computational missense-variant predictors (REVEL, CADD, SIFT, PolyPhen-2) support or
+contradict the current "Uncertain significance" classification of missense variants in
+BRCA1?
 
-## 6. Variant inclusion criteria
+**Secondary objective:** Benchmark computational predictions against an independent
+experimental functional ground-truth (Findlay 2018 saturation genome editing) where
+variants overlap.
 
-`TBD` (draft, to finalize at gene selection):
-- ClinVar variants mapped to the selected gene with an **aggregate germline clinical
-  significance of exactly "Uncertain significance"**;
-- a **missense-only** molecular consequence (see §9);
-- a resolvable HGVS/coordinate on GRCh38.
-- **Review status is recorded for every variant but is NOT used to filter by default**
-  (filtering to ≥1 star would drop single-submitter/0-star VUS and bias the set). If a
-  review-status filter is later used, it must be justified in `CHANGELOG.md`.
+**Scope guard:** This is research, not diagnosis. We describe evidence patterns only.
 
-## 7. Variant exclusion criteria
+## 3. Gene & phenotype
 
-`TBD` (draft):
-- non-missense consequence classes (synonymous, splice, frameshift, stop-gain/loss,
-  in-frame indels, non-coding, UTR/intronic without missense effect);
-- variants whose consequence set includes a functionally-relevant class beyond missense
-  (e.g. canonical splice acceptor/donor) — see §9;
-- variants without a resolvable HGVS/coordinate (reported, not silently dropped);
-- somatic-only records (unless germline-origin noted);
-- secondary/legacy records (`RPLD` Replaced Variation IDs) — resolved to current IDs.
+- **Gene:** BRCA1 (breast cancer 1, early onset).
+- **Disease/phenotype:** Hereditary Breast and Ovarian Cancer (HBOC) syndrome,
+  autosomal dominant. (OMIM IDs recorded in Phase 2 literature step.)
 
-## 8. Definition of VUS
+## 4. Transcript & assembly
 
-ClinVar aggregate germline significance **= "Uncertain significance"** (exact match).
-"Conflicting interpretations of pathogenicity" is tracked separately and excluded from the
-primary VUS set (it is a different evidentiary situation and would otherwise be miscounted).
+- **Assembly:** GRCh38 (primary). GRCh37 retained only for legacy cross-reference; never
+  mixed silently. Build of each ClinVar coordinate column is verified at download.
+- **Transcript:** **NM_007294.4** (ENST00000357654.9), genomic NG_005905.2 (LRG_292).
+  This is the ENIGMA/ClinGen BRCA1 VCEP reference transcript **and** the MANE Select
+  transcript (they coincide for BRCA1 — verified, not assumed). Source: Parsons 2024.
 
-## 9. Definition of missense
+## 5. Data sources
 
-A single-nucleotide substitution predicted to change one amino acid (VEP consequence
-`missense_variant`; ClinVar molecular consequence includes "missense variant").
-**Multi-consequence rule:** ClinVar `MCNS` can list more than one consequence (e.g.
-"missense variant" + "splice donor variant"). Such variants are **not** treated as plain
-missense by default — they are flagged and either excluded or analyzed in a separate
-sensitivity set, with the rule aligned to the gene-specific spec (which typically routes
-splice-affecting variants through splicing evidence, not missense prediction).
+### 5.1 ClinVar
+- Source: NCBI ClinVar, `variant_summary.txt.gz` (parsed, not API-approximated).
+- Build 260818-0035.1, accessed 2026-08-19. File logged with URL/date/version/sha256.
+- Granularity: **Variation ID (VID)**; aggregate germline classification; multi-condition
+  records inspected; "Conflicting interpretations" tracked separately.
 
-## 10. gnomAD dataset
+### 5.2 gnomAD
+- gnomAD **v4** (latest minor release verified + pinned at access), GRCh38, exomes + genomes.
+- Fields: `AF`, `AF_popmax`, per-population AF, `AC`, `AN`, `nhomalt`, `faf95`.
+- Obtained via the official API (per-variant, cached). No whole-genome download.
+- Interpretation: rarity ≠ pathogenic; presence ≠ benign; ancestry-aware.
 
-`TBD` (draft):
-- **Version is verified against the current official release at access time and then pinned**
-  (do not assume "v4.1" is current). Record version + release date in the download log.
-- Global AF, `AF_popmax`, per-population AF, AC, AN, homozygote count (`nhomalt`), and
-  filtering AF (`faf*`) are retrieved; exome vs genome and dataset context are recorded.
-- **Ancestry caveats:** population AF for rare variants has wide confidence intervals;
-  gnomAD v4 is not ancestry-balanced; gnomAD removes individuals with severe pediatric
-  disease. Population-specific AF is never collapsed into a single "frequency."
-- Interpretation rules: rarity ≠ pathogenic; presence ≠ benign. No frequency threshold is
-  used to *reclassify* any variant.
+### 5.3 Computational predictors
+| Predictor | Source (pin at execution) | Range | Direction | Original reference |
+|---|---|---|---|---|
+| REVEL | standalone REVEL GRCh38 / dbNSFP | 0–1 | higher = damaging | Ioannidis 2016, PMID 27666373 |
+| CADD | CADD web / precomputed | Phred 1–99 | higher = damaging | Kircher 2014, PMID 24487276 |
+| SIFT | Ensembl VEP REST | 0–1 | lower = damaging | Ng & Henikoff 2003, PMID 12824425 |
+| PolyPhen-2 | Ensembl VEP REST (HumVar) | 0–1 | higher = damaging | Adzhubei 2010, PMID 20354512 |
 
-## 11. Population-frequency fields
+Hard rule: scores come only from these named external sources, never model-generated;
+missing = NaN.
 
-`TBD` (draft): `AF`, `AF_popmax`, per-population `AF`, `AC`, `AN`, `nhomalt`, `faf95`
-(allele frequency at 95% upper confidence bound of the filtering AF), plus dataset context.
+### 5.4 Experimental functional ground-truth
+- Findlay 2018 saturation genome editing (BRCA1), PMID 30209399; scores downloaded from
+  the published source data (not approximated).
 
-## 12. Computational predictors
+### 5.5 Literature
+- PubMed (primary) + ClinVar-cited PMIDs + ClinGen/ENIGMA curated pages.
 
-**Hard rule:** every score is pulled from a *named, cited external source* (dbNSFP, Ensembl
-VEP, CADD precomputed, gnomAD, or equivalent) — **never generated or estimated by the
-assistant/model**. Missing values stay missing (NaN).
+## 6. Inclusion / exclusion criteria
 
-| Predictor | Source (to be pinned at Phase 1) | Range | Interpretation |
-|---|---|---|---|
-| REVEL | dbNSFP / VEP | 0–1 | higher = more damaging |
-| CADD | CADD precomputed / VEP | Phred ~1–99 | higher = more damaging |
-| BayesDel | dbNSFP | — | higher = more damaging |
-| SIFT | dbNSFP / VEP | 0–1 | lower = more damaging |
-| PolyPhen-2 | dbNSFP / VEP | 0–1 | higher = more damaging |
+**Inclusion** (all must hold):
+1. ClinVar variant mapped to BRCA1;
+2. aggregate germline significance **exactly "Uncertain significance"**;
+3. molecular consequence **missense-only** (single-nucleotide, amino-acid changing);
+4. resolvable HGVS/coordinate on GRCh38.
 
-Each predictor is documented with: source, **version**, score range, interpretation,
-threshold used, and scientific reference. No threshold is invented.
+**Exclusion:**
+- non-missense consequences; splice-affecting or multi-consequence variants (see §7);
+- "Conflicting interpretations" records (counted separately);
+- no resolvable HGVS/coordinate (reported, not silently dropped);
+- somatic-only records; replaced `RPLD` IDs (resolved to current).
 
-## 13. Thresholds (evidence-pattern description only)
+**Review status** is recorded for every variant but is **not** a filter by default.
 
-- ACMG/AMP **BA1** (AF > 5% — source wording "above 5% in Exome Sequencing Project,
-  1000 Genomes, or ExAC") — Richards et al. 2015, *Genet Med* 17:405, PMID 25741868.
-  Note: BA1's original datasets predate gnomAD; its gnomAD application is a modern
-  convention, and for a dominant highly-penetrant gene **BS1** (gene-specific cutoff) is
-  the more appropriate evidence code (see override rule below).
-- ClinGen-calibrated REVEL PP3/BP4 (≥0.932 / ≤0.290) — Pejaver et al. 2022, *AJHG* 109:2163,
-  PMID 36413997.
-- **Override rule:** where the gene-specific specification (e.g. ENIGMA BRCA1/BRCA2, TP53,
-  ATM VCEP) defines its own AF/BS1 or predictor evidence rules, the gene-specific spec
-  takes precedence and is cited. Generic BA1=5% is **not** blindly applied to a dominant,
-  highly-penetrant gene (BS1, not BA1, is usually the relevant code there).
-- These are used only to *describe evidence patterns*; criteria are **not** summed into a
-  final pathogenic/benign class, and no clinical verdict is issued.
+## 7. Definitions
 
-## 14. Literature-search strategy
+- **VUS:** ClinVar aggregate germline significance = "Uncertain significance" (exact).
+- **Missense:** VEP `missense_variant`; ClinVar MCNS "missense variant".
+  Multi-consequence ("missense" + "splice") → flagged, excluded from primary set,
+  analyzed in a separate sensitivity set.
+- **Predictor call** (Pejaver 2022 calibrated supporting thresholds):
+  - Damaging = score in PP3 range; Benign = score in BP4 range; Indeterminate = between.
 
-- Databases: PubMed (primary), ClinVar cited PMIDs, ClinGen/ENIGMA/InSiGHT curated pages.
-- Queries use exact identifiers: `"GENE [protein change]"`, `"GENE [HGVS c.]"`,
-  `"GENE variant functional assay"`, `"GENE VUS reclassification"`.
-- Every search is logged (query, database, date, result count, inclusion/exclusion).
-- **Every PMID/DOI is resolved via NCBI E-utilities and recorded** (never recalled from
-  memory). Absence of results is reported as: *"No relevant publication was identified
-  using the documented search strategy."*
+### 7.1 Evidence categories (reproducible rules)
+Let `N_damaging`, `N_benign` = count of non-missing predictors in PP3 / BP4 ranges;
+`FREQ_HIGH` = faf95 ≥ 0.001; `FREQ_LOW` = faf95 < 0.001 or absent.
 
-## 15. Handling of missing data
+1. **Benign-leaning:** FREQ_HIGH AND N_damaging == 0 AND N_benign > 0.
+2. **Pathogenic-leaning:** FREQ_LOW AND N_benign == 0 AND N_damaging > 0.
+3. **Conflicting:** (FREQ_HIGH AND N_damaging > N_benign) OR (FREQ_LOW AND N_benign > N_damaging)
+   OR (N_damaging ≥ 1 AND N_benign ≥ 1 AND |N_damaging − N_benign| ≤ 1).
+4. **Insufficient evidence:** fewer than 2 non-missing predictor scores, or both frequency
+   and all predictors missing.
+5. **Requires further investigation:** (Pathogenic-leaning OR Conflicting) AND no Findlay
+   2018 functional call AND no literature hit — a candidate for functional study.
 
-Missing annotations are preserved as missing and reported in the data-quality report.
-Variants failing normalization/annotation are flagged and listed, not silently dropped.
+## 8. Variant normalization & validation
 
-## 16. Duplicate handling
+- Canonicalize to (chrom, pos, ref, alt) GRCh38; left-align indels; handle MNVs.
+- Validate ref/alt against GRCh38 reference (FASTA source recorded).
+- Re-derive HGVS c./p. via Ensembl VEP REST / `hgvs` library (not string parsing).
+- Two-pass validation: ClinVar protein change ↔ VEP annotation; disagreements investigated.
+- Automated checks: malformed HGVS, impossible alleles, duplicate IDs, ref/alt mismatch,
+  transcript mismatch, build mismatch.
 
-- ClinVar: deduplicate on **Variation ID**; resolve `RPLD` replaced IDs to current.
-- gnomAD: deduplicate on (chrom, pos, ref, alt).
-- Literature: deduplicate on PMID/DOI.
+## 9. Thresholds (evidence-pattern description only — no classification)
 
-## 17. Transcript normalization
+| Threshold | Value | Source |
+|---|---|---|
+| BA1 (stand-alone benign) | AF > 5% (ESP/1000G/ExAC wording) | Richards 2015, PMID 25741868 |
+| BRCA1 BS1 (gene-specific) | filtering AF ≥ 0.001 | ENIGMA/ClinGen VCEP, Parsons 2024, PMID 39142283 |
+| REVEL BP4 (supporting benign) | ≤ 0.290 | Pejaver 2022, PMID 36413997, Table 2 |
+| REVEL PP3 (supporting pathogenic) | ≥ 0.644 | Pejaver 2022, Table 2 |
+| REVEL PP3_Strong | ≥ 0.932 | Pejaver 2022, Table 2 |
+| Gene-specific bioinformatic code (reference) | BayesDel, BRCA1 PP3 ≥ 0.28 | Parsons 2024, PMID 39142283 |
 
-All variants are mapped to the **VCEP-specified transcript (exact version)**; HGVS c./p. are
-re-derived from coordinates using a robust mapping source (Ensembl VEP REST or the `hgvs`
-package), **not** hand-written string parsing. Transcript accession + version are recorded
-per variant.
+- CADD / SIFT / PolyPhen-2 supporting thresholds are transcribed from Pejaver 2022 Table 2
+  at annotation time (U4), never recalled from memory.
+- Generic thresholds defer to the gene-specific spec where the spec defines its own rules.
+- Criteria are **never summed into a pathogenic/benign class**.
 
-## 18. Variant normalization
+## 10. ACMG/AMP usage
 
-- Canonicalize to (chrom, pos, ref, alt) on GRCh38; left-align/normalize indels.
-- Validate ref/alt against the GRCh38 reference sequence (reference FASTA source recorded).
-- Handle multi-nucleotide variants (MNVs) explicitly where present.
-- Two-pass validation: ClinVar protein change ↔ independent VEP annotation; disagreements
-  are investigated, not resolved by convenience.
+Codes (BA1, BS1, PP3, BP4, PM2) are discussed **only** as an evidence framework, with the
+exact source and gene-specific applicability cited. No final classification is produced.
 
-## 19. Statistical methods
+## 11. Literature search
 
-`TBD` (draft): descriptive counts; distribution summaries; pairwise predictor agreement
-(Cohen's kappa / percent agreement); Spearman correlation between predictor scores;
-correlation of AF with scores; comparison of predictions vs. functional outcomes (accuracy,
-ROC-AUC **only if** a reliable functional ground-truth exists).
-**Circularity caveat:** several predictors are trained on evolutionary conservation, which
-correlates with rarity — an AF↔score correlation is therefore partly expected and is
-interpreted accordingly, not presented as a surprising finding. Every test must have an
-explicit research justification.
+- Queries: exact identifiers ("BRCA1 [p.XxxYyy]", "BRCA1 [HGVS c.]", "BRCA1 VUS
+  reclassification", "BRCA1 variant functional assay").
+- Every search logged (query, DB, date, count, inclusion/exclusion).
+- All PMIDs/DOIs resolved via NCBI E-utilities and recorded.
+- Absence → "No relevant publication identified using the documented search strategy."
 
-## 20. Visualization methods
+## 12. Statistical plan
 
-`TBD` (draft): workflow; AF distribution; predictor score distributions; agreement heatmap;
-REVEL-vs-CADD scatter; AF-vs-score; prediction-vs-functional evidence; evidence-category
-distribution. All figures script-generated with titles/axes/legends; no manual edits.
+1. Descriptive counts (total VUS, missense VUS, annotated, with/without gnomAD, with
+   functional/literature evidence).
+2. Distributions: global AF, AF_popmax (log scale); per-predictor score distributions.
+3. Pairwise predictor agreement: Cohen's kappa + percent agreement (binarized); Spearman
+   correlation of raw scores.
+4. Unanimous vs conflicting predictor counts.
+5. AF vs predictor-score correlation (Spearman) — **circularity caveat**: predictors are
+   conservation-trained, so this correlation is partly expected.
+6. Predictions vs Findlay 2018 functional outcome: accuracy, sensitivity/specificity,
+   ROC-AUC (only if sufficient overlap; reported as n).
+7. Evidence-category distribution.
 
-## 21. Limitations
+Every test requires an explicit research justification; no tests "just because available."
+
+## 13. Visualization plan
+
+Workflow diagram; AF distribution; predictor score distributions; agreement heatmap;
+REVEL-vs-CADD scatter; AF-vs-score; prediction-vs-functional; evidence-category bar.
+All script-generated with titles/axes/legends; no manual edits.
+
+## 14. Data quality
+
+Automated report: duplicates, missing values, impossible/out-of-range frequencies,
+allele mismatch, transcript/build mismatch, duplicate literature, failed annotations.
+Problematic records are flagged and listed, never silently dropped.
+Output: `results/reports/data_quality_report.md`.
+
+## 15. Reproducibility
+
+Pin + record: Python version, `requirements.txt`, ClinVar file + sha256, gnomAD release,
+predictor source versions, reference FASTA. Save all API queries/responses to disk.
+Final analyses run via `scripts/`; notebooks are exploratory only.
+
+## 16. Limitations
 
 - Computational predictions are evidence, not truth.
-- Frequency data reflect ancestry- and cohort-specific ascertainment.
-- Functional datasets (e.g. saturation genome editing) use specific assays/cell lines and
-  have their own limits.
-- ClinVar and functional datasets are subject to ascertainment bias (e.g. founder testing),
-  so the VUS set is not a random sample of all possible variants.
+- Frequency data reflect ancestry/cohort ascertainment.
+- Findlay 2018 is a single-assay functional readout.
+- ClinVar/founder-testing ascertainment bias: the VUS set is not a random sample.
 - Findings are hypothesis-generating, not clinically actionable.
 
-## 22. Reproducibility requirements
+## 17. Sources (externally sourced methodological choices)
 
-- Pin and record: Python version, `requirements.txt` (created in Phase 1), ClinVar file +
-  sha256, gnomAD version + release date, predictor source versions, reference FASTA.
-- Save all API queries and their responses to disk (reproducible counts, not ad-hoc).
-- Final analyses run via `scripts/` (notebooks are exploratory only).
-- A fresh researcher must be able to regenerate everything from `config.yaml` + `scripts/`.
+| Source | Citation | DOI/URL | Access | Version/release |
+|---|---|---|---|---|
+| ACMG/AMP standards | Richards et al. 2015, Genet Med 17:405 | 10.1038/gim.2015.30 | 2026-08-19 | PMID 25741868 |
+| PP3/BP4 calibration | Pejaver et al. 2022, AJHG 109:2163 | 10.1016/j.ajhg.2022.10.013 | 2026-08-19 | PMID 36413997 |
+| BRCA1/BRCA2 VCEP spec | Parsons et al. 2024, AJHG 111:2044 | 10.1016/j.ajhg.2024.07.013 | 2026-08-19 | PMID 39142283 |
+| BRCA1 saturation genome editing | Findlay et al. 2018, Nature 562:217 | 10.1038/s41586-018-0461-z | 2026-08-19 | PMID 30209399 |
+| REVEL | Ioannidis et al. 2016, AJHG 99:877 | — | 2026-08-19 | PMID 27666373 |
+| CADD | Kircher et al. 2014, Nat Genet 46:310 | — | 2026-08-19 | PMID 24487276 |
+| SIFT | Ng & Henikoff 2003, NAR 31:3812 | — | 2026-08-19 | PMID 12824425 |
+| PolyPhen-2 | Adzhubei et al. 2010, Nat Methods 7:248 | — | 2026-08-19 | PMID 20354512 |
+| ClinVar | NCBI ClinVar FTP | ftp.ncbi.nlm.nih.gov/pub/clinvar/ | 2026-08-19 | build 260818-0035.1 |
+| gnomAD | Broad Institute | gnomad.broadinstitute.org | at access | v4 (pin U1) |
 
-## 23. Data provenance & integrity (anti-fabrication)
+## 18. Consistency-check reference
 
-- No variant, allele frequency, prediction score, paper, PMID, DOI, experimental result,
-  database record, or software version is ever fabricated or inferred.
-- Scores/values come only from named external sources; absent values are recorded as missing.
-- Functional datasets (e.g. Findlay 2018) are downloaded from the published source data,
-  never approximated from memory.
-- If two sources disagree, the disagreement is reported and investigated.
-- Assumptions are documented in `CHANGELOG.md` at the point they are made.
+Every config parameter maps to a protocol section (see
+`results/reports/protocol_consistency_check.md`); `scripts/validate_config.py` validates
+the config schema. Parameters not yet resolvable are listed in §1.4 (U1–U5).

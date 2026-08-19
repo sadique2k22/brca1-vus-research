@@ -40,3 +40,15 @@ Format: date — summary (author/agent).
 - Revised dataset limits: gnomAD whole-genome / full CADD still prohibited (exceed cap);
   VEP cache & dbNSFP now "fits but discouraged"; standalone REVEL feasible within budget.
 - Baseline workflow stays < 1 GB (~2% of cap).
+
+## 2026-08-19 — Phase 1 (protocol freeze)
+- Gene approved: **BRCA1**; predictors approved: **REVEL, CADD, SIFT, PolyPhen-2**.
+- `protocol.md` frozen at **v1.0** (decision register, evidence-category definitions,
+  statistical plan, sources table).
+- Verified from primary sources: BRCA1 VCEP transcript NM_007294.4 (= MANE Select);
+  BRCA1 BS1 = faf ≥ 0.001; gene-specific bioinformatic code = BayesDel ≥ 0.28.
+- **Correction:** REVEL PP3 supporting threshold is **≥ 0.644** (0.932 = strong), per
+  Pejaver 2022 Table 2; BP4 ≤ 0.290 confirmed.
+- `config/config.yaml` frozen (no secrets); `scripts/validate_config.py` + consistency
+  check report added; README "How the analysis will proceed" section added.
+- No datasets downloaded.

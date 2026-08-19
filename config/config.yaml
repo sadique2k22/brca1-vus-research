@@ -1,39 +1,74 @@
-# Central configuration. Edit values here — do NOT hard-code parameters in scripts.
-# (DRAFT — gene/transcript fields are TBD until gene selection is approved.)
+# Frozen research protocol configuration (Phase 1)
+# Protocol version: 1.0  |  Date frozen: 2026-08-19
+# NOTE: no secrets or API keys belong in this file.
 
-gene: TBD
-disease: TBD
-mane_transcript: TBD
+protocol:
+  version: "1.0"
+  date_frozen: "2026-08-19"
 
-assembly: GRCh38
+study:
+  gene: BRCA1
+  disease: "Hereditary Breast and Ovarian Cancer (HBOC) syndrome"
+  inheritance: "Autosomal dominant"
+  genome_build: GRCh38
+  transcript: "NM_007294.4"          # ENIGMA/ClinGen VCEP = MANE Select (verified)
+  transcript_ensembl: "ENST00000357654.9"
+  genomic_ref: "NG_005905.2"          # LRG_292
 
 clinvar:
+  source_url: "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/"
   access_date: "2026-08-19"
   build: "260818-0035.1"
-  url: "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/"
+  file: "variant_summary.txt.gz"
   include_significance: ["Uncertain significance"]
   include_consequence: ["missense variant"]
+  exclude_conflicting: true           # "Conflicting interpretations" tracked separately
 
 gnomad:
-  version: "4.1"
-  fields: ["AF", "AF_popmax", "AC", "AN", "nhomalt", "faf95"]
+  version: "v4"                        # exact minor release verified + pinned at access (U1)
+  datasets: ["exomes", "genomes"]
+  fields: ["af", "af_popmax", "ac", "an", "nhomalt", "faf95"]
 
 predictors:
-  - revel
-  - cadd
-  - bayesdel
-  - sift
-  - polyphen
+  - name: REVEL
+    source: "standalone REVEL GRCh38 / dbNSFP (pin at execution)"
+    range: [0.0, 1.0]
+    higher_is_damaging: true
+  - name: CADD
+    source: "CADD web service / precomputed (pin at execution)"
+    range: [1.0, 99.0]                 # Phred-scaled
+    higher_is_damaging: true
+  - name: SIFT
+    source: "Ensembl VEP REST"
+    range: [0.0, 1.0]
+    higher_is_damaging: false
+  - name: PolyPhen-2
+    source: "Ensembl VEP REST (HumVar)"
+    range: [0.0, 1.0]
+    higher_is_damaging: true
 
 thresholds:
-  # Documented, sourced values — used to describe evidence patterns only (never a verdict).
-  ba1_af: 0.05          # ACMG/AMP BA1 "above 5%" — Richards et al. 2015 (PMID 25741868); use BS1 for dominant genes
-  revel_pp3: 0.932      # ClinGen-calibrated PP3 — Pejaver et al. 2022 (PMID 36413997)
-  revel_bp4: 0.290      # ClinGen-calibrated BP4 — Pejaver et al. 2022 (PMID 36413997)
+  ba1_af: 0.05              # Richards 2015 (PMID 25741868): "above 5%"
+  brca1_bs1_faf: 0.001      # ENIGMA/ClinGen VCEP (PMID 39142283): filtering AF >= 0.001
+  revel_bp4: 0.290          # Pejaver 2022 (PMID 36413997) supporting-benign
+  revel_pp3: 0.644          # Pejaver 2022 supporting-pathogenic
+  revel_pp3_strong: 0.932   # Pejaver 2022 strong-pathogenic
+  enigma_bayesdel_pp3: 0.28 # gene-specific bioinformatic code (reference only)
 
-# Hard resource caps for this mobile (Android/proot) environment.
+evidence:
+  min_predictors: 2         # A2: >=2 non-missing scores to categorize
+  frequent_faf: 0.001       # A2: faf95 threshold for "frequent"
+
 resources:
-  storage_cap_gb: 50     # TOTAL project storage ceiling — do not exceed
-  ram_cap_gb: 2          # peak process memory budget (only ~2.3 GB free on device)
-  temp_cap_gb: 5         # transient working files (use data/, NOT /tmp which is RAM-backed)
-  max_workers: 4         # parallelism cap (thermal throttling already active)
+  storage_cap_gb: 50
+  ram_cap_gb: 2
+  temp_cap_gb: 5
+  max_workers: 4
+
+output_dirs:
+  raw: "data/raw"
+  intermediate: "data/intermediate"
+  processed: "data/processed"
+  tables: "results/tables"
+  figures: "results/figures"
+  reports: "results/reports"

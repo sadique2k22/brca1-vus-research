@@ -12,9 +12,9 @@ identify *evidence patterns* and *candidates for further investigation*.
 
 ## Project status
 
-**Phase 0 — environment + gene selection (current).**
-No variants have been analyzed yet. The gene has not yet been selected (see `protocol.md`
-and the Phase 0 comparison table in `results/reports/`).
+**Phase 1 — protocol frozen (current).** Gene: **BRCA1** (approved). Predictors:
+REVEL, CADD, SIFT, PolyPhen-2. Protocol v1.0 in `protocol.md`; parameters in
+`config/config.yaml`. No variants have been retrieved yet.
 
 ## Directory layout
 
@@ -69,11 +69,25 @@ streaming + chunked processing, disk caching of API responses, no duplicate larg
 **Prohibited (exceed cap):** whole-genome gnomAD, full CADD scores.
 **Discouraged (need explicit approval):** dbNSFP, full VEP cache.
 
-## Getting started
+## How the analysis will proceed
+
+1. **Retrieve ClinVar** (`variant_summary.txt.gz`) and stream-filter to BRCA1 missense VUS
+   (single-gene subset, never loading the full table into memory).
+2. **Normalize & validate** variants (GRCh38 coords, HGVS, alleles) with two-pass
+   cross-validation against Ensembl VEP.
+3. **Annotate** population frequency (gnomAD API, cached) and predictor scores
+   (REVEL/CADD/SIFT/PolyPhen-2 from named external sources).
+4. **Collect** literature + Findlay 2018 functional evidence for overlapping variants.
+5. **Categorize** each variant into one of five reproducible evidence categories
+   (benign-leaning / pathogenic-leaning / conflicting / insufficient / needs-investigation).
+6. **Compute** statistics + generate publication-quality figures.
+7. **Validate** (data-quality report) before any manuscript.
+
+Full details and the frozen thresholds are in `protocol.md` (v1.0); machine-readable
+parameters are in `config/config.yaml`.
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt   # (to be created in Phase 1)
+pip install -r requirements.txt              # to be created in Phase 2
+python3 scripts/validate_config.py           # config consistency check
 ```
-
-Full pipeline instructions will be added once the gene is selected and Phase 1 begins.

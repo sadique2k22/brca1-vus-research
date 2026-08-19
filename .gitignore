@@ -18,6 +18,8 @@ secrets/
 # Large raw downloads (immutable; provenance tracked in data/raw/metadata.json + README.md)
 data/raw/*.gz
 data/raw/*.md5
+data/raw/*.zip
+*.zip
 
 # Regenerable intermediate files (re-derived from raw via src/clinvar.py)
 data/intermediate/*

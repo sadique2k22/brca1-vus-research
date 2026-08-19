@@ -85,3 +85,16 @@ Format: date — summary (author/agent).
   (download→parse→filter→normalize→commit-results + artifacts). Compute runs in CI, not
   on the phone.
 - Public repo `sadique2k22/brca1-vus-research`; auto-commit results + artifacts.
+
+## 2026-08-19 — Phase 4B (population + computational annotation)
+- **STEP 0 source audit** (`results/reports/annotation_source_audit.md`): gnomAD v4 GraphQL
+  (gnomad_r4) + VEP release 116 (SIFT/PolyPhen included) verified live; REVEL = standalone
+  ~636 MB zip (direct URL); **CADD v1.7 online scoring degraded** (hardware failure, long
+  queue, no clean bulk API) → best-effort v1.6 web only.
+- New modules: `src/population.py` (gnomAD), `src/predictors.py` (REVEL + CADD),
+  `src/annotation.py` (SIFT/PolyPhen extraction), `src/variants.py` (variant_key).
+- `scripts/prepare_revel.py` (download + extract chr17 region),
+  `scripts/annotate_variants.py` (dedup → annotate → map-back → QC/reports).
+- Outputs: `biological_variant_map.tsv`, `annotation_unique_variants.tsv`,
+  `brca1_vus_missense_annotated.tsv`; reports `duplicate_variant_report.md`,
+  `annotation_report.md`. Tests: 30 pass. Workflow extended (REVEL cache + annotate).

@@ -77,3 +77,34 @@ def extract_mane_consequence(result):
             consequence = ",".join(tc.get("consequence_terms", []))
             break
     return hgvsc, hgvsp, amino_acids, consequence, error
+
+
+def extract_mane_annotation(result):
+    """Full annotation dict for the MANE Select transcript (consequence + SIFT + PolyPhen)."""
+    ann = {
+        "vep_error": result.get("error"),
+        "vep_consequence": None,
+        "vep_hgvsc": None,
+        "vep_hgvsp": None,
+        "vep_amino_acids": None,
+        "sift_score": None,
+        "sift_prediction": None,
+        "polyphen_score": None,
+        "polyphen_prediction": None,
+        "vep_gene": None,
+        "vep_impact": None,
+    }
+    for tc in result.get("transcript_consequences", []):
+        if str(tc.get("transcript_id", "")).startswith(MANE_ENST):
+            ann["vep_consequence"] = ",".join(tc.get("consequence_terms", []))
+            ann["vep_hgvsc"] = tc.get("hgvsc")
+            ann["vep_hgvsp"] = tc.get("hgvsp")
+            ann["vep_amino_acids"] = tc.get("amino_acids")
+            ann["sift_score"] = tc.get("sift_score")
+            ann["sift_prediction"] = tc.get("sift_prediction")
+            ann["polyphen_score"] = tc.get("polyphen_score")
+            ann["polyphen_prediction"] = tc.get("polyphen_prediction")
+            ann["vep_gene"] = tc.get("gene_symbol")
+            ann["vep_impact"] = tc.get("impact")
+            break
+    return ann

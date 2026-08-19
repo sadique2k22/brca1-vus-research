@@ -59,6 +59,19 @@ jobs:
       - name: Normalize transcripts (VEP)
         run: python scripts/transcript_normalize.py
 
+      - name: Cache REVEL download
+        id: cache-revel
+        uses: actions/cache@v4
+        with:
+          path: data/raw/revel/revel-v1.3_all_chromosomes.zip
+          key: revel-v1.3
+
+      - name: Prepare REVEL (download + extract chr17 region)
+        run: python scripts/prepare_revel.py
+
+      - name: Annotate variants (gnomAD + VEP + REVEL + CADD)
+        run: python scripts/annotate_variants.py
+
       - name: Commit generated results
         run: |
           git config user.name "github-actions[bot]"
@@ -70,7 +83,9 @@ jobs:
             results/figures/ \
             data/intermediate/brca1_vus_missense_normalized.tsv \
             data/intermediate/unresolved_normalization.tsv \
-            data/intermediate/clinvar_brca1_summary.json 2>/dev/null || true
+            data/intermediate/clinvar_brca1_summary.json \
+            data/intermediate/biological_variant_map.tsv \
+            data/intermediate/annotation_unique_variants.tsv 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
@@ -90,4 +105,6 @@ jobs:
             results/figures/
             data/intermediate/brca1_vus_missense_normalized.tsv
             data/intermediate/unresolved_normalization.tsv
+            data/intermediate/biological_variant_map.tsv
+            data/intermediate/annotation_unique_variants.tsv
           if-no-files-found: ignore

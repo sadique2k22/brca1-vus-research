@@ -146,3 +146,13 @@ def extract_c_change(s):
     m = re.search(r':c\.([^)\s]+)', s) or re.search(r'c\.([^)\s]+)', s)
     return m.group(1) if m else None
 
+
+def make_variant_key(chrom, pos, ref, alt):
+    """Biological variant key: GRCh38:chrom:pos:ref:alt."""
+    return f"GRCh38:{chrom}:{pos}:{ref}:{alt}"
+
+
+def gnomad_variant_id(chrom, pos, ref, alt):
+    """gnomAD GraphQL variantId format: 'chrom-pos-ref-alt'."""
+    return f"{chrom}-{pos}-{ref}-{alt}"
+

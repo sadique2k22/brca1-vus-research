@@ -52,3 +52,15 @@ Format: date — summary (author/agent).
 - `config/config.yaml` frozen (no secrets); `scripts/validate_config.py` + consistency
   check report added; README "How the analysis will proceed" section added.
 - No datasets downloaded.
+
+## 2026-08-19 — Phase 2 (ClinVar retrieval & basic parsing)
+- Downloaded ClinVar `variant_summary.txt.gz` (442 MB, build 260818-0035.1); md5 verified
+  against official `.md5`; sha256 recorded; `metadata.json` written.
+- `src/clinvar.py` streaming parser: 9,044,810 raw rows → 31,542 BRCA1 rows → 16,023 unique
+  Variation IDs (GRCh37 15,818 / GRCh38 15,529 / na 195).
+- Aggregate "Uncertain significance" = 2,583 (not Phase 0 API estimate 7,930 — API counted
+  submission-level significance; resolves U3).
+- Discovered per-assembly row duplication + deprecated `ReferenceAllele`/`AlternateAllele`
+  columns (use `*VCF` columns).
+- `scripts/validate_clinvar.py` (checksum + reproducibility checks) PASSED.
+- Report: `results/reports/clinvar_retrieval_report.md`. No annotation/predictors run.

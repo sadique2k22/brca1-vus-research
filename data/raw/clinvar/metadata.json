@@ -1,0 +1,14 @@
+{
+  "dataset": "ClinVar variant_summary.txt (tab-delimited)",
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz",
+  "retrieval_date_utc": "2026-08-19T02:59:49Z",
+  "release_build": "260818-0035.1",
+  "last_modified": "2026-08-17 18:51:44 GMT",
+  "file_name": "variant_summary.txt.gz",
+  "file_size_bytes": 442283371,
+  "sha256": "d2a8c9c2f038c70325a55a82801b059aa6e9325f958eca8a280625d19ddb27a8",
+  "md5": "90c969bbf917a9eced1a8768d2cc33f1",
+  "md5_matches_official": true,
+  "n_columns": 43,
+  "coordinate_build_note": "One row per (AlleleID x Assembly). Chromosome/Start/Stop and PositionVCF are on the row's Assembly (GRCh37 or GRCh38). ReferenceAllele/AlternateAllele are deprecated ('na'); actual alleles are ReferenceAlleleVCF/AlternateAlleleVCF. Name carries HGVS c./p."
+}

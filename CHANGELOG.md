@@ -64,3 +64,13 @@ Format: date — summary (author/agent).
   columns (use `*VCF` columns).
 - `scripts/validate_clinvar.py` (checksum + reproducibility checks) PASSED.
 - Report: `results/reports/clinvar_retrieval_report.md`. No annotation/predictors run.
+
+## 2026-08-19 — Phase 3 (ClinVar audit + VUS/missense filtering)
+- `src/variants.py`: protein-change classifier (3-letter AA codes) + `filter_vus_missense`;
+  `tests/test_variants.py` (12 unit tests, pass).
+- `scripts/clinvar_audit.py`: 13-point audit; applies FINAL inclusion criteria.
+- Final candidate set: **1,904 missense VUS** (GRCh38) after dedup (31,542→16,023), GRCh38
+  (→15,529), VUS (→2,504), missense (→1,904).
+- Outputs: `data/processed/clinvar_vus_missense.tsv`, `results/reports/clinvar_audit.md`.
+- **Fixed .gitignore** (was silently excluding reports/metadata/processed data from git).
+- No gnomAD annotation / predictors run (stopped per instructions).

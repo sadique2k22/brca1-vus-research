@@ -1,0 +1,44 @@
+{
+  "gene": "BRCA1",
+  "n_columns": 43,
+  "total_rows_in_file": 9044810,
+  "gene_rows": 31542,
+  "unique_variation_ids": 16023,
+  "unique_allele_ids": 16023,
+  "assembly_rows": {
+    "GRCh37": 15818,
+    "GRCh38": 15529,
+    "na": 195
+  },
+  "chromosome_of_unique_variants_grch38": {
+    "17": 15529
+  },
+  "clinical_significance": {
+    "Pathogenic": 4133,
+    "Benign": 742,
+    "Conflicting classifications of pathogenicity": 2928,
+    "Pathogenic/Likely pathogenic": 229,
+    "Likely benign": 2902,
+    "Benign/Likely benign": 95,
+    "Uncertain significance": 2583,
+    "Likely pathogenic": 337,
+    "not provided": 50,
+    "no classifications from unflagged records": 1,
+    "-": 2019,
+    "no classification for the single variant": 3,
+    "VUS-high": 1
+  },
+  "review_status": {
+    "criteria provided, multiple submitters, no conflicts": 2324,
+    "reviewed by expert panel": 3408,
+    "no assertion criteria provided": 485,
+    "criteria provided, conflicting classifications": 2926,
+    "criteria provided, single submitter": 4808,
+    "no classification provided": 49,
+    "no classifications from unflagged records": 1,
+    "-": 2019,
+    "no classification for the single variant": 3
+  },
+  "missing_hgvs_c": 516,
+  "missing_protein": 3819
+}

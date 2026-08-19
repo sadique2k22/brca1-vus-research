@@ -99,6 +99,9 @@ jobs:
       - name: Phase 7.5 — pre-manuscript scientific audit
         run: python scripts/phase7_5_audit.py
 
+      - name: Phase 9 — literature verification + Findlay refinement
+        run: python scripts/phase9.py
+
       - name: Commit generated results
         run: |
           git config user.name "github-actions[bot]"

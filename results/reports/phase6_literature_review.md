@@ -13,7 +13,7 @@ Methodology: `results/reports/phase6_selection_methodology.md`
 
 - Variants reviewed: 436
 - With Findlay 2018 functional score: 43
-- With current ClinVar curation: 0
+- With current ClinVar curation: 436
 - Prioritized variants with no PubMed hit identified: 19
 
 ## 3. Major evidence conflicts
@@ -28,7 +28,7 @@ See `results/tables/representative_variants.tsv` (selected only after systematic
 
 - PubMed search is title/metadata level (esearch/esummary), not full-text.
 - 'No PubMed hit' means 'No relevant publication identified using the documented search strategy' — NOT 'no functional evidence exists'.
-- Findlay score is a single-assay readout (saturation genome editing).
+- Findlay 2018 functional score retrieved from MaveDB covers only the RING and BRCT domains (partial dataset); whole-gene scores require the Nature supplementary table (recommended follow-up).
 - Literature-derived evidence does not modify the frozen computational dataset.
 
 ## 6. Recommendations

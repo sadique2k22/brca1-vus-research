@@ -13,7 +13,7 @@
 
 ## Resource usage
 
-- Runtime: 161.1s
+- Runtime: 156.7s
 - gnomad_cache storage: 0.16 MB
 - vep_cache storage: 52.95 MB
 

@@ -1,0 +1,13 @@
+figure	filename	description	source_script	source_data	format	resolution
+Fig 1	fig1_workflow.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 2	fig2_revel_distribution.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 3	fig3_sift_distribution.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 4	fig4_polyphen_distribution.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 5	fig5_agreement_matrix.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 6	fig8_revel_by_presence.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 7	fig9_log10_af_vs_revel.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 8	fig11_cohort_composition.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 9	fig12_predictor_vs_functional.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 10	fig13_concordance.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 11	fig14_functional_by_category.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI
+Fig 12	fig16_domain_comparison.svg		src/figures.py	annotated/with-functional	SVG+PNG	300 DPI

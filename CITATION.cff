@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below (author list pending)."
+title: "A reproducible framework for integrating population, computational, and functional evidence for BRCA1 missense variants of uncertain significance"
+type: software
+repository-code: "https://github.com/sadique2k22/brca1-vus-research"
+version: 1.0
+date-released: "2026-08-19"
+authors:
+  - family-names: "[to be completed]"
+    given-names: "[to be completed]"
+keywords:
+  - BRCA1
+  - variants of uncertain significance
+  - missense variant
+  - computational prediction
+  - population frequency
+  - saturation genome editing
+license: "[to be chosen — see results/reports/license_decision_required.md]"

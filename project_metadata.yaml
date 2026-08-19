@@ -1,0 +1,11 @@
+project_name: brca1-vus-research
+gene: BRCA1
+assembly: GRCh38
+transcript: NM_007294.4
+variant_count: 1904
+functional_variant_count: 373
+final_cohort_count: 41
+manuscript_version: phase11
+pipeline_version: "1.0"
+dataset_checksum: 7afe54db14718bcc612531325fb18ade9c1ae1a50aa4a0a0237cdee3708a2797
+test_count: 62

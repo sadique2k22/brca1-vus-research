@@ -16,10 +16,10 @@ def load_revel(path=REVEL_DEFAULT_PATH):
     with open(path) as fh:
         header = fh.readline().rstrip("\n").split("\t")
         cols = {c: i for i, c in enumerate(header)}
-        pos_col = next((c for c in ("grch38_pos", "pos", "hg19_pos", "grch37_pos") if c in cols), None)
-        ref_col = next((c for c in ("ref", "REF") if c in cols), None)
-        alt_col = next((c for c in ("alt", "ALT") if c in cols), None)
-        score_col = next((c for c in ("REVEL", "revel", "score") if c in cols), None)
+        pos_col = next((cols[c] for c in ("grch38_pos", "pos", "hg19_pos", "grch37_pos") if c in cols), None)
+        ref_col = next((cols[c] for c in ("ref", "REF") if c in cols), None)
+        alt_col = next((cols[c] for c in ("alt", "ALT") if c in cols), None)
+        score_col = next((cols[c] for c in ("REVEL", "revel", "score") if c in cols), None)
         if None in (pos_col, ref_col, alt_col, score_col):
             raise ValueError(f"REVEL columns not detected: {header}")
         for line in fh:

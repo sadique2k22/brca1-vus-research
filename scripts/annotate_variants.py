@@ -209,30 +209,40 @@ def main():
         "missing_polyphen": sum(1 for a in unique_ann.values() if a["polyphen_score"] in (None, "")),
     }
 
-    # duplicate representations: map variant_key -> list of (VID, protein_change)
+    # genomic duplicates (expected 0) + protein-change collisions (distinct alts -> same AA)
     key_vids = defaultdict(list)
     for r in records:
         key_vids[r["variant_key"]].append((r["VariationID"], r.get("protein_change", "")))
     multi = {k: v for k, v in key_vids.items() if len(v) > 1}
 
+    prot_vids = defaultdict(list)
+    for r in records:
+        prot_vids[r.get("protein_change", "")].append(
+            (r["VariationID"], r["ReferenceAlleleVCF"], r["AlternateAlleleVCF"]))
+    collisions = {k: v for k, v in prot_vids.items() if k and len(v) > 1}
+
     runtime = round(time.time() - t0, 1)
-    write_reports(rep_dir, int_dir, qc, multi, runtime)
+    write_reports(rep_dir, int_dir, qc, multi, collisions, runtime)
     print(json.dumps(qc, indent=2))
     print(f"Runtime: {runtime}s")
     print(f"Wrote: {map_tsv}, {unique_tsv}, {annotated_tsv}")
 
 
-def write_reports(rep_dir, int_dir, qc, multi, runtime):
+def write_reports(rep_dir, int_dir, qc, multi, collisions, runtime):
     os.makedirs(rep_dir, exist_ok=True)
 
     # duplicate report
     with open(os.path.join(rep_dir, "duplicate_variant_report.md"), "w") as fh:
         fh.write("# Duplicate Variant Report — Phase 4B\n\n")
         fh.write(f"Total ClinVar records: {qc['total_records']}\n\n")
-        fh.write(f"Unique biological variants: {qc['unique_variants']}\n\n")
-        fh.write(f"Variants with >1 ClinVar VariationID: {len(multi)}\n\n")
-        for k in sorted(multi)[:40]:
-            vids = ", ".join(f"{v}({p})" for v, p in multi[k])
+        fh.write(f"Unique biological variants (chrom:pos:ref:alt): {qc['unique_variants']}\n\n")
+        fh.write(f"Genomic positions with >1 ClinVar VariationID: {len(multi)}\n\n")
+        fh.write("> Correction to Phase 4A: the earlier '38 duplicate representations' were "
+                 "protein-change collisions (distinct nucleotide changes producing the same amino-acid "
+                 "substitution), not genomic duplicates. There are **0** true genomic duplicates.\n\n")
+        fh.write(f"Protein-change collisions (distinct ref>alt → same AA substitution): {len(collisions)}\n\n")
+        for k in sorted(collisions)[:40]:
+            vids = ", ".join(f"{v}({r}>{a})" for v, r, a in collisions[k])
             fh.write(f"- {k}: {vids}\n")
         fh.write("\n(Full list in `data/intermediate/biological_variant_map.tsv`.)\n")
 

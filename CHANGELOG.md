@@ -24,3 +24,12 @@ Format: date — summary (author/agent).
 - REVEL PP3 (≥0.932) / BP4 (≤0.290) confirmed from Pejaver 2022 (PMID 36413997) Table 1.
 - BA1 "above 5% in ESP/1000G/ExAC" confirmed from Richards 2015 (PMID 25741868) Table 4;
   protocol wording corrected to ">5%" and BS1-vs-BA1 nuance documented.
+
+## 2026-08-19 — Phase 0.3 (mobile-environment audit)
+- Confirmed Android/Termux/proot-distro host (Cortex-X4 + 7× A720, f2fs, ~2.3 GB RAM free).
+- Created `results/reports/environment_report.md`; README "Computational Environment"
+  section added.
+- Established resource rules: API-first, streaming/chunked, caching, 1–4 workers, no Docker,
+  `/tmp` avoided (RAM-backed), dbNSFP/VEP-cache/whole-genome-gnomAD prohibited.
+- Resource estimate: workflow SAFE under 2 GB RAM / 5 GB temp / 10 GB storage if streamed.
+- No software installed; no large downloads.

@@ -49,11 +49,24 @@ genetics-research/
 5. Two independent sources are cross-checked wherever practical (e.g. ClinVar protein
    change vs. VEP annotation).
 
-## Environment
+## Computational Environment
 
-See the Phase 0 report for the full environment inventory. Briefly: Ubuntu 25.10 (ARM64),
-Python 3.13.7, git 2.51, curl/wget available, **no** Docker/VEP/bcftools yet. A dedicated
-project virtualenv is recommended (see Phase 0 recommendation).
+**Android phone → Termux → proot-distro (Ubuntu) → OpenCode** (no desktop/laptop).
+
+Key constraints (full detail in `results/reports/environment_report.md`):
+
+- **CPU:** ARM64 (aarch64), 8 cores (1× Cortex-X4 + 7× Cortex-A720), 6 usable; thermal
+  throttling already active → keep parallelism at **1–4 workers**.
+- **RAM:** ~11.5 GB total but only **~2.3 GB available** → stream data, never load full
+  tables into memory.
+- **Storage:** f2fs, ~172 GB free (ample); **`/tmp` is RAM-backed** → use `data/` for temp.
+- **Python 3.13.7**, git 2.51, curl/wget, Java 17, gzip/xz/zstd/7z. **No** Docker, VEP,
+  bcftools/tabix, conda.
+
+**Resource rules (enforced):** API-first annotation (VEP REST / gnomAD GraphQL / CADD web),
+streaming + chunked processing, disk caching of API responses, no duplicate large files.
+**Prohibited without explicit approval:** whole-genome gnomAD, dbNSFP, full VEP cache,
+full CADD scores.
 
 ## Getting started
 

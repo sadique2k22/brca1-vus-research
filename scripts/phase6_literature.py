@@ -163,11 +163,12 @@ def main():
         pc = r[idx["protein_change"]]
         cd = cdna_from(r[idx["normalized_hgvs_c"]])
         vid = r[idx["VariationID"]]
-        # Findlay functional row
+        # Findlay functional row (partial coverage: RING + BRCT domains)
         fs = findlay(r)
         evidence_rows.append([k, vid, pc, cd, search_date, "Findlay SGE (MaveDB)", "MaveDB",
                               "", "", "Findlay et al. 2018 (PMID 30209399)", "saturation genome editing",
-                              "saturation genome editing (HDR)", pc, fs, "", "", fs, "HIGH", ""])
+                              "saturation genome editing (HDR)", pc, fs, "", "", fs, "HIGH",
+                              "partial coverage: RING+BRCT domains only"])
         # ClinVar row
         cv = clinvar.get(vid, {})
         cur_sig = cv.get("significance")
@@ -321,7 +322,9 @@ def write_report(n_union, tier_counts, reviewed, with_findlay, with_clinvar, no_
     L.append("- PubMed search is title/metadata level (esearch/esummary), not full-text.\n")
     L.append("- 'No PubMed hit' means 'No relevant publication identified using the documented "
              "search strategy' — NOT 'no functional evidence exists'.\n")
-    L.append("- Findlay score is a single-assay readout (saturation genome editing).\n")
+    L.append("- Findlay 2018 functional score retrieved from MaveDB covers only the RING and "
+             "BRCT domains (partial dataset); whole-gene scores require the Nature supplementary "
+             "table (recommended follow-up).\n")
     L.append("- Literature-derived evidence does not modify the frozen computational dataset.\n\n")
     L.append("## 6. Recommendations\n\n")
     L.append("Focus further investigation on conflicts and on absent+strong-impact variants. "

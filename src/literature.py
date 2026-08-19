@@ -69,13 +69,11 @@ def fetch_clinvar_status(variation_ids, cache_file, chunk=200, pause=0.4):
         for vid in batch:
             rec = res.get(vid, {})
             if isinstance(rec, dict):
+                gc = rec.get("germline_classification") or {}
                 out[vid] = {
-                    "significance": rec.get("clinical_significance", {}).get("description")
-                    if isinstance(rec.get("clinical_significance"), dict) else None,
-                    "review_status": rec.get("clinical_significance", {}).get("review_status")
-                    if isinstance(rec.get("clinical_significance"), dict) else None,
-                    "last_evaluated": rec.get("clinical_significance", {}).get("last_evaluated")
-                    if isinstance(rec.get("clinical_significance"), dict) else None,
+                    "significance": gc.get("description") if isinstance(gc, dict) else None,
+                    "review_status": gc.get("review_status") if isinstance(gc, dict) else None,
+                    "last_evaluated": gc.get("last_evaluated") if isinstance(gc, dict) else None,
                 }
             else:
                 out[vid] = {"significance": None, "review_status": None, "last_evaluated": None}

@@ -2,7 +2,7 @@
 
 **Exploratory / descriptive only.** No pathogenic/benign classification, no ACMG codes, no clinical interpretation.
 
-Frozen dataset checksum verified: `7afe54db14718bcc…`. Runtime 2.9s.
+Frozen dataset checksum verified: `7afe54db14718bcc…`. Runtime 3.0s.
 
 ## 1. Dataset summary
 

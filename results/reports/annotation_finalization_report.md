@@ -1,6 +1,6 @@
 # Annotation Finalization Report — Phase 4B
 
-Generated: 2026-08-19T13:48:28Z
+Generated: 2026-08-19T14:55:47Z
 
 ## Dataset integrity
 
@@ -41,7 +41,7 @@ Missing (NA) counts by field:
 
 - Annotated dataset SHA-256: `7afe54db14718bcc612531325fb18ade9c1ae1a50aa4a0a0237cdee3708a2797`
 - File: `data/processed/brca1_vus_missense_annotated.tsv`
-- Python: `3.12.13`
+- Python: `3.12.14`
 - gnomAD: v4 (`gnomad_r4`), GRCh38, GraphQL API
 - Ensembl VEP: release 116, GRCh38 (SIFT + PolyPhen-2 HumVar)
 - REVEL: v1.3, GRCh38 (standalone file)

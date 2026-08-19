@@ -1,0 +1,13 @@
+variant_key	VariationID	protein_change	REVEL	Findlay_score	conflict
+GRCh38:17:43104877:C:G	54724	Gly98Arg	0.236	-0.3784714866047879	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43106468:T:A	409307	Asp67Val	0.652	0.141412315907018	computational impact vs functional-normal (Findlay score > 0)
+GRCh38:17:43047672:T:A	489733	Asp1813Val	0.262	-0.1805607161148019	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43047691:T:A	825717	Ile1807Phe	0.217	-1.12507013556553	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43047646:G:A	868519	His1822Tyr	0.287	-0.2424249649628339	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43047653:A:T	868911	Asn1819Lys	0.191	-0.231764896321833	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43047655:T:A	868511	Asn1819Tyr	0.146	-0.449637787239626	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43047673:C:G	867389	Asp1813His	0.281	-0.981230415384132	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43063898:C:G	868692	Gly1710Arg	0.668	0.3834514875001129	computational impact vs functional-normal (Findlay score > 0)
+GRCh38:17:43104881:G:T	868828	Asp96Glu	0.102	-3.8443814269126295	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43104888:T:G	865628	Gln94Pro	0.115	-1.2029044729423	computational tolerance vs functional-LOF (Findlay score < 0)
+GRCh38:17:43104918:T:C	868310	Glu84Gly	0.743	0.0977008263695057	computational impact vs functional-normal (Findlay score > 0)

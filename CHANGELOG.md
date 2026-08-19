@@ -11,3 +11,10 @@ Format: date — summary (author/agent).
 - Candidate genes researched via NCBI ClinVar (build 260818-0035.1) and PubMed.
 - Gene comparison table produced; recommendation pending user approval.
 - **No variants analyzed yet.**
+
+## 2026-08-19 — Phase 0.1 (self-audit + fixes)
+- Self-audit performed (see `results/reports/phase0_audit.md`).
+- **CRITICAL fix:** corrected mis-cited PMID (Giacomelli 2018 → PMID 30224644, was 30061595).
+- Protocol revised: VCEP-specified transcript (exact version); "Conflicting" vs "Uncertain"
+  distinction; multi-consequence missense rule; ClinVar build verification; gene-specific
+  threshold override; anti-fabrication/provenance section.

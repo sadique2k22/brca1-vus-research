@@ -45,6 +45,9 @@ def main():
     int_tsv = os.path.join(cfg["output_dirs"]["intermediate"], f"clinvar_{gene.lower()}_raw.tsv")
     out_tsv = os.path.join(cfg["output_dirs"]["processed"], "clinvar_vus_missense.tsv")
     out_report = os.path.join(cfg["output_dirs"]["reports"], "clinvar_audit.md")
+    if os.path.exists(out_tsv):
+        print(f"Output exists ({out_tsv}); skipping filter (idempotent).")
+        return
 
     header, records = load_records(int_tsv)
 

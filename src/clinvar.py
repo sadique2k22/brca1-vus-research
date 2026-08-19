@@ -116,6 +116,9 @@ def main():
     gz_path = os.path.join(raw_dir, "clinvar", cfg["clinvar"]["file"])
     out_tsv = os.path.join(int_dir, f"clinvar_{gene.lower()}_raw.tsv")
     out_summary = os.path.join(int_dir, f"clinvar_{gene.lower()}_summary.json")
+    if os.path.exists(out_tsv):
+        print(f"Output exists ({out_tsv}); skipping parse (idempotent).")
+        return
     stats = parse_gene_subset(gz_path, gene, out_tsv, out_summary)
     print(json.dumps(stats, indent=2))
     print(f"\nWrote {out_tsv}")

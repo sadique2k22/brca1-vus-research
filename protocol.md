@@ -125,7 +125,11 @@ threshold used, and scientific reference. No threshold is invented.
 
 ## 13. Thresholds (evidence-pattern description only)
 
-- ACMG/AMP **BA1** (AF ≥ 5%) — Richards et al. 2015, *Genet Med* 17:405, PMID 25741868.
+- ACMG/AMP **BA1** (AF > 5% — source wording "above 5% in Exome Sequencing Project,
+  1000 Genomes, or ExAC") — Richards et al. 2015, *Genet Med* 17:405, PMID 25741868.
+  Note: BA1's original datasets predate gnomAD; its gnomAD application is a modern
+  convention, and for a dominant highly-penetrant gene **BS1** (gene-specific cutoff) is
+  the more appropriate evidence code (see override rule below).
 - ClinGen-calibrated REVEL PP3/BP4 (≥0.932 / ≤0.290) — Pejaver et al. 2022, *AJHG* 109:2163,
   PMID 36413997.
 - **Override rule:** where the gene-specific specification (e.g. ENIGMA BRCA1/BRCA2, TP53,

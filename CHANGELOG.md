@@ -18,3 +18,9 @@ Format: date — summary (author/agent).
 - Protocol revised: VCEP-specified transcript (exact version); "Conflicting" vs "Uncertain"
   distinction; multi-consequence missense rule; ClinVar build verification; gene-specific
   threshold override; anti-fabrication/provenance section.
+
+## 2026-08-19 — Phase 0.2 (full re-verification of citations & thresholds)
+- All 10 cited PMIDs re-verified against PubMed E-utilities (full bibliographic detail).
+- REVEL PP3 (≥0.932) / BP4 (≤0.290) confirmed from Pejaver 2022 (PMID 36413997) Table 1.
+- BA1 "above 5% in ESP/1000G/ExAC" confirmed from Richards 2015 (PMID 25741868) Table 4;
+  protocol wording corrected to ">5%" and BS1-vs-BA1 nuance documented.

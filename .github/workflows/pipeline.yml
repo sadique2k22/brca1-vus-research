@@ -56,6 +56,15 @@ jobs:
       - name: Filter VUS + missense
         run: python scripts/clinvar_audit.py
 
+      - name: Cache annotation caches (gnomAD + VEP)
+        id: cache-annotation
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/intermediate/gnomad_cache
+            data/intermediate/vep_cache
+          key: annotation-cache-${{ hashFiles('data/processed/clinvar_vus_missense.tsv') }}
+
       - name: Normalize transcripts (VEP)
         run: python scripts/transcript_normalize.py
 
@@ -68,15 +77,6 @@ jobs:
 
       - name: Prepare REVEL (download + extract chr17 region)
         run: python scripts/prepare_revel.py
-
-      - name: Cache annotation caches (gnomAD + VEP)
-        id: cache-annotation
-        uses: actions/cache@v4
-        with:
-          path: |
-            data/intermediate/gnomad_cache
-            data/intermediate/vep_cache
-          key: annotation-cache-${{ hashFiles('data/processed/clinvar_vus_missense.tsv') }}
 
       - name: Annotate variants (gnomAD + VEP + REVEL + CADD)
         run: python scripts/annotate_variants.py

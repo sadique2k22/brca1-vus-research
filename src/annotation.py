@@ -45,13 +45,16 @@ def vep_annotate(variant_strings, cache_dir, chunk=50, pause=0.5, retries=3):
                         data=json.dumps({"variants": batch}),
                         timeout=120,
                     )
+                    if resp.status_code == 429:
+                        time.sleep(int(resp.headers.get("Retry-After", 5)))
+                        continue
                     resp.raise_for_status()
                     data = resp.json()
                     break
                 except Exception as exc:  # noqa: BLE001
                     if attempt == retries - 1:
                         failed.append((i, str(exc)))
-                    time.sleep(2 ** attempt)
+                    time.sleep(5 * (2 ** attempt))
             if data is None:
                 continue
             with open(cache_file, "w") as fh:

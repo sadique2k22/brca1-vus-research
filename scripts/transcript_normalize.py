@@ -47,6 +47,14 @@ def main():
     report = os.path.join(cfg["output_dirs"]["reports"], "transcript_normalization_report.md")
     cache_dir = os.path.join(cfg["output_dirs"]["intermediate"], "vep_cache")
 
+    # Idempotency: the normalized dataset is deterministic given the input and is committed.
+    # Skip re-derivation (and the VEP re-query) if it already exists.
+    if os.path.exists(out_tsv):
+        with open(out_tsv) as fh:
+            n = sum(1 for _ in fh) - 1
+        print(f"Normalized dataset already exists ({out_tsv}, {n} rows); skipping VEP re-derivation.")
+        return
+
     header, records = load_processed(src_tsv)
 
     # Build VEP input strings (1:1 with records)

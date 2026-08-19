@@ -125,6 +125,7 @@ def main():
                 unverified += 1
         except Exception:
             unverified += 1
+        time.sleep(0.4)
     lit_result = f"sampled {len(sample)} PMIDs: {verified} verified, {unverified} unverified"
     if unverified:
         findings.append(("MODERATE", f"{unverified} PMID(s) could not be verified", "6"))

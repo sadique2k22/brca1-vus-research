@@ -1,0 +1,8 @@
+pattern	description	count	examples
+A	gnomAD-present + high impact	61	55123(Ile1391Thr); 55261(Pro1562Leu); 55330(Ser1651Phe); 55551(Gly1788Asp); 55684(Pro25Thr)
+B	gnomAD-present + tolerance	84	37591(Asn1468Asp); 37593(Ser1486Cys); 41824(Leu1472Phe); 55012(Ser127Asn); 55141(His1402Arg)
+C	gnomAD-absent + strong impact	4	632609(Trp1718Leu); 867923(Cys61Phe); 2716815(Phe517Ile); 2813703(Tyr465His)
+D	gnomAD-absent + tolerance	283	37576(Leu1407Val); 54724(Gly98Arg); 55144(Leu1407Pro); 55206(Lys1487Arg); 55207(Pro1491Ala)
+E	strong predictor disagreement	49	37593(Ser1486Cys); 54724(Gly98Arg); 55012(Ser127Asn); 136087(Gln169Pro); 142627(Gly1560Val)
+F	elevated population frequency	0	
+G	extreme REVEL score	7	440475(Glu1478Asp); 632609(Trp1718Leu); 867923(Cys61Phe); 1035284(Glu1478Asp); 2716815(Phe517Ile)

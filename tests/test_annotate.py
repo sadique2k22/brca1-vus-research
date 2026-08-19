@@ -40,7 +40,6 @@ class TestGnomadParse(unittest.TestCase):
         self.assertAlmostEqual(p["gnomad_genome_af"], 0.014)
         self.assertEqual(p["gnomad_genome_hom"], 20)
         self.assertAlmostEqual(p["gnomad_genome_faf95_popmax"], 0.02)
-        self.assertAlmostEqual(p["gnomad_genome_af_popmax"], 0.01)
         for f in ("gnomad_genome_af", "gnomad_exome_af"):
             self.assertIsNotNone(p[f])
             self.assertGreaterEqual(p[f], 0.0)

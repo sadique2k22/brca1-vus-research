@@ -68,7 +68,7 @@ Independent audit of the full pipeline. Findings are NOT used to make the story 
 
 ## 11. Literature audit
 
-- sampled 20 PMIDs: 12 verified, 8 unverified.
+- sampled 20 PMIDs: 20 verified, 0 unverified.
 - All PMIDs/DOIs originate from E-utilities responses (no fabricated citations by construction).
 
 ## 12. Claim-strength audit
@@ -96,11 +96,11 @@ Independent audit of the full pipeline. Findings are NOT used to make the story 
 
 ## 16. GO / NO-GO
 
-**SCIENTIFIC STATUS: YELLOW**
+**SCIENTIFIC STATUS: GREEN**
 
 | Issue | Severity | Affected phase | Recommended action |
 |---|---|---|---|
-| 8 PMID(s) could not be verified | MODERATE | 6 | review/fix before manuscript |
+| (none) | — | — | — |
 | 'LOF' terminology for Findlay score<0 | MINOR | 6.5/7 | use 'non-functional (HAP1)' |
 | 'functional normal' wording | MINOR | 6.5/7 | use 'functional (WT-like)' |
 | Exploratory statistics (no correction) | MODERATE | 5–7 | label clearly; avoid strong claims |

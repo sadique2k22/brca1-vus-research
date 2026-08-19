@@ -1,0 +1,38 @@
+# Phase 5 analysis thresholds — FROZEN (2026-08-19)
+# These thresholds are locked BEFORE inspecting variant-level results.
+# Do NOT modify them to produce more "interesting" results.
+
+thresholds:
+  revel:
+    # ClinGen-calibrated PP3/BP4 supporting thresholds (Pejaver et al. 2022).
+    tolerance_supporting: 0.290    # REVEL <= 0.290  -> BP4 (tolerance-supporting)
+    impact_supporting: 0.644       # REVEL >= 0.644  -> PP3 (impact-supporting)
+    impact_moderate: 0.773         # REVEL >= 0.773  -> PP3_Moderate
+    impact_strong: 0.932           # REVEL >= 0.932  -> PP3_Strong
+    tolerance_strong: 0.003        # REVEL <= 0.003  -> very-strong benign (Pejaver Table 2)
+    source: "Pejaver et al. 2022, Am J Hum Genet 109:2163-2177, PMID 36413997"
+
+  sift:
+    # SIFT score in [0,1]; lower = damaging. Developer-recommended threshold 0.05.
+    deleterious_max: 0.05          # SIFT <= 0.05 -> deleterious; > 0.05 -> tolerated
+    source: "Ng & Henikoff 2003, Nucleic Acids Res 31:3812, PMID 12824425"
+
+  polyphen:
+    # PolyPhen-2 HumVar model; higher = damaging.
+    benign_max: 0.446              # <= 0.446 benign
+    possibly_damaging_max: 0.908   # (0.446, 0.908] possibly damaging; > 0.908 probably damaging
+    source: "Adzhubei et al. 2010, Nat Methods 7:248-249, PMID 20354512"
+
+  gnomad:
+    # gnomAD-absent variants are NEVER encoded as AF=0.
+    absent_not_zero: true
+    # Reference point for "elevated population-specific frequency" reporting
+    # (BRCA1 BS1 filtering-AF threshold; reported, NOT applied as a classification).
+    elevated_faf95: 0.001
+    source: "ENIGMA/ClinGen BRCA1/BRCA2 VCEP, Parsons et al. 2024, PMID 39142283"
+
+  # Neutral, non-clinical terminology used throughout.
+  terminology:
+    revel_tolerance: "computational-tolerance-supporting"
+    revel_intermediate: "intermediate/indeterminate"
+    revel_impact: "computational-impact-supporting"

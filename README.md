@@ -95,3 +95,15 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt              # to be created in Phase 2
 python3 scripts/validate_config.py           # config consistency check
 ```
+
+## Reproducing Phase 5
+
+```bash
+pip install -r requirements.txt
+python scripts/phase5_analysis.py            # reads the frozen annotated dataset -> tables/figures/report
+python -m unittest discover -s tests          # 41 tests
+```
+
+Thresholds are frozen in `configs/analysis_config.yaml` (documented in
+`results/reports/predictor_thresholds.md`). Figures are generated as SVG + PNG (300 dpi)
+under `results/figures/`; tables under `results/tables/`. All compute runs on GitHub Actions.

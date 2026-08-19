@@ -29,30 +29,35 @@ def _run_query(aliases, cache_file, retries=3):
     if os.path.exists(cache_file):
         return json.load(open(cache_file))
     query = "query {" + aliases + "}"
-    result = None
+    reason = "unknown"
     for attempt in range(retries):
         try:
             r = requests.post(GNOMAD_URL, json={"query": query},
                               headers={"Content-Type": "application/json"}, timeout=120)
             if r.status_code == 429:
-                wait = int(r.headers.get("Retry-After", 5))
-                time.sleep(wait)
-                raise RuntimeError("rate limited")
+                reason = "rate_limited"
+                time.sleep(int(r.headers.get("Retry-After", 5)))
+                continue
             r.raise_for_status()
             data = r.json()
             msgs = [e.get("message", "") for e in (data.get("errors") or [])]
             if any("too expensive" in m or "cost" in m.lower() for m in msgs):
-                raise RuntimeError(f"gnomAD cost limit: {msgs[0][:120]}")
-            result = data
-            break
+                reason = "cost_limit"
+                time.sleep(5 * (2 ** attempt))
+                continue
+            with open(cache_file, "w") as fh:
+                json.dump(data, fh)
+            return data
+        except requests.exceptions.Timeout:
+            reason = "timeout"
+        except requests.exceptions.HTTPError as e:
+            reason = f"http_{e.response.status_code if e.response is not None else 'error'}"
+        except requests.exceptions.ConnectionError:
+            reason = "connection_error"
         except Exception:
-            if attempt == retries - 1:
-                result = {"_failed": True}
-            time.sleep(5 * (2 ** attempt))
-    if not result.get("_failed"):
-        with open(cache_file, "w") as fh:
-            json.dump(result, fh)
-    return result
+            reason = "error"
+        time.sleep(5 * (2 ** attempt))
+    return {"_failed": True, "_reason": reason}
 
 
 def query_gnomad(variant_ids, cache_dir, batch=BATCH, pause=2.0):
@@ -73,7 +78,7 @@ def query_gnomad(variant_ids, cache_dir, batch=BATCH, pause=2.0):
         data = _run_query(aliases, cache_file)
         if data.get("_failed"):
             for vid in chunk:
-                out[vid] = {"_error": "request_failed"}
+                out[vid] = {"_error": data.get("_reason", "request_failed")}
         else:
             d = data.get("data") or {}
             for j, vid in enumerate(chunk):
@@ -90,7 +95,7 @@ def parse_gnomad_record(rec):
     if not rec:
         return {"gnomad_found": "absent"}
     if rec.get("_error"):
-        return {"gnomad_found": "error"}
+        return {"gnomad_found": "error", "gnomad_error": rec.get("_error", "request_failed")}
     out = {"gnomad_found": "present"}
     for scope in ("genome", "exome"):
         d = rec.get(scope) or {}

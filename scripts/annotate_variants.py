@@ -32,7 +32,7 @@ from src.variants import (
 
 ANNOTATION_FIELDS = [
     "variant_key",
-    "gnomad_found",
+    "gnomad_found", "gnomad_error",
     "gnomad_genome_af", "gnomad_genome_ac", "gnomad_genome_an", "gnomad_genome_hom",
     "gnomad_genome_faf95_popmax", "gnomad_genome_faf95_pop",
     "gnomad_exome_af", "gnomad_exome_ac", "gnomad_exome_an", "gnomad_exome_hom",
@@ -137,6 +137,7 @@ def main():
         unique_ann[k] = {
             "variant_key": k,
             "gnomad_found": g.get("gnomad_found"),
+            "gnomad_error": g.get("gnomad_error"),
             "gnomad_genome_af": g.get("gnomad_genome_af"),
             "gnomad_genome_ac": g.get("gnomad_genome_ac"),
             "gnomad_genome_an": g.get("gnomad_genome_an"),
@@ -262,6 +263,11 @@ def write_reports(rep_dir, int_dir, qc, multi, collisions, runtime):
         fh.write("| vep_*, sift_*, polyphen_* | Ensembl VEP | release 116 | GRCh38 | 2026-08-19 | REST /vep/human/region |\n")
         fh.write("| revel_score | REVEL | v1.3 | GRCh38 | 2021-05-03 | standalone file (chr17 region) |\n")
         fh.write("| cadd_phred | CADD | v1.6 (v1.7 degraded) | GRCh38 | 2026-08-19 | web service (best-effort) |\n")
+        fh.write("\n**CADD exclusion:** CADD was not included in the primary analysis because the "
+                 "available v1.7 service did not provide a reliable bulk annotation pathway compatible "
+                 "with the project's resource constraints. No older CADD version was substituted. "
+                 "Missing CADD is not treated as a negative result and CADD is excluded from subsequent "
+                 "statistical analyses unless later added through a validated source.\n")
         fh.write("\nMissing values are recorded as empty (NA); no field is estimated.\n")
 
 

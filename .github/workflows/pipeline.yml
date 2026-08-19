@@ -81,6 +81,9 @@ jobs:
       - name: Annotate variants (gnomAD + VEP + REVEL + CADD)
         run: python scripts/annotate_variants.py
 
+      - name: Finalize + validate annotation (integrity checks)
+        run: python scripts/finalize_annotation.py
+
       - name: Commit generated results
         run: |
           git config user.name "github-actions[bot]"

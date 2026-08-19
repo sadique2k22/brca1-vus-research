@@ -4,8 +4,8 @@
 
 - total_records: 1904
 - unique_variants: 1904
-- gnomad_present: 293
-- gnomad_absent: 961
+- gnomad_present: 419
+- gnomad_absent: 1410
 - missing_cadd: 1904
 - missing_revel: 0
 - missing_sift: 0
@@ -13,8 +13,8 @@
 
 ## Resource usage
 
-- Runtime: 305.2s
-- gnomad_cache storage: 0.11 MB
+- Runtime: 513.5s
+- gnomad_cache storage: 0.16 MB
 - vep_cache storage: 52.95 MB
 
 ## Annotation metadata (provenance)

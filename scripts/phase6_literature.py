@@ -45,7 +45,7 @@ def load_ann():
     with open(ANN_TSV, newline="", encoding="utf-8") as fh:
         r = csv.reader(fh, delimiter="\t")
         header = next(r)
-        idx = {n: i for i, n in enumerate(header)}
+        idx = {n.lstrip("#"): i for i, n in enumerate(header)}
         rows = [row for row in r]
     return header, idx, rows
 

@@ -2,7 +2,7 @@
 
 ## Literature verification
 
-- class_GENE_LEVEL: 295
+- class_GENE_LEVEL: 293
 - variants_searched: 41
 - variants_with_pubmed: 36
 

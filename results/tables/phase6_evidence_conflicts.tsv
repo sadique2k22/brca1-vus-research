@@ -1,13 +1,30 @@
-variant_key	VariationID	protein_change	REVEL	Findlay_score	conflict
-GRCh38:17:43104877:C:G	54724	Gly98Arg	0.236	-0.3784714866047879	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43106468:T:A	409307	Asp67Val	0.652	0.141412315907018	computational impact vs functional-normal (Findlay score > 0)
-GRCh38:17:43047672:T:A	489733	Asp1813Val	0.262	-0.1805607161148019	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43047691:T:A	825717	Ile1807Phe	0.217	-1.12507013556553	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43047646:G:A	868519	His1822Tyr	0.287	-0.2424249649628339	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43047653:A:T	868911	Asn1819Lys	0.191	-0.231764896321833	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43047655:T:A	868511	Asn1819Tyr	0.146	-0.449637787239626	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43047673:C:G	867389	Asp1813His	0.281	-0.981230415384132	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43063898:C:G	868692	Gly1710Arg	0.668	0.3834514875001129	computational impact vs functional-normal (Findlay score > 0)
-GRCh38:17:43104881:G:T	868828	Asp96Glu	0.102	-3.8443814269126295	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43104888:T:G	865628	Gln94Pro	0.115	-1.2029044729423	computational tolerance vs functional-LOF (Findlay score < 0)
-GRCh38:17:43104918:T:C	868310	Glu84Gly	0.743	0.0977008263695057	computational impact vs functional-normal (Findlay score > 0)
+variant_key	VariationID	protein_change	REVEL	SIFT	PolyPhen	gnomAD	findlay_score	conflict
+GRCh38:17:43104900:A:G	54651	Ile90Thr	0.713	0.16	0.64	absent	0.0569082533560138	computational_impact + functional_normal
+GRCh38:17:43104877:C:G	54724	Gly98Arg	0.236	0.0	0.92	absent	-0.3784714866047879	computational_tolerance + functional_LOF
+GRCh38:17:43106468:T:A	409307	Asp67Val	0.652	0.0	0.156	present	0.141412315907018	computational_impact + functional_normal
+GRCh38:17:43124035:A:C	431195	Ile21Ser	0.668	0.0	0.376	absent	0.2023744142360539	computational_impact + functional_normal
+GRCh38:17:43047672:T:A	489733	Asp1813Val	0.262	0.0	0.006	absent	-0.1805607161148019	computational_tolerance + functional_LOF
+GRCh38:17:43057110:A:G	491102	Val1740Ala	0.648	0.0	0.924	absent	0.0796598527324661	computational_impact + functional_normal
+GRCh38:17:43063370:A:G	652310	Val1719Ala	0.816	0.0	0.844	absent	0.3747867957781279	computational_impact + functional_normal
+GRCh38:17:43047691:T:A	825717	Ile1807Phe	0.217	0.0	0.129	absent	-1.12507013556553	computational_tolerance + functional_LOF
+GRCh38:17:43045751:T:G	861117	Asp1840Ala	0.835	0.0	0.461	absent	0.0408873762011184	computational_impact + functional_normal
+GRCh38:17:43124041:T:C	864052	Gln19Arg	0.736	0.0	0.455	absent	0.0502988982912768	computational_impact + functional_normal
+GRCh38:17:43045721:A:G	867653	Leu1850Pro	0.746	0.0	0.988	absent	0.106617167469741	computational_impact + functional_normal
+GRCh38:17:43047646:G:A	868519	His1822Tyr	0.287	0.06	0.387	absent	-0.2424249649628339	computational_tolerance + functional_LOF
+GRCh38:17:43047653:A:T	868911	Asn1819Lys	0.191	0.02	0.01	absent	-0.231764896321833	computational_tolerance + functional_LOF
+GRCh38:17:43047655:T:A	868511	Asn1819Tyr	0.146	0.01	0.0	absent	-0.449637787239626	computational_tolerance + functional_LOF
+GRCh38:17:43047673:C:G	867389	Asp1813His	0.281	0.0	0.766	absent	-0.981230415384132	computational_tolerance + functional_LOF
+GRCh38:17:43051107:C:G	868287	Gly1763Ala	0.722	0.0	0.045	absent	0.6362917429080122	computational_impact + functional_normal
+GRCh38:17:43063334:T:C	867786	Glu1731Gly	0.769	0.01	0.301	absent	0.0652273024678645	computational_impact + functional_normal
+GRCh38:17:43063361:G:C	868766	Ser1722Cys	0.645	0.04	0.003	absent	0.197527537137091	computational_impact + functional_normal
+GRCh38:17:43063898:C:G	868692	Gly1710Arg	0.668	0.29	0.366	absent	0.3834514875001129	computational_impact + functional_normal
+GRCh38:17:43063900:C:G	868687	Gly1709Ala	0.703	0.0	0.618	absent	0.116068252212263	computational_impact + functional_normal
+GRCh38:17:43067674:T:C	865526	Arg1670Gly	0.687	0.0	0.893	absent	0.217765798580629	computational_impact + functional_normal
+GRCh38:17:43104881:G:T	868828	Asp96Glu	0.102	0.0	0.095	absent	-3.8443814269126295	computational_tolerance + functional_LOF
+GRCh38:17:43104888:T:G	865628	Gln94Pro	0.115	0.0	0.044	absent	-1.2029044729423	computational_tolerance + functional_LOF
+GRCh38:17:43104909:A:G	865611	Leu87Ser	0.665	0.02	0.64	absent	0.0036569972417714	computational_impact + functional_normal
+GRCh38:17:43104916:C:G	868804	Glu85Gln	0.65	0.03	0.095	absent	0.5965181635971739	computational_impact + functional_normal
+GRCh38:17:43104918:T:C	868310	Glu84Gly	0.743	0.0	0.638	present	0.0977008263695057	computational_impact + functional_normal
+GRCh38:17:43104932:A:T	865309	Phe79Leu	0.75	0.0	0.283	absent	0.0545034602353462	computational_impact + functional_normal
+GRCh38:17:43104943:T:C	867985	Ser76Gly	0.734	0.01	0.881	absent	0.844991185551513	computational_impact + functional_normal
+GRCh38:17:43106464:T:C	868278	Ile68Met	0.646	0.0	0.81	absent	0.122549115399585	computational_impact + functional_normal

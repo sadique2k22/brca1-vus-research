@@ -1,0 +1,374 @@
+variant_key	VariationID	protein_change	REVEL	SIFT	PolyPhen	gnomAD	findlay_score	comparison
+GRCh38:17:43106533:T:A	54219	Lys45Asn	0.545	0.03	0.155	absent	-0.5912440433284171	intermediate
+GRCh38:17:43106467:A:C	54439	Asp67Glu	0.562	0.8	0.081	absent	-0.096183037628413	intermediate
+GRCh38:17:43106465:A:T	54444	Ile68Lys	0.84	0.0	0.047	absent	-1.53542040040805	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106462:G:T	54450	Thr69Asn	0.604	0.01	0.07	present	0.153279183571519	intermediate
+GRCh38:17:43104900:A:G	54651	Ile90Thr	0.713	0.16	0.64	absent	0.0569082533560138	computational_impact + functional_normal
+GRCh38:17:43104877:C:G	54724	Gly98Arg	0.236	0.0	0.92	absent	-0.3784714866047879	computational_tolerance + functional_LOF
+GRCh38:17:43124065:A:G	54828	Val11Ala	0.727	0.0	0.536	absent	-0.126650277002018	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124053:A:G	55217	Ile15Thr	0.594	0.0	0.02	present	-2.09697257117144	intermediate
+GRCh38:17:43070980:C:A	55320	Arg1645Met	0.644	0.02	0.011	absent	-0.7774597332426679	computational_impact + functional_LOF (agreement)
+GRCh38:17:43070962:G:A	55330	Ser1651Phe	0.794	0.0	0.052	present	-0.6317969139302211	computational_impact + functional_LOF (agreement)
+GRCh38:17:43070947:C:T	55337	Gly1656Asp	0.828	0.0	0.311	absent	-0.53894391028949	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067695:T:A	55348	Met1663Leu	0.514	0.25	0.0	absent	-2.12306699932937	intermediate
+GRCh38:17:43067694:A:T	55349	Met1663Lys	0.629	0.0	0.001	present	-2.05232380144043	intermediate
+GRCh38:17:43063940:C:G	55390	Val1696Leu	0.63	0.0	0.099	present	-0.405383960609914	intermediate
+GRCh38:17:43063930:C:G	55397	Arg1699Pro	0.843	0.0	0.957	absent	-1.54852253887007	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063373:C:G	55433	Trp1718Ser	0.914	0.0	0.251	absent	-1.1867029449301498	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057093:G:T	55472	His1746Asn	0.584	0.0	0.787	present	-0.7595655616414309	intermediate
+GRCh38:17:43057074:G:A	55484	Ala1752Val	0.656	0.0	0.043	absent	-1.73849196243126	computational_impact + functional_LOF (agreement)
+GRCh38:17:43049164:C:T	55551	Gly1788Asp	0.862	0.0	0.882	present	-0.693108211684985	computational_impact + functional_LOF (agreement)
+GRCh38:17:43047687:A:G	55572	Val1808Ala	0.751	0.0	0.259	absent	-0.7988192254043821	computational_impact + functional_LOF (agreement)
+GRCh38:17:43047681:A:C	55576	Val1810Gly	0.778	0.0	0.966	absent	-3.37388079968849	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045748:C:T	55613	Ser1841Asn	0.626	0.0	0.173	present	-2.2621444410842497	intermediate
+GRCh38:17:43045717:G:T	55624	Asp1851Glu	0.536	0.08	0.009	absent	-0.2369283501812999	intermediate
+GRCh38:17:43124024:G:T	55684	Pro25Thr	0.818	0.0	0.935	present	-0.194290415479458	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115777:A:G	55732	Leu28Pro	0.832	0.0	0.162	absent	-1.64360581860877	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106508:G:T	91559	Gln54Lys	0.575	0.41	0.165	present	-0.620201371008806	intermediate
+GRCh38:17:43106469:C:T	91572	Asp67Asn	0.344	0.32	0.025	absent	0.149696615854813	intermediate
+GRCh38:17:43063335:C:T	91641	Glu1731Lys	0.586	0.01	0.053	present	-2.76977608894852	intermediate
+GRCh38:17:43057132:C:T	91643	Asp1733Asn	0.462	0.21	0.138	absent	-0.511247529135134	intermediate
+GRCh38:17:43051065:G:A	91648	Thr1777Ile	0.653	0.0	0.901	absent	-0.4534450161903389	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104879:G:C	96909	Thr97Arg	0.724	0.03	0.745	present	-1.02382358502105	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057075:C:T	96944	Ala1752Thr	0.688	0.0	0.052	absent	-2.5857887593723903	computational_impact + functional_LOF (agreement)
+GRCh38:17:43051093:A:C	96948	Cys1768Gly	0.867	0.0	0.098	present	-0.967951041146808	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057129:A:G	125806	Phe1734Leu	0.87	0.0	0.114	absent	-2.37335995851566	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104879:G:A	133721	Thr97Ile	0.782	0.0	0.399	absent	-1.04013448709355	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063937:A:T	141077	Cys1697Ser	0.896	0.0	0.679	absent	-0.0692527583068329	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045772:A:G	142256	Val1833Ala	0.787	0.0	0.774	absent	-0.661423186820916	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045766:C:G	182172	Arg1835Pro	0.48	0.04	0.073	present	-1.31208575342448	intermediate
+GRCh38:17:43051092:C:T	182167	Cys1768Tyr	0.758	0.0	0.249	absent	-0.7358954081784379	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057091:G:C	185702	His1746Gln	0.698	0.0	0.013	absent	-0.8968275496203171	computational_impact + functional_LOF (agreement)
+GRCh38:17:43071020:C:A	186979	Val1632Leu	0.564	0.1	0.001	absent	-0.794290560797775	intermediate
+GRCh38:17:43104898:A:G	187707	Cys91Arg	0.515	0.15	0.0	absent	-0.330071693871008	intermediate
+GRCh38:17:43106483:G:C	185578	Pro62Arg	0.899	0.0	0.986	absent	-0.73045276973931	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124031:T:G	185882	Leu22Phe	0.648	0.0	0.9	absent	-0.33315091053469	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057069:C:T	188419	Glu1754Lys	0.598	0.0	0.017	absent	-0.318323795563548	intermediate
+GRCh38:17:43063900:C:T	188417	Gly1709Glu	0.784	0.0	0.95	present	-0.558665497685808	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067640:G:A	188416	Thr1681Ile	0.581	0.0	0.006	present	-0.786038537797987	intermediate
+GRCh38:17:43070959:A:T	188415	Met1652Lys	0.719	0.0	0.015	present	-1.53235546339967	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104895:C:G	216657	Ala92Pro	0.685	0.0	0.857	absent	-3.0436604684468103	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045785:C:T	225731	Glu1829Lys	0.407	0.25	0.12	present	-0.804182973764603	intermediate
+GRCh38:17:43047703:C:T	232037	Gly1803Ser	0.547	0.05	0.06	present	-0.320508703475903	intermediate
+GRCh38:17:43049156:C:T	234129	Val1791Met	0.654	0.0	0.037	absent	-0.252402919340413	computational_impact + functional_LOF (agreement)
+GRCh38:17:43049173:T:G	232897	Gln1785Pro	0.609	0.0	0.803	absent	-1.5255604320955	intermediate
+GRCh38:17:43051108:C:G	234183	Gly1763Arg	0.652	0.0	0.282	absent	-0.664336514868902	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057092:T:G	232790	His1746Pro	0.897	0.0	0.845	absent	-2.56647745711579	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067652:G:A	233207	Thr1677Ile	0.582	0.0	0.18	absent	-1.01369458943812	intermediate
+GRCh38:17:43070968:C:G	233593	Arg1649Thr	0.62	0.04	0.049	absent	-0.214181107122188	intermediate
+GRCh38:17:43124028:C:G	232427	Glu23Asp	0.609	0.0	0.638	absent	-1.0667011016788	intermediate
+GRCh38:17:43063912:A:C	240816	Leu1705Arg	0.578	0.0	0.347	absent	-1.17417485343466	intermediate
+GRCh38:17:43063940:C:A	240813	Val1696Leu	0.63	0.0	0.099	absent	-0.945259124798763	intermediate
+GRCh38:17:43051066:T:A	252402	Thr1777Ser	0.598	0.01	0.915	absent	-0.0170110028106307	intermediate
+GRCh38:17:43115757:C:A	252386	Val35Phe	0.715	0.0	0.973	absent	-1.23552836047238	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104927:T:A	267217	Gln81Leu	0.73	0.02	0.17	absent	-0.372554913707786	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063940:C:T	409346	Val1696Met	0.537	0.0	0.865	absent	-0.298896816341335	intermediate
+GRCh38:17:43106468:T:A	409307	Asp67Val	0.652	0.0	0.156	present	0.141412315907018	computational_impact + functional_normal
+GRCh38:17:43106513:A:G	409340	Leu52Pro	0.827	0.0	0.985	absent	-1.26354747579423	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045748:C:G	423044	Ser1841Thr	0.7	0.0	0.121	present	-1.86342946322187	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063347:T:G	418072	Lys1727Gln	0.614	0.0	0.061	absent	0.295675239099518	intermediate
+GRCh38:17:43063882:C:A	422674	Ser1715Ile	0.809	0.0	0.103	absent	-2.0230407342013503	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063906:A:C	422989	Ile1707Ser	0.839	0.0	0.769	absent	-2.29509445148828	computational_impact + functional_LOF (agreement)
+GRCh38:17:43051070:C:T	431278	Met1775Ile	0.606	0.0	0.085	absent	-0.299537464070136	intermediate
+GRCh38:17:43124035:A:C	431195	Ile21Ser	0.668	0.0	0.376	absent	0.2023744142360539	computational_impact + functional_normal
+GRCh38:17:43049155:A:T	433732	Val1791Glu	0.805	0.0	0.709	absent	-1.18900378766452	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106516:A:G	433685	Leu51Pro	0.821	0.0	0.989	present	-1.33284833119727	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063916:A:G	440479	Phe1704Leu	0.631	0.0	0.007	present	-1.6652800811778	intermediate
+GRCh38:17:43124066:C:G	438922	Val11Leu	0.677	0.02	0.631	present	-1.14195506703003	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045716:T:C	441287	Thr1852Ala	0.464	0.65	0.049	present	0.309628122141978	intermediate
+GRCh38:17:43115732:A:G	441341	Phe43Ser	0.847	0.0	0.767	present	-1.24099502166333	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115733:A:G	441319	Phe43Leu	0.8	0.01	0.684	absent	-1.0838823856696702	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104928:G:C	462586	Gln81Glu	0.629	0.0	0.354	absent	-0.964109618177198	intermediate
+GRCh38:17:43047673:C:A	479266	Asp1813Tyr	0.335	0.0	0.795	absent	-1.31630485647323	intermediate
+GRCh38:17:43047677:C:G	479210	Gln1811His	0.597	0.0	0.907	absent	-0.7477769592583521	intermediate
+GRCh38:17:43063337:T:A	485403	Asn1730Ile	0.535	0.0	0.023	absent	-0.329646109752361	intermediate
+GRCh38:17:43049153:C:G	485397	Val1792Leu	0.623	0.0	0.011	absent	-0.323216046739691	intermediate
+GRCh38:17:43106518:T:A	479269	Lys50Asn	0.604	0.0	0.945	absent	-0.253562359007247	intermediate
+GRCh38:17:43124049:A:T	479225	Asn16Lys	0.561	0.08	0.479	absent	-0.291203178754204	intermediate
+GRCh38:17:43057074:G:C	482908	Ala1752Gly	0.637	0.0	0.125	present	-0.281368161514999	intermediate
+GRCh38:17:43063906:A:G	481464	Ile1707Thr	0.835	0.0	0.913	present	-0.1433250948322409	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067617:T:C	481444	Met1689Val	0.5	0.0	0.24	absent	0.5615404037321371	intermediate
+GRCh38:17:43047672:T:A	489733	Asp1813Val	0.262	0.0	0.006	absent	-0.1805607161148019	computational_tolerance + functional_LOF
+GRCh38:17:43047687:A:C	489732	Val1808Gly	0.843	0.0	0.845	absent	-1.93008814099227	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124048:C:A	489728	Ala17Ser	0.582	0.0	0.638	absent	0.244995540364458	intermediate
+GRCh38:17:43063361:G:T	491098	Ser1722Tyr	0.772	0.0	0.015	absent	-1.284016223324	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057110:A:G	491102	Val1740Ala	0.648	0.0	0.924	absent	0.0796598527324661	computational_impact + functional_normal
+GRCh38:17:43049140:G:A	496395	Ser1796Leu	0.392	0.04	0.003	absent	-0.7835870171002098	intermediate
+GRCh38:17:43057101:C:G	496391	Gly1743Ala	0.655	0.0	0.058	present	-1.2133956437475	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067617:T:G	496390	Met1689Leu	0.522	0.01	0.031	absent	-0.031839984390885	intermediate
+GRCh38:17:43057086:C:A	496392	Gly1748Val	0.749	0.0	0.023	absent	-1.26800840696668	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057077:C:A	531284	Arg1751Leu	0.727	0.0	0.012	absent	-0.371918700338791	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063928:T:G	531317	Thr1700Pro	0.84	0.0	0.988	absent	-2.27997885783161	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124078:G:T	531388	Arg7Ser	0.503	0.2	0.038	present	-0.921591673894526	intermediate
+GRCh38:17:43057083:G:A	531311	Pro1749Leu	0.718	0.0	0.056	absent	-2.09151893906852	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063349:C:G	531408	Arg1726Thr	0.532	0.06	0.043	absent	-0.108020882242448	intermediate
+GRCh38:17:43057095:T:C	560856	Asn1745Ser	0.427	0.07	0.006	absent	0.195848238107692	intermediate
+GRCh38:17:43063946:C:T	566134	Glu1694Lys	0.549	0.0	0.223	absent	-1.75545582628953	intermediate
+GRCh38:17:43063945:T:C	567879	Glu1694Gly	0.595	0.0	0.025	absent	-0.0458899992366069	intermediate
+GRCh38:17:43057098:C:T	571901	Arg1744Lys	0.541	0.0	0.155	absent	0.21732441862255	intermediate
+GRCh38:17:43047663:G:T	631079	Thr1816Lys	0.487	0.08	0.055	absent	-0.5050953379937101	intermediate
+GRCh38:17:43049159:A:G	630815	Ser1790Pro	0.61	0.0	0.215	absent	-0.545062213705706	intermediate
+GRCh38:17:43049162:C:G	628780	Ala1789Pro	0.795	0.0	0.383	absent	-1.67132779442868	computational_impact + functional_LOF (agreement)
+GRCh38:17:43051096:A:G	630918	Cys1767Arg	0.869	0.0	0.489	present	-1.02352073149176	computational_impact + functional_LOF (agreement)
+GRCh38:17:43051114:A:G	630802	Phe1761Leu	0.799	0.0	0.028	absent	-0.0465529055170588	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057132:C:G	628107	Asp1733His	0.664	0.0	0.55	absent	-0.0544888779988724	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063948:G:A	631209	Ala1693Val	0.621	0.08	0.015	absent	-1.67152473037458	intermediate
+GRCh38:17:43067667:T:A	631148	His1672Leu	0.482	0.07	0.0	absent	0.664878570566934	intermediate
+GRCh38:17:43067679:A:C	631339	Phe1668Cys	0.802	0.0	0.035	absent	-0.3250298917995939	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067679:A:G	629251	Phe1668Ser	0.81	0.0	0.845	absent	-1.76068713282001	computational_impact + functional_LOF (agreement)
+GRCh38:17:43070998:A:G	628290	Leu1639Ser	0.484	0.58	0.047	absent	0.3969955480039639	intermediate
+GRCh38:17:43071015:G:T	631413	Ser1633Arg	0.488	0.09	0.0	absent	-0.555716157713003	intermediate
+GRCh38:17:43071021:A:T	628576	Ser1631Arg	0.595	0.06	0.001	absent	0.154709037549276	intermediate
+GRCh38:17:43104922:C:T	629283	Val83Ile	0.575	0.23	0.455	present	-0.0934321813016914	intermediate
+GRCh38:17:43104949:G:T	629710	Gln74Lys	0.557	0.06	0.047	present	-0.7761061337997609	intermediate
+GRCh38:17:43124072:C:G	630444	Glu9Gln	0.586	0.1	0.711	absent	-0.292376184810078	intermediate
+GRCh38:17:43063373:C:A	632609	Trp1718Leu	0.933	0.0	0.56	absent	-1.37115523247543	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063370:A:G	652310	Val1719Ala	0.816	0.0	0.844	absent	0.3747867957781279	computational_impact + functional_normal
+GRCh38:17:43063924:A:G	664982	Leu1701Pro	0.813	0.0	0.988	absent	-1.30043059133703	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067619:A:G	655629	Val1688Ala	0.684	0.0	0.644	absent	-0.322963559452218	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067647:G:C	665905	Leu1679Val	0.488	1.0	0.012	absent	0.370339922652456	intermediate
+GRCh38:17:43071014:T:C	650798	Arg1634Gly	0.604	0.12	0.015	absent	0.519292946630737	intermediate
+GRCh38:17:43051095:C:G	801087	Cys1767Ser	0.767	0.0	0.209	present	-0.966362391806273	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067638:C:G	801081	Glu1682Gln	0.496	0.0	0.045	absent	-0.978868465162841	intermediate
+GRCh38:17:43047669:G:T	825736	Ala1814Asp	0.731	0.0	0.007	present	-1.25491240157845	computational_impact + functional_LOF (agreement)
+GRCh38:17:43047691:T:A	825717	Ile1807Phe	0.217	0.0	0.129	absent	-1.12507013556553	computational_tolerance + functional_LOF
+GRCh38:17:43049186:C:T	825665	Glu1781Lys	0.509	0.01	0.311	absent	0.1223307037461699	intermediate
+GRCh38:17:43051075:T:G	825649	Asn1774His	0.564	0.0	0.704	absent	0.136919874414982	intermediate
+GRCh38:17:43057058:G:T	825607	Asp1757Glu	0.412	0.44	0.006	absent	-0.0407180388420184	intermediate
+GRCh38:17:43057105:T:C	825568	Asn1742Asp	0.592	0.01	0.196	present	-0.749588491501205	intermediate
+GRCh38:17:43057133:A:T	825529	His1732Gln	0.546	0.07	0.037	absent	-0.1066809396453399	intermediate
+GRCh38:17:43063340:A:G	825518	Leu1729Pro	0.824	0.0	0.958	absent	-1.25811813513376	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063371:C:T	825488	Val1719Met	0.677	0.0	0.586	present	-0.540558899922355	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063880:A:G	825476	Tyr1716His	0.486	0.0	0.987	absent	0.293174677694855	intermediate
+GRCh38:17:43063880:A:T	825475	Tyr1716Asn	0.539	0.0	0.439	absent	0.0180862415763089	intermediate
+GRCh38:17:43063907:T:G	825461	Ile1707Leu	0.564	0.0	0.129	present	0.0780221890285954	intermediate
+GRCh38:17:43067634:T:C	825397	Glu1683Gly	0.445	0.32	0.74	absent	-1.0971505269913102	intermediate
+GRCh38:17:43067689:C:A	825349	Val1665Leu	0.599	0.0	0.001	present	-0.908947432730684	intermediate
+GRCh38:17:43070992:G:A	825294	Ala1641Val	0.531	0.21	0.025	absent	0.362735801041234	intermediate
+GRCh38:17:43104894:G:C	821773	Ala92Gly	0.747	0.0	0.722	absent	-1.29607333854295	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104897:C:G	821724	Cys91Ser	0.529	0.03	0.001	absent	-0.6245078205091129	intermediate
+GRCh38:17:43115764:C:G	823423	Lys32Asn	0.614	0.0	0.921	absent	-0.0915135458113136	intermediate
+GRCh38:17:43115778:G:C	827565	Leu28Val	0.701	0.0	0.631	absent	-0.728959633849956	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124029:T:G	826690	Glu23Ala	0.793	0.0	0.455	present	-0.608742915773584	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124084:C:G	819110	Ala5Pro	0.585	0.02	0.465	absent	-0.8928590529378051	intermediate
+GRCh38:17:43045751:T:G	861117	Asp1840Ala	0.835	0.0	0.461	absent	0.0408873762011184	computational_impact + functional_normal
+GRCh38:17:43045769:G:T	840931	Thr1834Asn	0.545	0.0	0.962	absent	-0.0496950637413476	intermediate
+GRCh38:17:43049128:A:C	844181	Leu1800Arg	0.511	0.39	0.0	absent	0.0201724922153654	intermediate
+GRCh38:17:43124041:T:C	864052	Gln19Arg	0.736	0.0	0.455	absent	0.0502988982912768	computational_impact + functional_normal
+GRCh38:17:43124057:C:A	848933	Val14Phe	0.607	0.0	0.944	present	-1.43176219554685	intermediate
+GRCh38:17:43045706:A:T	868679	Ile1855Lys	0.687	0.0	0.028	absent	-0.863843894941789	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045707:T:C	868677	Ile1855Val	0.435	0.88	0.0	absent	0.0462776303387803	intermediate
+GRCh38:17:43045712:T:A	865017	Tyr1853Phe	0.79	0.0	0.376	absent	-0.627988107807151	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045715:G:C	869042	Thr1852Ser	0.523	0.08	0.258	absent	-0.131134371063331	intermediate
+GRCh38:17:43045718:T:A	868660	Asp1851Val	0.599	0.0	0.011	absent	-0.675031571224461	intermediate
+GRCh38:17:43045721:A:G	867653	Leu1850Pro	0.746	0.0	0.988	absent	0.106617167469741	computational_impact + functional_normal
+GRCh38:17:43045726:C:A	869027	Gln1848His	0.682	0.0	0.263	present	-1.1808433092648505	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045728:G:C	868639	Gln1848Glu	0.667	0.0	0.151	absent	-0.353073612422102	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045740:G:A	868626	Leu1844Phe	0.598	0.02	0.264	absent	-0.170767947483597	intermediate
+GRCh38:17:43045745:A:G	864970	Val1842Ala	0.619	0.0	0.987	absent	-1.4948113395770402	intermediate
+GRCh38:17:43045749:T:A	868617	Ser1841Cys	0.783	0.0	0.742	absent	-0.023697712368313	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045750:G:C	868615	Asp1840Glu	0.777	0.0	0.001	absent	-1.36946449858641	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045775:A:C	868594	Val1832Gly	0.721	0.0	0.073	absent	-2.87157054358408	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045775:A:G	868593	Val1832Ala	0.672	0.0	0.708	present	-0.909867174020695	computational_impact + functional_LOF (agreement)
+GRCh38:17:43045779:G:T	864938	Pro1831Thr	0.531	0.26	0.165	present	-0.0149928976380875	intermediate
+GRCh38:17:43045781:G:A	864934	Ala1830Val	0.486	0.28	0.107	absent	-0.21197628861101	intermediate
+GRCh38:17:43045781:G:C	864933	Ala1830Gly	0.521	0.03	0.218	absent	-0.990940648228031	intermediate
+GRCh38:17:43045781:G:T	864932	Ala1830Glu	0.507	0.0	0.136	present	-1.12572817242339	intermediate
+GRCh38:17:43045783:C:G	868982	Glu1829Asp	0.498	0.15	0.111	absent	-3.61778280157322e-06	intermediate
+GRCh38:17:43045790:A:G	864923	Met1827Thr	0.527	0.15	0.107	absent	0.0630260478167066	intermediate
+GRCh38:17:43045790:A:T	864922	Met1827Lys	0.414	0.25	0.022	absent	-0.129843361578819	intermediate
+GRCh38:17:43045802:G:T	864909	Ala1823Glu	0.472	0.33	0.013	absent	0.135290185644148	intermediate
+GRCh38:17:43047646:G:A	868519	His1822Tyr	0.287	0.06	0.387	absent	-0.2424249649628339	computational_tolerance + functional_LOF
+GRCh38:17:43047649:A:G	868104	Phe1821Leu	0.335	0.08	0.0	absent	-0.0705944057349995	intermediate
+GRCh38:17:43047651:C:A	865546	Gly1820Val	0.316	0.0	0.112	present	0.262636792305302	intermediate
+GRCh38:17:43047653:A:T	868911	Asn1819Lys	0.191	0.02	0.01	absent	-0.231764896321833	computational_tolerance + functional_LOF
+GRCh38:17:43047655:T:A	868511	Asn1819Tyr	0.146	0.01	0.0	absent	-0.449637787239626	computational_tolerance + functional_LOF
+GRCh38:17:43047665:C:G	868899	Trp1815Cys	0.745	0.0	0.987	absent	-4.591698941323781	computational_impact + functional_LOF (agreement)
+GRCh38:17:43047673:C:G	867389	Asp1813His	0.281	0.0	0.766	absent	-0.981230415384132	computational_tolerance + functional_LOF
+GRCh38:17:43047682:C:G	867386	Val1810Leu	0.677	0.05	0.099	present	-0.135301414304995	computational_impact + functional_LOF (agreement)
+GRCh38:17:43047691:T:G	868476	Ile1807Leu	0.168	0.01	0.009	absent	0.177009280841274	computational_tolerance + functional_normal (agreement)
+GRCh38:17:43047693:G:T	868078	Pro1806Gln	0.516	0.0	0.007	absent	0.0738415973464122	intermediate
+GRCh38:17:43047696:T:C	867378	His1805Arg	0.49	0.18	0.0	absent	-0.0100644573327441	intermediate
+GRCh38:17:43047702:C:T	868461	Gly1803Asp	0.539	0.24	0.121	present	-1.07093036779495	intermediate
+GRCh38:17:43047703:C:G	868074	Gly1803Arg	0.562	0.0	0.015	present	0.104268267938043	intermediate
+GRCh38:17:43049126:C:G	865701	Gly1801Arg	0.487	0.32	0.005	absent	-0.261908995635857	intermediate
+GRCh38:17:43049132:T:C	868049	Thr1799Ala	0.567	0.01	0.014	present	0.197311230451047	intermediate
+GRCh38:17:43049143:A:T	868040	Leu1795His	0.558	0.02	0.984	absent	-0.161827929847202	intermediate
+GRCh38:17:43049149:T:C	865396	Lys1793Arg	0.584	0.07	0.109	absent	0.472239647341756	intermediate
+GRCh38:17:43049152:A:T	868389	Val1792Glu	0.82	0.0	0.775	absent	-1.0339054301172	computational_impact + functional_LOF (agreement)
+GRCh38:17:43049155:A:C	868035	Val1791Gly	0.823	0.0	0.936	absent	-0.6542998429020551	computational_impact + functional_LOF (agreement)
+GRCh38:17:43049166:A:C	868032	Cys1787Trp	0.789	0.0	0.763	absent	-1.95535837760952	computational_impact + functional_LOF (agreement)
+GRCh38:17:43049174:G:C	868367	Gln1785Glu	0.374	0.3	0.003	absent	0.269408296524204	intermediate
+GRCh38:17:43049181:C:G	865368	Trp1782Cys	0.533	0.04	0.991	absent	-0.17742550575048	intermediate
+GRCh38:17:43049189:G:C	868022	Leu1780Val	0.582	0.0	0.019	absent	-0.6909530416435962	intermediate
+GRCh38:17:43049192:G:T	865633	Gln1779Lys	0.555	0.03	0.153	absent	0.174697663649451	intermediate
+GRCh38:17:43049193:A:T	865356	Asp1778Glu	0.527	0.12	0.009	present	-0.20823704088306	intermediate
+GRCh38:17:43051069:G:T	865307	Pro1776Thr	0.481	0.18	0.2	absent	-0.151370594978487	intermediate
+GRCh38:17:43051070:C:A	865306	Met1775Ile	0.606	0.0	0.085	present	-0.844174268411832	intermediate
+GRCh38:17:43051086:C:T	867980	Gly1770Glu	0.677	0.27	0.234	absent	-0.2418053402376749	computational_impact + functional_LOF (agreement)
+GRCh38:17:43051087:C:T	865581	Gly1770Arg	0.739	0.01	0.299	absent	-1.26337029729486	computational_impact + functional_LOF (agreement)
+GRCh38:17:43051092:C:G	865283	Cys1768Ser	0.733	0.0	0.209	absent	-0.513420934838165	computational_impact + functional_LOF (agreement)
+GRCh38:17:43051102:C:T	865272	Glu1765Lys	0.58	0.11	0.147	absent	-0.102273747831075	intermediate
+GRCh38:17:43051105:G:T	868288	Leu1764Ile	0.519	0.01	0.03	present	-0.457075645766635	intermediate
+GRCh38:17:43051107:C:G	868287	Gly1763Ala	0.722	0.0	0.045	absent	0.6362917429080122	computational_impact + functional_normal
+GRCh38:17:43051111:T:A	867955	Arg1762Trp	0.572	0.0	0.867	absent	0.246660900229952	intermediate
+GRCh38:17:43051117:T:G	868284	Ile1760Leu	0.399	0.34	0.015	absent	-0.1927880689859669	intermediate
+GRCh38:17:43057068:T:C	867287	Glu1754Gly	0.75	0.0	0.091	absent	-0.106235488064118	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057089:T:C	867267	Gln1747Arg	0.485	0.14	0.003	absent	0.200842360256771	intermediate
+GRCh38:17:43057105:T:G	868199	Asn1742His	0.612	0.0	0.005	absent	-0.0283156120907143	intermediate
+GRCh38:17:43057107:A:G	868195	Val1741Ala	0.632	0.0	0.659	absent	-0.274187750020751	intermediate
+GRCh38:17:43057110:A:C	867858	Val1740Gly	0.805	0.0	0.974	absent	-0.506044073452074	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057111:C:G	867857	Val1740Leu	0.615	0.0	0.013	absent	-0.0635160678177613	intermediate
+GRCh38:17:43057116:C:G	865166	Gly1738Ala	0.671	0.0	0.024	absent	-2.42390360666334	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057119:C:A	868187	Arg1737Ile	0.609	0.01	0.146	absent	0.204096135852601	intermediate
+GRCh38:17:43057119:C:T	868185	Arg1737Lys	0.475	0.15	0.195	absent	-0.9493474029303448	intermediate
+GRCh38:17:43057126:C:G	865156	Glu1735Gln	0.779	0.0	0.124	absent	-0.249794861930793	computational_impact + functional_LOF (agreement)
+GRCh38:17:43057135:G:T	867500	His1732Asn	0.5	0.07	0.176	absent	-0.5866640054502329	intermediate
+GRCh38:17:43063333:C:A	867789	Glu1731Asp	0.594	0.03	0.048	absent	-0.0311382534387421	intermediate
+GRCh38:17:43063334:T:C	867786	Glu1731Gly	0.769	0.01	0.301	absent	0.0652273024678645	computational_impact + functional_normal
+GRCh38:17:43063337:T:G	865097	Asn1730Thr	0.511	0.01	0.0	absent	-0.178811215209827	intermediate
+GRCh38:17:43063338:T:G	865094	Asn1730His	0.493	0.06	0.123	absent	0.421659853859503	intermediate
+GRCh38:17:43063341:G:C	868120	Leu1729Val	0.603	0.0	0.096	present	0.196300676287272	intermediate
+GRCh38:17:43063342:C:T	867781	Met1728Ile	0.441	1.0	0.001	absent	-0.296985542916493	intermediate
+GRCh38:17:43063344:T:C	867776	Met1728Val	0.48	0.46	0.003	present	0.113929224486424	intermediate
+GRCh38:17:43063346:T:G	867445	Lys1727Thr	0.628	0.01	0.761	absent	0.1772598575328569	intermediate
+GRCh38:17:43063347:T:C	867444	Lys1727Glu	0.599	0.0	0.006	absent	0.552034290481192	intermediate
+GRCh38:17:43063349:C:T	865082	Arg1726Lys	0.496	0.34	0.003	absent	0.0656067842873872	intermediate
+GRCh38:17:43063352:T:C	868771	Glu1725Gly	0.531	0.02	0.01	absent	0.230840789668226	intermediate
+GRCh38:17:43063361:G:C	868766	Ser1722Cys	0.645	0.04	0.003	absent	0.197527537137091	computational_impact + functional_normal
+GRCh38:17:43063364:T:C	867755	Gln1721Arg	0.586	0.13	0.066	absent	-0.203878344046421	intermediate
+GRCh38:17:43063874:A:G	865030	Trp1718Arg	0.915	0.0	0.195	absent	-1.6503322359382702	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063883:T:C	867402	Ser1715Gly	0.698	0.0	0.334	absent	-0.8945015747535859	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063886:C:G	865011	Val1714Leu	0.655	0.0	0.036	absent	-0.0114337714354798	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063886:C:T	865010	Val1714Ile	0.59	0.0	0.078	absent	-0.4388771292981029	intermediate
+GRCh38:17:43063888:A:T	868701	Val1713Glu	0.76	0.0	0.514	absent	-2.18378786479938	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063892:A:G	867685	Trp1712Arg	0.879	0.0	0.439	absent	-0.237008767323878	computational_impact + functional_LOF (agreement)
+GRCh38:17:43063898:C:G	868692	Gly1710Arg	0.668	0.29	0.366	absent	0.3834514875001129	computational_impact + functional_normal
+GRCh38:17:43063900:C:G	868687	Gly1709Ala	0.703	0.0	0.618	absent	0.116068252212263	computational_impact + functional_normal
+GRCh38:17:43063914:A:C	867662	Phe1704Leu	0.607	0.0	0.007	absent	-1.85217401205403	intermediate
+GRCh38:17:43063933:T:C	868634	Glu1698Gly	0.704	0.0	0.717	absent	-0.1384841285817349	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067614:T:C	867593	Lys1690Glu	0.665	0.0	0.013	present	-0.629180784542703	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067615:C:G	867591	Met1689Ile	0.491	0.17	0.054	absent	-0.095807980502264	intermediate
+GRCh38:17:43067617:T:A	864898	Met1689Leu	0.522	0.01	0.031	absent	-0.484375978767089	intermediate
+GRCh38:17:43067620:C:T	868974	Val1688Ile	0.477	1.0	0.0	absent	0.0487756195300588	intermediate
+GRCh38:17:43067623:C:G	868574	Val1687Leu	0.546	0.0	0.011	absent	-0.0695057398421208	intermediate
+GRCh38:17:43067631:G:C	868965	Thr1684Ser	0.745	0.0	0.915	absent	-1.30500871881027	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067633:C:A	868565	Glu1683Asp	0.603	0.13	0.39	absent	-0.1626616335581309	intermediate
+GRCh38:17:43067635:C:T	867573	Glu1683Lys	0.612	0.03	0.04	absent	-1.99075203431829	intermediate
+GRCh38:17:43067643:A:C	868952	Ile1680Ser	0.674	0.0	0.166	absent	-0.272118587848758	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067644:T:C	868551	Ile1680Val	0.444	0.16	0.001	absent	0.1580576303348919	intermediate
+GRCh38:17:43067646:A:C	867560	Leu1679Arg	0.484	0.18	0.081	absent	0.2546109257225439	intermediate
+GRCh38:17:43067648:A:C	867556	Asn1678Lys	0.463	0.0	0.181	absent	0.193543714315205	intermediate
+GRCh38:17:43067649:T:C	865556	Asn1678Ser	0.259	0.03	0.007	present	0.2029688968670079	computational_tolerance + functional_normal (agreement)
+GRCh38:17:43067650:T:A	865554	Asn1678Tyr	0.604	0.0	0.491	absent	-0.0799880288479798	intermediate
+GRCh38:17:43067650:T:C	865553	Asn1678Asp	0.398	0.43	0.2	absent	0.519645257077495	intermediate
+GRCh38:17:43067653:T:C	868940	Thr1677Ala	0.489	0.04	0.051	absent	-0.398041548203807	intermediate
+GRCh38:17:43067667:T:C	868927	His1672Arg	0.514	0.05	0.018	present	0.5042527341928329	intermediate
+GRCh38:17:43067670:T:C	868525	Lys1671Arg	0.42	0.08	0.0	present	0.298685820996946	intermediate
+GRCh38:17:43067672:T:A	867533	Arg1670Ser	0.651	0.0	0.859	absent	-1.2450465215430602	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067673:C:T	865528	Arg1670Lys	0.376	0.12	0.062	absent	-1.5526979248423	intermediate
+GRCh38:17:43067674:T:C	865526	Arg1670Gly	0.687	0.0	0.893	absent	0.217765798580629	computational_impact + functional_normal
+GRCh38:17:43067678:A:C	868916	Phe1668Leu	0.542	0.0	0.239	absent	-0.045968038805677	intermediate
+GRCh38:17:43067680:A:G	868514	Phe1668Leu	0.601	0.0	0.239	present	0.2545107218857499	intermediate
+GRCh38:17:43067685:T:A	865515	Tyr1666Phe	0.448	0.0	0.007	absent	-0.0410385296899268	intermediate
+GRCh38:17:43067688:A:T	868905	Val1665Glu	0.775	0.0	0.119	absent	-1.72003404972147	computational_impact + functional_LOF (agreement)
+GRCh38:17:43067692:G:C	868501	Leu1664Val	0.532	0.07	0.001	absent	-0.447092426335367	intermediate
+GRCh38:17:43067693:C:A	868099	Met1663Ile	0.559	0.01	0.001	present	-0.404924608574949	intermediate
+GRCh38:17:43067694:A:G	868095	Met1663Thr	0.534	0.03	0.16	present	-0.8088266943784	intermediate
+GRCh38:17:43070929:A:C	868081	Phe1662Cys	0.523	0.09	0.023	present	0.7481641672689759	intermediate
+GRCh38:17:43070929:A:T	865489	Phe1662Tyr	0.488	0.41	0.127	absent	0.052872220357304	intermediate
+GRCh38:17:43070930:A:G	865487	Phe1662Leu	0.364	0.92	0.003	absent	-0.0496224300991557	intermediate
+GRCh38:17:43070935:T:G	868470	Glu1660Ala	0.586	0.0	0.267	absent	0.13457731401999	intermediate
+GRCh38:17:43070948:C:T	868458	Gly1656Ser	0.734	0.0	0.189	absent	-0.499145944604371	computational_impact + functional_LOF (agreement)
+GRCh38:17:43070967:T:G	868867	Arg1649Ser	0.619	0.03	0.769	absent	0.208336568294786	intermediate
+GRCh38:17:43070968:C:T	868865	Arg1649Lys	0.56	0.17	0.825	present	0.075178455167008	intermediate
+GRCh38:17:43070969:T:C	868440	Arg1649Gly	0.596	0.19	0.866	present	0.5222316512188301	intermediate
+GRCh38:17:43070980:C:T	868425	Arg1645Lys	0.618	0.14	0.06	absent	-0.0560751717928809	intermediate
+GRCh38:17:43070986:G:A	865429	Thr1643Ile	0.601	0.1	0.059	absent	-0.174565420561269	intermediate
+GRCh38:17:43070992:G:T	868410	Ala1641Asp	0.533	0.01	0.035	absent	0.441891174889265	intermediate
+GRCh38:17:43070995:G:A	865684	Thr1640Ile	0.587	0.77	0.005	absent	-0.0218986974718469	intermediate
+GRCh38:17:43070997:C:A	865415	Leu1639Phe	0.588	0.66	0.001	absent	-0.128654136121499	intermediate
+GRCh38:17:43071005:G:T	865674	Pro1637Thr	0.568	0.0	0.005	absent	-0.659918849676847	intermediate
+GRCh38:17:43071010:T:C	868839	Glu1635Gly	0.488	0.21	0.024	absent	-0.09675439111036	intermediate
+GRCh38:17:43071016:C:T	865663	Ser1633Asn	0.355	0.12	0.0	absent	-0.1227211530183019	intermediate
+GRCh38:17:43071023:T:C	868834	Ser1631Gly	0.499	0.25	0.017	absent	0.305708317472987	intermediate
+GRCh38:17:43104881:G:T	868828	Asp96Glu	0.102	0.0	0.095	absent	-3.8443814269126295	computational_tolerance + functional_LOF
+GRCh38:17:43104888:T:G	865628	Gln94Pro	0.115	0.0	0.044	absent	-1.2029044729423	computational_tolerance + functional_LOF
+GRCh38:17:43104895:C:A	868342	Ala92Ser	0.64	0.0	0.638	absent	-0.580671009093887	intermediate
+GRCh38:17:43104909:A:G	865611	Leu87Ser	0.665	0.02	0.64	absent	0.0036569972417714	computational_impact + functional_normal
+GRCh38:17:43104910:A:T	865610	Leu87Met	0.531	0.0	0.9	absent	-0.436587615023912	intermediate
+GRCh38:17:43104912:A:G	865339	Leu86Pro	0.767	0.0	0.98	absent	-1.9964456629302496	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104914:C:G	868809	Glu85Asp	0.552	0.09	0.722	absent	-0.772470137838265	intermediate
+GRCh38:17:43104916:C:G	868804	Glu85Gln	0.65	0.03	0.095	absent	0.5965181635971739	computational_impact + functional_normal
+GRCh38:17:43104916:C:T	868315	Glu85Lys	0.68	0.03	0.56	absent	-3.71822115320077	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104918:T:C	868310	Glu84Gly	0.743	0.0	0.638	present	0.0977008263695057	computational_impact + functional_normal
+GRCh38:17:43104919:C:T	865327	Glu84Lys	0.628	0.01	0.482	absent	-1.4151940527380702	intermediate
+GRCh38:17:43104922:C:G	867375	Val83Leu	0.682	0.0	0.306	absent	-0.5153134800922079	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104924:A:C	867371	Leu82Arg	0.804	0.0	0.058	absent	-2.5096592901989103	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104925:G:A	868803	Leu82Phe	0.693	0.0	0.078	present	-1.79948636614858	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104925:G:C	868802	Leu82Val	0.647	0.0	0.638	absent	-0.788895725099636	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104926:T:A	868800	Gln81His	0.56	0.0	0.81	absent	-1.3942695239741298	intermediate
+GRCh38:17:43104927:T:C	868798	Gln81Arg	0.614	0.0	0.029	absent	0.198078810911722	intermediate
+GRCh38:17:43104931:T:C	865313	Ser80Gly	0.619	0.04	0.842	absent	0.141974945502884	intermediate
+GRCh38:17:43104931:T:G	865312	Ser80Arg	0.681	0.0	0.435	absent	-0.763797379784919	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104932:A:T	865309	Phe79Leu	0.75	0.0	0.283	absent	0.0545034602353462	computational_impact + functional_normal
+GRCh38:17:43104933:A:C	867368	Phe79Cys	0.801	0.0	0.852	absent	-0.194974239294707	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104933:A:G	867367	Phe79Ser	0.85	0.0	0.047	absent	-0.6483022245832939	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104934:A:G	867365	Phe79Leu	0.728	0.0	0.283	absent	-0.30018783974369	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104940:T:G	865301	Thr77Pro	0.673	0.13	0.812	absent	-0.6313819436270239	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104943:T:C	867985	Ser76Gly	0.734	0.01	0.881	absent	0.844991185551513	computational_impact + functional_normal
+GRCh38:17:43104946:C:G	867357	Glu75Gln	0.541	0.01	0.724	absent	-0.9728596889907508	intermediate
+GRCh38:17:43104954:C:A	867977	Ser72Ile	0.672	0.0	0.071	absent	-1.01387392358275	computational_impact + functional_LOF (agreement)
+GRCh38:17:43104956:C:A	867971	Arg71Ser	0.718	0.0	0.237	present	-2.40516553009356	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106462:G:C	868282	Thr69Ser	0.646	0.0	0.376	absent	-0.201005025579741	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106464:T:C	868278	Ile68Met	0.646	0.0	0.81	absent	0.122549115399585	computational_impact + functional_normal
+GRCh38:17:43106468:T:C	867326	Asp67Gly	0.589	0.03	0.156	absent	0.0456568383840613	intermediate
+GRCh38:17:43106474:T:G	868265	Lys65Thr	0.732	0.0	0.724	absent	-0.0847304380898753	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106483:G:A	865233	Pro62Leu	0.919	0.0	0.99	present	-0.530946091433252	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106484:G:A	868256	Pro62Ser	0.888	0.0	0.876	absent	-0.7396213872834421	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106486:C:A	867923	Cys61Phe	0.956	0.0	0.944	absent	-1.93751901318034	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106495:G:T	868242	Pro58His	0.65	0.0	0.98	absent	-1.46809657233464	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106503:C:A	867292	Lys55Asn	0.576	0.0	0.23	absent	0.0127625313699572	intermediate
+GRCh38:17:43106508:G:C	868234	Gln54Glu	0.577	0.0	0.684	absent	-0.314001650399221	intermediate
+GRCh38:17:43106514:G:C	867281	Leu52Val	0.686	0.0	0.904	absent	-0.1050636875934259	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106517:G:A	865203	Leu51Phe	0.688	0.0	0.978	absent	-0.145244780755562	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106522:A:G	867886	Leu49Pro	0.741	0.0	0.973	present	-1.62451858428158	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106525:A:G	867269	Met48Thr	0.72	0.0	0.589	absent	-0.0633378478729209	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106532:A:C	867878	Phe46Val	0.679	0.01	0.631	absent	-0.400503796929427	computational_impact + functional_LOF (agreement)
+GRCh38:17:43106532:A:G	867877	Phe46Leu	0.659	0.01	0.631	absent	-0.578320565388626	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115726:T:A	865153	Lys45Ile	0.356	0.0	0.022	absent	-2.4358058246935497	intermediate
+GRCh38:17:43115727:T:C	865150	Lys45Glu	0.562	0.0	0.085	absent	-0.634450233958355	intermediate
+GRCh38:17:43115731:A:C	867833	Phe43Leu	0.799	0.01	0.684	absent	-1.1818865203369198	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115732:A:T	867829	Phe43Tyr	0.66	0.0	0.705	absent	-0.221090144399722	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115733:A:C	867828	Phe43Val	0.801	0.03	0.767	absent	-1.03847047425694	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115735:A:G	867506	Ile42Thr	0.599	0.0	0.83	absent	-0.0757505608216063	intermediate
+GRCh38:17:43115747:T:A	865133	Lys38Met	0.637	0.0	0.972	absent	-0.271030936348293	intermediate
+GRCh38:17:43115747:T:C	865132	Lys38Arg	0.55	0.05	0.875	present	-0.187628556558442	intermediate
+GRCh38:17:43115748:T:C	865129	Lys38Glu	0.567	0.0	0.834	absent	-0.0591683644642362	intermediate
+GRCh38:17:43115751:T:G	868145	Thr37Pro	0.821	0.01	0.085	absent	-0.368808462244033	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115757:C:T	867489	Val35Ile	0.512	0.11	0.294	absent	-0.3373746262212529	intermediate
+GRCh38:17:43115760:G:T	865117	Pro34Thr	0.839	0.0	0.907	absent	-1.18400047550482	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115766:T:C	867793	Lys32Glu	0.624	0.05	0.23	absent	-0.0877744100664281	intermediate
+GRCh38:17:43115768:A:G	867477	Ile31Thr	0.684	0.0	0.83	absent	-0.133781446217631	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115768:A:T	867476	Ile31Asn	0.695	0.0	0.92	absent	-0.8282234786938331	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115771:A:C	865103	Leu30Trp	0.712	0.0	0.997	absent	-0.295743493236045	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115771:A:G	865102	Leu30Ser	0.627	0.0	0.986	absent	0.0601091190569478	intermediate
+GRCh38:17:43115775:C:T	868122	Glu29Lys	0.713	0.0	0.881	absent	-0.645511679301639	computational_impact + functional_LOF (agreement)
+GRCh38:17:43115778:G:T	867464	Leu28Met	0.59	0.0	0.973	absent	-0.559160152972987	intermediate
+GRCh38:17:43124028:C:A	868756	Glu23Asp	0.609	0.0	0.638	absent	-0.8732068931060449	intermediate
+GRCh38:17:43124030:C:T	867739	Glu23Lys	0.734	0.0	0.095	absent	-0.342968970516733	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124039:T:C	868743	Lys20Glu	0.692	0.0	0.56	absent	-0.419304746954729	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124042:G:C	867726	Gln19Glu	0.686	0.0	0.354	absent	-0.170930864062617	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124043:C:A	867724	Met18Ile	0.678	0.0	0.17	absent	-0.1938459867704549	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124045:T:C	865042	Met18Val	0.667	0.0	0.022	absent	-0.947284908003992	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124047:G:C	869097	Ala17Gly	0.544	0.14	0.638	absent	-0.180847973262728	intermediate
+GRCh38:17:43124048:C:G	869095	Ala17Pro	0.639	0.0	0.9	absent	-2.8798217378467	intermediate
+GRCh38:17:43124056:A:G	865032	Val14Ala	0.643	0.0	0.61	absent	0.062406302949053	intermediate
+GRCh38:17:43124068:T:C	869084	Glu10Gly	0.787	0.0	0.724	absent	-0.183632895124666	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124069:C:T	869080	Glu10Lys	0.723	0.0	0.322	absent	-0.7696158789837689	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124074:A:G	867693	Val8Ala	0.591	0.03	0.009	absent	0.2234064970773299	intermediate
+GRCh38:17:43124074:A:T	867692	Val8Asp	0.674	0.0	0.007	absent	-1.12167589876894	computational_impact + functional_LOF (agreement)
+GRCh38:17:43124081:G:C	868697	Leu6Val	0.447	1.0	0.0	absent	0.163586304203768	intermediate
+GRCh38:17:43124084:C:T	867681	Ala5Thr	0.525	0.27	0.119	absent	-0.0878381970969909	intermediate
+GRCh38:17:43124089:A:G	869066	Leu3Ser	0.548	0.11	0.532	present	-0.0664564027844771	intermediate
+GRCh38:17:43124092:T:C	868684	Asp2Gly	0.654	0.0	0.995	absent	-1.01782797782734	computational_impact + functional_LOF (agreement)

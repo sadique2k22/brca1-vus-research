@@ -87,6 +87,9 @@ jobs:
       - name: Phase 5 analysis (statistics + figures + tables)
         run: python scripts/phase5_analysis.py
 
+      - name: Phase 6 literature review (MaveDB + ClinVar + PubMed)
+        run: python scripts/phase6_literature.py
+
       - name: Commit generated results
         run: |
           git config user.name "github-actions[bot]"

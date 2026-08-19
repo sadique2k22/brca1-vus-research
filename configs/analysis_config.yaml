@@ -36,3 +36,10 @@ thresholds:
     revel_tolerance: "computational-tolerance-supporting"
     revel_intermediate: "intermediate/indeterminate"
     revel_impact: "computational-impact-supporting"
+
+# Phase 6 candidate prioritization (frozen BEFORE literature searches).
+phase6:
+  tier1_classes: ["C", "E", "G"]
+  tier2_classes: ["A", "B"]
+  tier3_classes: ["D"]
+  tier_note: "A variant's tier = highest tier among its pattern classes. Literature findings do not alter tiering."

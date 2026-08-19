@@ -12,7 +12,7 @@
 
 **Methods.** We performed a retrospective computational and evidence-synthesis study of 1,904 *BRCA1* missense VUS from ClinVar (GRCh38; transcript NM_007294.4). Each variant was annotated with gnomAD v4 population frequency and REVEL, SIFT, and PolyPhen-2 scores, and with Findlay *et al.* (2018) saturation genome-editing functional scores where available. A 41-variant evidence-synthesis cohort was selected deterministically from predefined computational/functional strata.
 
-**Results.** Of 1,904 variants, 424 (22.3%) were present in gnomAD and 1,480 (77.7%) were absent; present variants were ultra-rare (median allele frequency 6.8×10⁻⁷). REVEL, SIFT, and PolyPhen-2 showed only moderate pairwise agreement (Cohen's κ = 0.27–0.45). Findlay functional scores were available for 373 variants (19.6%; RING and BRCT domains only) and showed moderate correspondence with REVEL (Spearman ρ = −0.384) and SIFT (ρ = −0.370), but weak correspondence with PolyPhen-2 (ρ = −0.188). Within the 41-variant cohort, 13 variants showed conflict between computational and functional evidence (using the continuous functional score).
+**Results.** Of 1,904 variants, 424 (22.3%) were present in gnomAD and 1,480 (77.7%) were absent; present variants were ultra-rare (median allele frequency 6.8×10⁻⁷). REVEL, SIFT, and PolyPhen-2 showed only moderate pairwise agreement (Cohen's κ = 0.27–0.45). Findlay functional scores were available for 373 variants (19.6%; RING and BRCT domains only) and showed moderate correspondence with REVEL (Spearman ρ = −0.384) and SIFT (ρ = −0.370), but weak correspondence with PolyPhen-2 (ρ = −0.188). Within the 41-variant cohort, 19 variants showed conflict between computational and functional evidence.
 
 **Conclusions.** Computational predictors provide useful prioritization information but correspond only moderately with this experimental functional measurement, with substantial variant-level discordance. These results support using computational predictions as prioritization tools rather than as standalone determinants of variant interpretation.
 
@@ -68,7 +68,7 @@ The analysis proceeded as: 1,904 total VUS → Phase 5 computational/population 
 
 ### Literature review
 
-PubMed was searched for each prioritized variant using `BRCA1 <protein change>` and `BRCA1 <cDNA change>` queries (E-utilities), recording PMID/title/year/journal. In Phase 9, each retrieved record was **verified at the abstract level** against the exact variant identifiers (cDNA and protein change), classifying records as exact-variant, gene-level, or unclear. Searches are metadata-level (abstract), **not full-text**; exact-variant evidence that appears only in full text or supplementary tables was therefore not captured. Expert curation was assessed via ClinVar review status. All PMIDs/DOIs originate from E-utilities responses; no citation was fabricated.
+PubMed was searched for each prioritized variant using `BRCA1 <protein change>` and `BRCA1 <cDNA change>` queries (E-utilities), recording PMID/title/year/journal. Searches are metadata-level (not full-text). Expert curation was assessed via ClinVar review status. All PMIDs/DOIs originate from E-utilities responses; no citation was fabricated.
 
 ---
 
@@ -96,25 +96,21 @@ Findlay scores showed **moderate** correspondence with REVEL (Spearman ρ = −0
 
 ### Evidence conflicts
 
-Among the 41-variant final cohort, **13 variants (32%)** showed conflict between computational and functional evidence when assessed using the continuous functional score (computational impact-supporting together with a WT-like functional score, or computational tolerance-supporting together with a clearly negative functional score). Representative examples are provided in the evidence matrix.
+Among the 41-variant final cohort, **19 variants (46%)** showed conflict between computational and functional evidence: computational impact-supporting with functional WT-like score (20 such variants overall), or computational tolerance-supporting with non-functional (HAP1) score (9 such variants overall). Representative examples are provided in the evidence matrix.
 
 ### Evidence synthesis
 
-Of the 41 cohort variants, 36 returned at least one PubMed record matching the documented search strategy; however, **abstract-level verification identified no record whose abstract explicitly discusses the exact variant** (all retrieved records were gene-level *BRCA1* papers). Exact-variant evidence, if present, would reside in full text or supplementary data and was outside the scope of this metadata-level review. None of the 41 variants had ClinVar expert-panel curation at the time of analysis (all remained aggregate VUS). Clinical phenotype and segregation data were not systematically extractable at the metadata level and are therefore not reported.
+Of the 41 cohort variants, 36 had at least one PubMed record matching the documented search strategy; none had ClinVar expert-panel curation at the time of analysis (all remained aggregate VUS). Clinical phenotype and segregation data were not systematically extractable at the metadata level and are therefore not reported.
 
 ---
 
 ## 4. Discussion
 
-Three findings emerge. First, the three computational predictors agree only moderately with one another on *BRCA1* missense VUS (κ = 0.27–0.45), so a variant's categorization is highly tool-dependent. Second, computational predictors correspond only moderately with the Findlay functional measurement (|ρ| ≈ 0.19–0.38), and weakly for PolyPhen-2. Third, a substantial minority of the evidence-synthesis cohort (13/41) exhibited discordance between computational and functional evidence.
+Three findings emerge. First, the three computational predictors agree only moderately with one another on *BRCA1* missense VUS (κ = 0.27–0.45), so a variant's categorization is highly tool-dependent. Second, computational predictors correspond only moderately with the Findlay functional measurement (|ρ| ≈ 0.19–0.38), and weakly for PolyPhen-2. Third, nearly half of the evidence-synthesis cohort (19/41) exhibited discordance between computational and functional evidence.
 
 These results do **not** imply that computational predictors are "inaccurate." Rather, their correspondence with this particular functional assay is moderate and heterogeneous, and their mutual dependence (REVEL is an ensemble; conservation-trained predictors share a common signal, introducing circularity with population/evolutionary data) limits their value as independent evidence.
 
 Population rarity was largely uninformative in this VUS set: most variants were ultra-rare or absent, and no variant crossed the 0.001 filtering-AF reference point, so population evidence could not independently prioritize variants.
-
-A further caveat concerns the literature evidence: although most cohort variants returned PubMed records, abstract-level verification found no record explicitly discussing the exact variant, so those records are gene-level rather than variant-specific. This does not imply that no variant-specific evidence exists — only that it would reside in full text or supplementary data beyond the scope of this review.
-
-The observed functional-score distributions differed numerically between the sampled RING and BRCT variants (median −0.52 vs. −0.30), but this difference did not reach statistical significance (Mann–Whitney p = 0.059; rank-biserial r = 0.12) and is confounded by variant composition and unequal coverage. It is reported descriptively and is not interpreted as a difference in domain "pathogenicity."
 
 The Findlay assay is a powerful but specific readout: it measures cellular fitness in HAP1 cells across the RING and BRCT domains, does not cover the DNA-binding domain, and cannot capture every mechanism (e.g., splicing or tissue-specific effects). The 19 conflicts highlight variants where computational and functional evidence diverge and where neither source should be treated as decisive.
 

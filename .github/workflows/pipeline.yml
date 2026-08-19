@@ -93,6 +93,9 @@ jobs:
       - name: Phase 6.5 — full Findlay integration
         run: python scripts/phase6_5_findlay.py
 
+      - name: Phase 7 — final evidence cohort + synthesis
+        run: python scripts/phase7_cohort.py
+
       - name: Commit generated results
         run: |
           git config user.name "github-actions[bot]"

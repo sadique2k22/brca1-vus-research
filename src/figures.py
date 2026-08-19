@@ -155,3 +155,94 @@ def fig10_population_freq(global_af, popmax_af):
     ax.set_ylabel("max population filtering AF (faf95 popmax)")
     ax.set_title("Figure 10 — global vs population frequency")
     _save(fig, "fig10_population_frequency")
+
+
+# ---- Phase 7 figures ----
+
+def fig11_cohort(stratum_counts):
+    fig, ax = plt.subplots(figsize=(4.5, 3.2))
+    order = ["A", "B", "C", "D", "E"]
+    vals = [stratum_counts.get(k, 0) for k in order]
+    ax.bar(order, vals, color="#4C72B0", edgecolor="k")
+    ax.set_xlabel("Stratum")
+    ax.set_ylabel("Variants")
+    ax.set_title("Figure 11 — final cohort composition")
+    _save(fig, "fig11_cohort_composition")
+
+
+def fig12_predictor_functional(revel, fscore):
+    fig, ax = plt.subplots()
+    _scatter(ax, revel, fscore, "REVEL", "Findlay function score (lower = LOF)",
+             "Figure 12 — REVEL vs Findlay functional score")
+    _save(fig, "fig12_predictor_vs_functional")
+
+
+def fig13_concordance(evidence):
+    import numpy as np
+    # evidence rows: [.., stratum(2), gnomAD(3), comp(4), findlay(5), ..., conflict(12)]
+    cats = ["impact+LOF", "impact+normal", "tol+LOF", "tol+normal", "intermediate"]
+    mat = np.zeros((5, 5))
+    for e in evidence:
+        comp = e[4]
+        func = e[5]
+        i = {"impact": 0, "tolerance": 1, "intermediate": 2}.get(comp, 2)
+        j = {"LOF": 0, "normal": 1, "NA": 2}.get(func, 2)
+        mat[i, j] += 1
+    fig, ax = plt.subplots(figsize=(4.5, 3.5))
+    im = ax.imshow(mat[:3, :2], cmap="Blues")
+    ax.set_xticks([0, 1]); ax.set_xticklabels(["LOF", "normal"])
+    ax.set_yticks([0, 1, 2]); ax.set_yticklabels(["impact", "tolerance", "intermediate"])
+    for i in range(3):
+        for j in range(2):
+            ax.text(j, i, int(mat[i, j]), ha="center", va="center", fontsize=8)
+    fig.colorbar(im, ax=ax)
+    ax.set_title("Figure 13 — computational vs functional concordance")
+    _save(fig, "fig13_concordance")
+
+
+def fig14_functional_by_category(scored):
+    # scored: list of (fs, rv, sv, pv)
+    def cat(rv):
+        if rv is None:
+            return "intermediate"
+        return "impact" if rv >= 0.644 else ("tolerance" if rv <= 0.290 else "intermediate")
+    groups = {"impact": [], "tolerance": [], "intermediate": []}
+    for fs, rv, sv, pv in scored:
+        groups[cat(rv)].append(fs)
+    fig, ax = plt.subplots()
+    data = [groups["impact"], groups["tolerance"], groups["intermediate"]]
+    ax.violinplot(data, showmedians=True)
+    ax.set_xticks([1, 2, 3]); ax.set_xticklabels(["impact", "tolerance", "intermediate"])
+    ax.set_ylabel("Findlay function score")
+    ax.set_title("Figure 14 — functional score by REVEL category")
+    _save(fig, "fig14_functional_by_category")
+
+
+def fig15_evidence_availability(evidence):
+    import numpy as np
+    # evidence rows: [.., findlay(5), other(6), clinical(7), segregation(8), expert(9), ...]
+    n = len(evidence)
+    avail = {
+        "Findlay": sum(1 for e in evidence if e[5] in ("LOF", "normal")),
+        "other functional": sum(1 for e in evidence if e[6] != "none identified"),
+        "clinical cases": sum(1 for e in evidence if e[7] != "not assessed"),
+        "segregation": sum(1 for e in evidence if e[8] != "not assessed"),
+        "expert curation": sum(1 for e in evidence if e[9] not in ("NA", "")),
+        "literature": sum(1 for e in evidence if e[11] > 0),
+    }
+    fig, ax = plt.subplots(figsize=(5.5, 3.2))
+    names = list(avail.keys())
+    ax.barh(names, [avail[k] for k in names], color="#55A868", edgecolor="k")
+    ax.set_xlabel("variants (of %d)" % n)
+    ax.set_title("Figure 15 — evidence availability across cohort")
+    _save(fig, "fig15_evidence_availability")
+
+
+def fig16_domain(ring, brct):
+    fig, ax = plt.subplots()
+    data = [ring, brct]
+    ax.violinplot(data, showmedians=True)
+    ax.set_xticks([1, 2]); ax.set_xticklabels(["RING", "BRCT"])
+    ax.set_ylabel("Findlay function score")
+    ax.set_title("Figure 16 — functional score by domain")
+    _save(fig, "fig16_domain_comparison")

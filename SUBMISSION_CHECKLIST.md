@@ -3,7 +3,10 @@
 ## Scientific
 - [x] scientific audit GREEN (`pre_manuscript_scientific_audit.md`)
 - [x] peer-review issues addressed (`phase11_peer_review_response.md`)
-- [x] no unsupported claims (numerical + citation audits pass)
+- [x] **Findlay-engagement fix**: manuscript now cites Findlay's Extended Data Fig. 9 correlations (SIFT ρ=0.363, PolyPhen-2 ρ=-0.277) and states what this analysis adds
+- [x] **Dace 2025 preprint cited** (ref 13) as the non-RING/BRCT extension path; Limitations time-bounded accordingly
+- [x] no unsupported claims (numerical + citation audits pass; "11.1%" stat verified absent from repo; not carried into any manuscript)
+- [x] frozen dataset verified (`7afe54db…`)
 - [x] frozen dataset verified (`7afe54db…`)
 - [x] 41-variant cohort verified (unchanged)
 

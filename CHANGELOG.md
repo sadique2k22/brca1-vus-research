@@ -98,3 +98,10 @@ Format: date — summary (author/agent).
 - Outputs: `biological_variant_map.tsv`, `annotation_unique_variants.tsv`,
   `brca1_vus_missense_annotated.tsv`; reports `duplicate_variant_report.md`,
   `annotation_report.md`. Tests: 30 pass. Workflow extended (REVEL cache + annotate).
+
+## 2026-08-20 — Phase 13 (Dace 2025 integration + domain-contrast analysis)
+- Integrated Dace et al. 2025 medRxiv preprint HAP1 SGE scores (central exons 6/10/11/12) for 352/1,904 VUS (18.5%); combined functional coverage 725/1,904 (38.1%). NEW files only; frozen Phase 7-12 inputs byte-identical.
+- Domain-contrast analysis (`scripts/phase13_dace_analysis.py`): predictor-functional correspondence does NOT transfer to central exons — REVEL -0.384→-0.049 (Fisher p=1.9e-6, perm p=1e-4), PolyPhen-2 -0.188→+0.047 (p=1.5e-3/1.1e-3), SIFT -0.370→-0.260 (p=0.10/0.073, attenuates but directional).
+- ORIENTATION AUDIT (fix): phase9.py computes SIFT as (1-SIFT); manuscript's sign rationale was wrong for SIFT (raw SIFT ρ=+0.370 matches Findlay's +0.363). Impact orientation now documented in Methods; Results and §4 corrected; feasibility report orientation mix corrected.
+- Conflict analysis on the 352: 28 (8.0%) vs 23/373 (6.2%) RING/BRCT (phase9-identical REVEL rules); 30 with Dace-paper LoF threshold (-0.799); 41-cohort/13 conflicts untouched.
+- Artifacts: S5_dace_352.tsv, fig17-19 (SVG+PNG), phase13_domain_contrast.md, 3 new tables; checksums/frozen dataset re-verified.

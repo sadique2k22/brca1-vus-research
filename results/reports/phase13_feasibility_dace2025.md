@@ -34,15 +34,14 @@ boundary) were deduplicated by taking the mean of replicate scores.
 | SIFT | +0.260 (+0.160 to +0.355) | 352 |
 | PolyPhen-2 | +0.047 (−0.057 to +0.151) | 352 |
 
-For comparison, in the RING/BRCT subset (Findlay): REVEL −0.384, SIFT −0.370, PolyPhen-2 −0.188.
-The correspondence **does not transfer** to the newly assayed central/coiled-coil-adjacent exons:
-REVEL and PolyPhen-2 lose essentially all association, and SIFT is oppositely signed.
+For comparison, in the RING/BRCT subset (Findlay, impact orientation): REVEL −0.384, SIFT (1−SIFT) −0.370, PolyPhen-2 −0.188. **Orientation note (corrected):** the SIFT row above for the new regions is reported in raw-SIFT orientation (higher = tolerated); in the matched impact orientation it is −0.260, so SIFT correspondence **attenuates but does not change sign** across domains. With matched orientation the correspondence **weakens substantially** in the newly assayed central exons: REVEL −0.384 → −0.049, PolyPhen-2 −0.188 → +0.047, SIFT −0.370 → −0.260 (see `results/reports/phase13_domain_contrast.md` for the full analysis with domain-difference tests).
 
 ## Interpretation
 
 - This is a **structured, potentially novel finding**: predictor-versus-function correspondence is
   domain-specific — weak-to-moderate in RING/BRCT (where most known pathogenic missense cluster) and
-  near-zero for REVEL/PolyPhen-2 in the newly assayed exons, where the majority of VUS actually lie.
+  near-zero for REVEL/PolyPhen-2 in the newly assayed exons, where the majority of VUS actually lie
+  (SIFT retains attenuated, directionally consistent correspondence).
 - It directly answers the "predictor domain bias" question and converts the project's biggest named
   limitation into a differentiator.
 - The correlation contrast is the analytic core that would be new; the 13-conflict cohort and the

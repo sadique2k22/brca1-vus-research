@@ -105,3 +105,10 @@ Format: date — summary (author/agent).
 - ORIENTATION AUDIT (fix): phase9.py computes SIFT as (1-SIFT); manuscript's sign rationale was wrong for SIFT (raw SIFT ρ=+0.370 matches Findlay's +0.363). Impact orientation now documented in Methods; Results and §4 corrected; feasibility report orientation mix corrected.
 - Conflict analysis on the 352: 28 (8.0%) vs 23/373 (6.2%) RING/BRCT (phase9-identical REVEL rules); 30 with Dace-paper LoF threshold (-0.799); 41-cohort/13 conflicts untouched.
 - Artifacts: S5_dace_352.tsv, fig17-19 (SVG+PNG), phase13_domain_contrast.md, 3 new tables; checksums/frozen dataset re-verified.
+
+## 2026-08-20 — Phase 13B (AlphaMissense + BayesDel extension; ClinVar calibration controls)
+- Annotated all 1,904 VUS with AlphaMissense hg38 (am_pathogenicity/am_class; 0/1904 missing) and BayesDel v1 noAF (GRCh37 table via ClinVar GRCh37 rows; 0/1904 missing; g37_allele_consistent verified 0 mismatches).
+- Gold-standard calibration controls from same ClinVar release (347 variants: 159 P/LP, 188 B/LB; >=2-star review status, germline, missense; 0 overlap with VUS set).
+- Calibration AUC (P/LP vs B/LB): AlphaMissense 0.961 [0.937-0.981]; BayesDel 0.938 [0.911-0.962]. AM class agreement 89.6%/90.4%. 5 unscored P/LP are p.Met1* start-codon (documented AM limitation); 13 P/LP AM-likely_benign (incl. p.Arg1495Lys), 4 B/LB AM-likely_pathogenic.
+- Domain-contrast reproduced with independent predictors: AM -0.492 (RING/BRCT) vs -0.291 (central), Fisher p=1.4e-3; BayesDel -0.393 vs -0.090, Fisher p=1.3e-5. AM retains significant central correspondence (p=2.7e-8).
+- Artifacts: scripts/phase13b_calibration.py + phase13b_figure.py; vus_all_scores_1904.tsv, controls_p_lp_b_lb.tsv (+2 mismatch lists); fig20 (SVG+PNG); phase13b_calibration.md; 3 new tables; manuscript revised (methods/results/discussion/limitations/conclusion/availability/refs 14-15); provenance + raw README + gitignore updated. Tests: 62 pass. Frozen inputs byte-identical.

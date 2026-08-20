@@ -1,0 +1,348 @@
+VariationID	label	sig	review	origin	pos38	ref38	alt38	name	bd37_pos	bd_ref_ok	bd_alt_ok	bayesdel_noAF	am_pathogenicity	revel_score	g37_allele_consistent	am_class
+17660	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106478	A	C	NM_007294.4(BRCA1):c.190T>G (p.Cys64Gly)				0.564009	0.9729		True	likely_pathogenic
+17661	P/LP	Pathogenic	reviewed by expert panel	germline/somatic	43106487	A	C	NM_007294.4(BRCA1):c.181T>G (p.Cys61Gly)				0.565018	0.9904		True	likely_pathogenic
+17670	B/LB	Benign	reviewed by expert panel	germline	43092412	C	T	NM_007294.4(BRCA1):c.3119G>A (p.Ser1040Asn)				-0.239677	0.1194		True	likely_benign
+17676	B/LB	Benign	reviewed by expert panel	germline	43082434	G	C	NM_007294.4(BRCA1):c.4327C>G (p.Arg1443Gly)				-0.285466	0.0904		True	likely_benign
+17681	B/LB	Benign	reviewed by expert panel	germline	43093010	G	A	NM_007294.4(BRCA1):c.2521C>T (p.Arg841Trp)				-0.172654	0.0844		True	likely_benign
+17693	P/LP	Pathogenic	reviewed by expert panel	germline/somatic	43106457	T	C	NM_007294.4(BRCA1):c.211A>G (p.Arg71Gly)				0.430062	0.9012		True	likely_pathogenic
+17694	P/LP	Pathogenic	reviewed by expert panel	germline	43051071	A	C	NM_007294.4(BRCA1):c.5324T>G (p.Met1775Arg)				0.38884	0.893		True	likely_pathogenic
+17695	P/LP	Pathogenic	reviewed by expert panel	germline	43051071	A	T	NM_007294.4(BRCA1):c.5324T>A (p.Met1775Lys)				0.388781	0.8787		True	likely_pathogenic
+37389	B/LB	Benign	reviewed by expert panel	germline	43094495	G	A	NM_007294.4(BRCA1):c.1036C>T (p.Pro346Ser)				-0.0353026	0.0854		True	likely_benign
+37390	B/LB	Benign	reviewed by expert panel	germline	43094426	C	T	NM_007294.4(BRCA1):c.1105G>A (p.Asp369Asn)				-0.0666801	0.1016		True	likely_benign
+37392	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline/somatic	43115744	C	T	NM_007294.4(BRCA1):c.116G>A (p.Cys39Tyr)				0.57077	0.9926		True	likely_pathogenic
+37393	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43115744	C	A	NM_007294.4(BRCA1):c.116G>T (p.Cys39Phe)				0.570783	0.9928		True	likely_pathogenic
+37416	B/LB	Benign	reviewed by expert panel	germline	43094045	G	A	NM_007294.4(BRCA1):c.1486C>T (p.Arg496Cys)				0.0140786	0.0797		True	likely_benign
+37420	B/LB	Benign	reviewed by expert panel	germline	43093997	G	A	NM_007294.4(BRCA1):c.1534C>T (p.Leu512Phe)				0.270518	0.2701		True	likely_benign
+37421	B/LB	Benign	reviewed by expert panel	germline	43106514	G	A	NM_007294.4(BRCA1):c.154C>T (p.Leu52Phe)				0.137696	0.6023		True	likely_pathogenic
+37423	B/LB	Benign	reviewed by expert panel	germline	43093883	T	G	NM_007294.4(BRCA1):c.1648A>C (p.Asn550His)				0.0353913	0.0967		True	likely_benign
+37441	B/LB	Benign	reviewed by expert panel	germline	43093529	G	A	NM_007294.4(BRCA1):c.2002C>T (p.Leu668Phe)				-0.145968	0.1148		True	likely_benign
+37452	B/LB	Benign	reviewed by expert panel	germline	43093376	T	C	NM_007294.4(BRCA1):c.2155A>G (p.Lys719Glu)				-0.216062	0.0712		True	likely_benign
+37454	B/LB	Benign	reviewed by expert panel	germline	43093364	T	C	NM_007294.4(BRCA1):c.2167A>G (p.Asn723Asp)				-0.246752	0.0987		True	likely_benign
+37455	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43093324	T	G	NM_007294.4(BRCA1):c.2207A>C (p.Glu736Ala)				-0.18977	0.1232		True	likely_benign
+37464	B/LB	Benign	reviewed by expert panel	germline	43093180	G	A	NM_007294.4(BRCA1):c.2351C>T (p.Ser784Leu)				0.156391	0.1879		True	likely_benign
+37473	B/LB	Benign	reviewed by expert panel	germline	43093054	G	T	NM_007294.4(BRCA1):c.2477C>A (p.Thr826Lys)				0.226104	0.1181		True	likely_benign
+37476	B/LB	Benign	reviewed by expert panel	germline	43092947	T	C	NM_007294.4(BRCA1):c.2584A>G (p.Lys862Glu)				0.103955	0.1104		True	likely_benign
+37479	B/LB	Benign	reviewed by expert panel	germline	43092862	C	A	NM_007294.4(BRCA1):c.2669G>T (p.Gly890Val)				-0.335387	0.092		True	likely_benign
+37487	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43092796	T	C	NM_007294.4(BRCA1):c.2735A>G (p.Lys912Arg)				-0.214522	0.0819		True	likely_benign
+37488	B/LB	Benign	reviewed by expert panel	germline	43092773	C	T	NM_007294.4(BRCA1):c.2758G>A (p.Val920Ile)				-0.304215	0.0803		True	likely_benign
+37489	B/LB	Benign	reviewed by expert panel	germline	43092758	T	G	NM_007294.4(BRCA1):c.2773A>C (p.Ile925Leu)				-0.268038	0.0937		True	likely_benign
+37505	B/LB	Benign	reviewed by expert panel	germline	43104258	G	C	NM_007294.4(BRCA1):c.305C>G (p.Ala102Gly)				0.139666	0.1382		True	likely_benign
+37506	B/LB	Benign	reviewed by expert panel	germline	43092449	G	A	NM_007294.4(BRCA1):c.3082C>T (p.Arg1028Cys)				-0.194466	0.08		True	likely_benign
+37507	B/LB	Benign	reviewed by expert panel	germline	43092448	C	T	NM_007294.4(BRCA1):c.3083G>A (p.Arg1028His)				-0.314733	0.0636		True	likely_benign
+37510	B/LB	Benign	reviewed by expert panel	germline	43092401	T	C	NM_007294.4(BRCA1):c.3130A>G (p.Ile1044Val)				-0.27413	0.082		True	likely_benign
+37522	B/LB	Benign	reviewed by expert panel	germline	43092204	T	G	NM_007294.4(BRCA1):c.3327A>C (p.Lys1109Asn)				-0.161603	0.2915		True	likely_benign
+37537	B/LB	Benign	reviewed by expert panel	germline	43091874	C	G	NM_007294.4(BRCA1):c.3657G>C (p.Glu1219Asp)				0.200344	0.1597		True	likely_benign
+37543	B/LB	Benign	reviewed by expert panel	germline	43091818	G	A	NM_007294.4(BRCA1):c.3713C>T (p.Pro1238Leu)				-0.156033	0.1069		True	likely_benign
+37549	B/LB	Benign	reviewed by expert panel	germline	43091708	T	C	NM_007294.4(BRCA1):c.3823A>G (p.Ile1275Val)				-0.22741	0.0883		True	likely_benign
+37561	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091495	C	T	NM_007294.4(BRCA1):c.4036G>A (p.Glu1346Lys)				-0.00672013	0.1053		True	likely_benign
+37575	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43082548	T	C	NM_007294.4(BRCA1):c.4213A>G (p.Ile1405Val)				-0.282707	0.0911		True	likely_benign
+37580	B/LB	Benign	reviewed by expert panel	germline	43104136	C	T	NM_007294.4(BRCA1):c.427G>A (p.Glu143Lys)				0.120218	0.0801		True	likely_benign
+37597	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43076488	C	T	NM_007294.4(BRCA1):c.4484G>A (p.Arg1495Lys)				0.0367853	0.1077		True	likely_benign
+37598	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43076488	C	A	NM_007294.4(BRCA1):c.4484G>T (p.Arg1495Met)				0.272623	0.1566		True	likely_benign
+37600	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43099865	T	G	NM_007294.4(BRCA1):c.457A>C (p.Ser153Arg)				0.118553	0.3048		True	likely_benign
+37604	P/LP	Pathogenic	reviewed by expert panel	germline	43074331	C	T	NM_007294.4(BRCA1):c.4675G>A (p.Glu1559Lys)				0.146727	0.1339		True	likely_benign
+37605	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43074331	C	G	NM_007294.4(BRCA1):c.4675G>C (p.Glu1559Gln)				0.124907	0.1408		True	likely_benign
+37612	B/LB	Benign	reviewed by expert panel	germline	43071098	T	C	NM_007294.4(BRCA1):c.4816A>G (p.Lys1606Glu)				0.0772584	0.0708		True	likely_benign
+37613	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43071077	T	A	NM_007294.4(BRCA1):c.4837A>T (p.Ser1613Cys)				-0.080604	0.1022		True	likely_benign
+37614	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43071046	G	C	NM_007294.4(BRCA1):c.4868C>G (p.Ala1623Gly)				0.152656	0.1102		True	likely_benign
+37615	B/LB	Benign	reviewed by expert panel	germline	43070959	A	G	NM_007294.4(BRCA1):c.4955T>C (p.Met1652Thr)				0.35653	0.6823		True	likely_pathogenic
+37621	B/LB	Benign	reviewed by expert panel	germline	43067691	A	G	NM_007294.4(BRCA1):c.4991T>C (p.Leu1664Pro)				0.0369141	0.2781		True	likely_benign
+37625	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067616	A	C	NM_007294.4(BRCA1):c.5066T>G (p.Met1689Arg)				0.336293	0.9347		True	likely_pathogenic
+37627	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067610	G	T	NM_007294.4(BRCA1):c.5072C>A (p.Thr1691Lys)				0.346539	0.9352		True	likely_pathogenic
+37628	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067610	G	A	NM_007294.4(BRCA1):c.5072C>T (p.Thr1691Ile)				0.301786	0.8983		True	likely_pathogenic
+37632	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline/somatic	43067608	C	T	NM_007294.4(BRCA1):c.5074G>A (p.Asp1692Asn)				-0.100257	0.2943		True	likely_benign
+37633	P/LP	Pathogenic	reviewed by expert panel	germline	43067608	C	G	NM_007294.4(BRCA1):c.5074G>C (p.Asp1692His)				0.319195	0.8871		True	likely_pathogenic
+37635	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063936	C	T	NM_007294.4(BRCA1):c.5090G>A (p.Cys1697Tyr)				0.386406	0.9577		True	likely_pathogenic
+37636	P/LP	Pathogenic	reviewed by expert panel	germline	43063930	C	T	NM_007294.4(BRCA1):c.5096G>A (p.Arg1699Gln)				0.419574	0.7345		True	likely_pathogenic
+37637	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063912	A	G	NM_007294.4(BRCA1):c.5114T>C (p.Leu1705Pro)				0.338873	0.9765		True	likely_pathogenic
+37638	P/LP	Pathogenic	reviewed by expert panel	germline	43063909	C	T	NM_007294.4(BRCA1):c.5117G>A (p.Gly1706Glu)				0.389125	0.9845		True	likely_pathogenic
+37648	P/LP	Pathogenic	reviewed by expert panel	germline	43057122	A	G	NM_007294.4(BRCA1):c.5207T>C (p.Val1736Ala)				0.418246	0.8955		True	likely_pathogenic
+37650	P/LP	Likely pathogenic	reviewed by expert panel	germline	43057087	C	A	NM_007294.4(BRCA1):c.5242G>T (p.Gly1748Cys)				0.295884	0.9435		True	likely_pathogenic
+37656	P/LP	Pathogenic	reviewed by expert panel	germline	43051098	A	C	NM_007294.4(BRCA1):c.5297T>G (p.Ile1766Ser)				0.319665	0.9315		True	likely_pathogenic
+37660	P/LP	Pathogenic	reviewed by expert panel	germline	43049164	C	A	NM_007294.4(BRCA1):c.5363G>T (p.Gly1788Val)				0.52932	0.9249		True	likely_pathogenic
+37661	B/LB	Benign	reviewed by expert panel	germline	43099786	T	C	NM_007294.4(BRCA1):c.536A>G (p.Tyr179Cys)				0.516305	0.1781		True	likely_benign
+37664	P/LP	Pathogenic	reviewed by expert panel	germline	43124044	A	G	NM_007294.4(BRCA1):c.53T>C (p.Met18Thr)				0.30864	0.9257		True	likely_pathogenic
+37668	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047702	C	G	NM_007294.4(BRCA1):c.5408G>C (p.Gly1803Ala)				-0.15377	0.0886		True	likely_benign
+37670	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047676	G	C	NM_007294.4(BRCA1):c.5434C>G (p.Pro1812Ala)				-0.0970217	0.171		True	likely_benign
+37672	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047657	T	C	NM_007294.4(BRCA1):c.5453A>G (p.Asp1818Gly)				0.0921517	0.084		True	likely_benign
+37679	P/LP	Pathogenic	reviewed by expert panel	germline	43045761	A	G	NM_007294.4(BRCA1):c.5509T>C (p.Trp1837Arg)				0.533019	0.9976		True	likely_pathogenic
+37680	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045759	C	A	NM_007294.4(BRCA1):c.5511G>T (p.Trp1837Cys)				0.52822	0.9903		True	likely_pathogenic
+37681	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045749	T	G	NM_007294.4(BRCA1):c.5521A>C (p.Ser1841Arg)				0.456984	0.9963		True	likely_pathogenic
+37684	B/LB	Benign	reviewed by expert panel	germline	43097266	C	T	NM_007294.4(BRCA1):c.571G>A (p.Val191Ile)				0.114315	0.075		True	likely_benign
+37689	B/LB	Benign	reviewed by expert panel	germline	43095875	T	C	NM_007294.4(BRCA1):c.641A>G (p.Asp214Gly)				0.112885	0.0811		True	likely_benign
+37706	B/LB	Benign	reviewed by expert panel	germline	43094704	G	C	NM_007294.4(BRCA1):c.827C>G (p.Thr276Arg)				0.184644	0.1542		True	likely_benign
+37709	B/LB	Benign	reviewed by expert panel	germline	43094585	T	C	NM_007294.4(BRCA1):c.946A>G (p.Ser316Gly)				0.268578	0.1502		True	likely_benign
+41803	B/LB	Benign	reviewed by expert panel	germline/somatic	43094464	T	C	NM_007294.4(BRCA1):c.1067A>G (p.Gln356Arg)				0.0460098	0.1088		True	likely_benign
+41804	B/LB	Benign	reviewed by expert panel	germline	43094298	A	C	NM_007294.4(BRCA1):c.1233T>G (p.Asp411Glu)				-0.196447	0.1223		True	likely_benign
+41805	B/LB	Benign	reviewed by expert panel	germline	43094044	C	T	NM_007294.4(BRCA1):c.1487G>A (p.Arg496His)				-0.108718	0.0634		True	likely_benign
+41806	B/LB	Benign	reviewed by expert panel	germline	43093742	C	T	NM_007294.4(BRCA1):c.1789G>A (p.Glu597Lys)				0.182467	0.2525		True	likely_benign
+41808	B/LB	Benign	reviewed by expert panel	germline/somatic	43093454	C	T	NM_007294.4(BRCA1):c.2077G>A (p.Asp693Asn)				-0.318068	0.0749		True	likely_benign
+41809	B/LB	Benign	reviewed by expert panel	germline	43093216	A	G	NM_007294.4(BRCA1):c.2315T>C (p.Val772Ala)				0.264772	0.3186		True	likely_benign
+41810	B/LB	Benign	reviewed by expert panel	germline	43093073	T	C	NM_007294.4(BRCA1):c.2458A>G (p.Lys820Glu)				-0.257918	0.0703		True	likely_benign
+41811	B/LB	Benign	reviewed by expert panel	germline	43092935	G	A	NM_007294.4(BRCA1):c.2596C>T (p.Arg866Cys)				0.384085	0.2416		True	likely_benign
+41812	B/LB	Benign	reviewed by expert panel	germline/somatic	43092919	G	A	NM_007294.4(BRCA1):c.2612C>T (p.Pro871Leu)				-0.402747	0.0424		True	likely_benign
+41814	B/LB	Benign	reviewed by expert panel	germline	43092507	C	T	NM_007294.4(BRCA1):c.3024G>A (p.Met1008Ile)				-0.300264	0.1313		True	likely_benign
+41815	B/LB	Benign	reviewed by expert panel	germline/somatic	43092418	T	C	NM_007294.4(BRCA1):c.3113A>G (p.Glu1038Gly)				-0.307134	0.0988		True	likely_benign
+41816	B/LB	Benign	reviewed by expert panel	germline	43092235	G	A	NM_007294.4(BRCA1):c.3296C>T (p.Pro1099Leu)				-0.116229	0.0892		True	likely_benign
+41817	B/LB	Benign	reviewed by expert panel	germline	43092113	T	C	NM_007294.4(BRCA1):c.3418A>G (p.Ser1140Gly)				-0.376893	0.0788		True	likely_benign
+41818	B/LB	Benign	reviewed by expert panel	germline/somatic	43091983	T	C	NM_007294.4(BRCA1):c.3548A>G (p.Lys1183Arg)				-0.45404	0.0581		True	likely_benign
+41821	B/LB	Benign	reviewed by expert panel	germline	43091492	T	C	NM_007294.4(BRCA1):c.4039A>G (p.Arg1347Gly)				0.0176056	0.1184		True	likely_benign
+41823	B/LB	Benign	reviewed by expert panel	germline	43104138	G	T	NM_007294.4(BRCA1):c.425C>A (p.Pro142His)				0.129791	0.1177		True	likely_benign
+41825	B/LB	Benign	reviewed by expert panel	germline	43074486	C	G	NM_007294.4(BRCA1):c.4520G>C (p.Arg1507Thr)				-0.0227208	0.1032		True	likely_benign
+41826	B/LB	Benign	reviewed by expert panel	germline	43074471	C	A	NM_007294.4(BRCA1):c.4535G>T (p.Ser1512Ile)				0.113053	0.1413		True	likely_benign
+41827	B/LB	Benign	reviewed by expert panel	germline/somatic	43071077	T	C	NM_007294.4(BRCA1):c.4837A>G (p.Ser1613Gly)				-0.210763	0.084		True	likely_benign
+41828	B/LB	Benign	reviewed by expert panel	germline	43071031	A	G	NM_007294.4(BRCA1):c.4883T>C (p.Met1628Thr)				0.0807983	0.0741		True	likely_benign
+41830	B/LB	Benign	reviewed by expert panel	germline	43070958	C	T	NM_007294.4(BRCA1):c.4956G>A (p.Met1652Ile)				-0.0261181	0.388		True	ambiguous
+41835	B/LB	Benign	reviewed by expert panel	germline	43094795	A	C	NM_007294.4(BRCA1):c.736T>G (p.Leu246Val)				0.180844	0.0782		True	likely_benign
+54099	B/LB	Benign	reviewed by expert panel	germline	43094530	G	A	NM_007294.4(BRCA1):c.1001C>T (p.Pro334Leu)				-0.0197674	0.1024		True	likely_benign
+54131	P/LP	Pathogenic	reviewed by expert panel	germline	43115750	G	T	NM_007294.4(BRCA1):c.110C>A (p.Thr37Lys)				0.449241	0.9729		True	likely_pathogenic
+54132	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43115750	G	C	NM_007294.4(BRCA1):c.110C>G (p.Thr37Arg)				0.450391	0.9643		True	likely_pathogenic
+54143	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094394	A	C	NM_007294.4(BRCA1):c.1137T>G (p.Ile379Met)				0.240646	0.3469		True	ambiguous
+54151	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43115745	A	T	NM_007294.4(BRCA1):c.115T>A (p.Cys39Ser)				0.573575	0.9966		True	likely_pathogenic
+54152	P/LP	Pathogenic	reviewed by expert panel	germline	43115745	A	G	NM_007294.4(BRCA1):c.115T>C (p.Cys39Arg)				0.573645	0.9978		True	likely_pathogenic
+54153	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43115745	A	C	NM_007294.4(BRCA1):c.115T>G (p.Cys39Gly)				0.573647	0.9735		True	likely_pathogenic
+54166	P/LP	Pathogenic	reviewed by expert panel	germline	43115738	T	C	NM_007294.4(BRCA1):c.122A>G (p.His41Arg)				0.570687	0.9824		True	likely_pathogenic
+54191	P/LP	Pathogenic	reviewed by expert panel	germline	43115730	A	T	NM_007294.4(BRCA1):c.130T>A (p.Cys44Ser)				0.573114	0.9964		True	likely_pathogenic
+54199	P/LP	Pathogenic	reviewed by expert panel	germline/somatic	43115729	C	T	NM_007294.4(BRCA1):c.131G>A (p.Cys44Tyr)				0.57077	0.9965		True	likely_pathogenic
+54200	P/LP	Pathogenic	reviewed by expert panel	germline	43115729	C	A	NM_007294.4(BRCA1):c.131G>T (p.Cys44Phe)				0.570783	0.9946		True	likely_pathogenic
+54228	B/LB	Benign	reviewed by expert panel	germline	43094148	A	T	NM_007294.4(BRCA1):c.1383T>A (p.Phe461Leu)				0.505239	0.9773		True	likely_pathogenic
+54246	P/LP	Pathogenic	reviewed by expert panel	germline	43106528	C	T	NM_007294.4(BRCA1):c.140G>A (p.Cys47Tyr)				0.570323	0.9974		True	likely_pathogenic
+54247	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106528	C	A	NM_007294.4(BRCA1):c.140G>T (p.Cys47Phe)				0.570324	0.9945		True	likely_pathogenic
+54248	B/LB	Benign	reviewed by expert panel	germline	43094113	T	C	NM_007294.4(BRCA1):c.1418A>G (p.Asn473Ser)				-0.0966245	0.0897		True	likely_benign
+54249	B/LB	Benign	reviewed by expert panel	germline	43094113	T	A	NM_007294.4(BRCA1):c.1418A>T (p.Asn473Ile)				0.0989757	0.1512		True	likely_benign
+54251	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094104	T	C	NM_007294.4(BRCA1):c.1427A>G (p.His476Arg)				0.0145273	0.0886		True	likely_benign
+54258	B/LB	Benign	reviewed by expert panel	germline	43094075	A	G	NM_007294.4(BRCA1):c.1456T>C (p.Phe486Leu)				-0.126726	0.3568		True	ambiguous
+54259	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094073	A	T	NM_007294.4(BRCA1):c.1458T>A (p.Phe486Leu)				-0.0465721	0.3568		True	ambiguous
+54278	B/LB	Benign	reviewed by expert panel	germline	43094020	C	T	NM_007294.4(BRCA1):c.1511G>A (p.Arg504His)				0.154623	0.1042		True	likely_benign
+54310	B/LB	Benign	reviewed by expert panel	germline	43093915	G	A	NM_007294.4(BRCA1):c.1616C>T (p.Thr539Met)				-0.194622	0.0553		True	likely_benign
+54329	B/LB	Benign	reviewed by expert panel	germline	43093828	G	A	NM_007294.4(BRCA1):c.1703C>T (p.Pro568Leu)				0.0290704	0.0744		True	likely_benign
+54359	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106487	A	T	NM_007294.4(BRCA1):c.181T>A (p.Cys61Ser)				0.564948	0.9979		True	likely_pathogenic
+54360	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106487	A	G	NM_007294.4(BRCA1):c.181T>C (p.Cys61Arg)				0.565014	0.9991		True	likely_pathogenic
+54364	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106486	C	T	NM_007294.4(BRCA1):c.182G>A (p.Cys61Tyr)				0.557649	0.9922		True	likely_pathogenic
+54367	B/LB	Benign	reviewed by expert panel	germline	43093697	T	C	NM_007294.4(BRCA1):c.1834A>G (p.Arg612Gly)				0.0106318	0.2943		True	likely_benign
+54371	B/LB	Benign	reviewed by expert panel	germline	43093666	G	A	NM_007294.4(BRCA1):c.1865C>T (p.Ala622Val)				0.176024	0.1351		True	likely_benign
+54394	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106478	A	G	NM_007294.4(BRCA1):c.190T>C (p.Cys64Arg)				0.564551	0.9965		True	likely_pathogenic
+54400	P/LP	Pathogenic	reviewed by expert panel	germline	43106477	C	T	NM_007294.4(BRCA1):c.191G>A (p.Cys64Tyr)				0.557106	0.9929		True	likely_pathogenic
+54401	B/LB	Benign	reviewed by expert panel	germline	43093607	C	G	NM_007294.4(BRCA1):c.1924G>C (p.Asp642His)				0.131932	0.318		True	likely_benign
+54402	B/LB	Benign	reviewed by expert panel	germline	43093604	T	C	NM_007294.4(BRCA1):c.1927A>G (p.Ser643Gly)				0.231292	0.1326		True	likely_benign
+54431	B/LB	Benign	reviewed by expert panel	germline	43106469	C	A	NM_007294.4(BRCA1):c.199G>T (p.Asp67Tyr)				0.173063	0.2168		True	likely_benign
+54432	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124096	T	C	NM_007294.4(BRCA1):c.1A>G (p.Met1Val)				0.336211			True	
+54456	B/LB	Benign	reviewed by expert panel	germline	43093448	C	A	NM_007294.4(BRCA1):c.2083G>T (p.Asp695Tyr)				0.0011687	0.1138		True	likely_benign
+54471	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106456	C	T	NM_007294.4(BRCA1):c.212G>A (p.Arg71Lys)				0.353145	0.6817		True	likely_pathogenic
+54486	B/LB	Benign	reviewed by expert panel	germline	43093351	G	A	NM_007294.4(BRCA1):c.2180C>T (p.Pro727Leu)				-0.249128	0.0798		True	likely_benign
+54522	B/LB	Benign	reviewed by expert panel	germline	43093245	T	A	NM_007294.4(BRCA1):c.2286A>T (p.Arg762Ser)				-0.0337057	0.2774		True	likely_benign
+54541	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43093184	T	C	NM_007294.4(BRCA1):c.2347A>G (p.Ile783Val)				-0.316337	0.0663		True	likely_benign
+54561	B/LB	Benign	reviewed by expert panel	germline	43093119	C	G	NM_007294.4(BRCA1):c.2412G>C (p.Gln804His)				-0.189127	0.1291		True	likely_benign
+54567	B/LB	Benign	reviewed by expert panel	germline/somatic	43093103	T	A	NM_007294.4(BRCA1):c.2428A>T (p.Asn810Tyr)				0.0590684	0.1101		True	likely_benign
+54591	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43093009	C	T	NM_007294.4(BRCA1):c.2522G>A (p.Arg841Gln)				-0.128019	0.056		True	likely_benign
+54604	B/LB	Benign	reviewed by expert panel	germline/somatic	43092965	A	G	NM_007294.4(BRCA1):c.2566T>C (p.Tyr856His)				0.161879	0.1695		True	likely_benign
+54613	B/LB	Benign	reviewed by expert panel	germline	43092934	C	T	NM_007294.4(BRCA1):c.2597G>A (p.Arg866His)				0.145553	0.1865		True	likely_benign
+54704	P/LP	Likely pathogenic	reviewed by expert panel	germline	43104883	C	T	NM_007294.4(BRCA1):c.286G>A (p.Asp96Asn)				0.0770286	0.8502		True	likely_pathogenic
+54709	B/LB	Benign	reviewed by expert panel	germline	43092647	C	T	NM_007294.4(BRCA1):c.2884G>A (p.Glu962Lys)				-0.172212	0.0777		True	likely_benign
+54727	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43092596	G	A	NM_007294.4(BRCA1):c.2935C>T (p.Arg979Cys)				-0.283534	0.0673		True	likely_benign
+54745	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124095	A	G	NM_007294.4(BRCA1):c.2T>C (p.Met1Thr)				0.314388			True	
+54746	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124095	A	C	NM_007294.4(BRCA1):c.2T>G (p.Met1Arg)				0.354807			True	
+54755	B/LB	Benign	reviewed by expert panel	germline	43092509	T	C	NM_007294.4(BRCA1):c.3022A>G (p.Met1008Val)				-0.196237	0.0508		True	likely_benign
+54777	B/LB	Benign	reviewed by expert panel	germline	43092388	C	A	NM_007294.4(BRCA1):c.3143G>T (p.Gly1048Val)				-0.141063	0.107		True	likely_benign
+54780	B/LB	Benign	reviewed by expert panel	germline	43104249	T	C	NM_007294.4(BRCA1):c.314A>G (p.Tyr105Cys)				0.326376	0.0908		True	likely_benign
+54830	B/LB	Benign	reviewed by expert panel	germline	43092229	C	T	NM_007294.4(BRCA1):c.3302G>A (p.Ser1101Asn)				-0.20773	0.0782		True	likely_benign
+54873	B/LB	Benign	reviewed by expert panel	germline	43092115	C	A	NM_007294.4(BRCA1):c.3416G>T (p.Ser1139Ile)				-0.118355	0.0956		True	likely_benign
+54887	B/LB	Benign	reviewed by expert panel	germline	43092083	G	A	NM_007294.4(BRCA1):c.3448C>T (p.Pro1150Ser)				0.414423	0.5361		True	ambiguous
+54891	B/LB	Benign	reviewed by expert panel	germline	43092068	C	G	NM_007294.4(BRCA1):c.3463G>C (p.Asp1155His)				-0.0388311	0.1524		True	likely_benign
+54911	B/LB	Benign	reviewed by expert panel	germline	43091990	C	T	NM_007294.4(BRCA1):c.3541G>A (p.Val1181Ile)				-0.240503	0.0773		True	likely_benign
+54930	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091931	C	G	NM_007294.4(BRCA1):c.3600G>C (p.Gln1200His)				-0.0563852	0.1609		True	likely_benign
+54931	B/LB	Benign	reviewed by expert panel	germline	43091931	C	A	NM_007294.4(BRCA1):c.3600G>T (p.Gln1200His)				-0.0563859	0.1609		True	likely_benign
+54932	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091930	C	T	NM_007294.4(BRCA1):c.3601G>A (p.Gly1201Ser)				-0.0470756	0.093		True	likely_benign
+54935	B/LB	Benign	reviewed by expert panel	germline	43091923	C	T	NM_007294.4(BRCA1):c.3608G>A (p.Arg1203Gln)				-0.15144	0.0703		True	likely_benign
+54948	B/LB	Benign	reviewed by expert panel	germline	43091891	C	T	NM_007294.4(BRCA1):c.3640G>A (p.Glu1214Lys)				0.0250068	0.1596		True	likely_benign
+54970	B/LB	Benign	reviewed by expert panel	germline	43091823	A	C	NM_007294.4(BRCA1):c.3708T>G (p.Asn1236Lys)				-0.249364	0.1565		True	likely_benign
+54971	B/LB	Benign	reviewed by expert panel	germline	43104193	T	C	NM_007294.4(BRCA1):c.370A>G (p.Ile124Val)				0.114484	0.0704		True	likely_benign
+54982	B/LB	Benign	reviewed by expert panel	germline	43091807	T	C	NM_007294.4(BRCA1):c.3724A>G (p.Thr1242Ala)				-0.0711192	0.0798		True	likely_benign
+54985	B/LB	Benign	reviewed by expert panel	germline	43091792	C	T	NM_007294.4(BRCA1):c.3739G>A (p.Val1247Ile)				-0.261291	0.0874		True	likely_benign
+54987	B/LB	Benign	reviewed by expert panel	germline	43091783	C	T	NM_007294.4(BRCA1):c.3748G>A (p.Glu1250Lys)				-0.182968	0.0886		True	likely_benign
+55009	B/LB	Benign	reviewed by expert panel	germline	43091734	C	G	NM_007294.4(BRCA1):c.3797G>C (p.Ser1266Thr)				-0.0730968	0.0827		True	likely_benign
+55028	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091683	T	C	NM_007294.4(BRCA1):c.3848A>G (p.His1283Arg)				-0.0127162	0.0863		True	likely_benign
+55064	B/LB	Benign	reviewed by expert panel	germline	43104167	G	T	NM_007294.4(BRCA1):c.396C>A (p.Asn132Lys)				0.0998727	0.5123		True	ambiguous
+55067	B/LB	Benign	reviewed by expert panel	germline	43104166	G	A	NM_007294.4(BRCA1):c.397C>T (p.Arg133Cys)				0.422978	0.6827		True	likely_pathogenic
+55072	P/LP	Pathogenic	reviewed by expert panel	germline	43124094	C	A	NM_007294.4(BRCA1):c.3G>T (p.Met1Ile)				0.334384			True	
+55085	B/LB	Benign	reviewed by expert panel	germline	43091485	G	A	NM_007294.4(BRCA1):c.4046C>T (p.Thr1349Met)				-0.165616	0.0882		True	likely_benign
+55099	B/LB	Benign	reviewed by expert panel	germline	43091450	T	G	NM_007294.4(BRCA1):c.4081A>C (p.Met1361Leu)				-0.199553	0.131		True	likely_benign
+55111	B/LB	Benign	reviewed by expert panel	germline	43090997	C	T	NM_007294.4(BRCA1):c.4132G>A (p.Val1378Ile)				-0.205768	0.0686		True	likely_benign
+55140	B/LB	Benign	reviewed by expert panel	germline	43082557	G	A	NM_007294.4(BRCA1):c.4204C>T (p.His1402Tyr)				-0.173683	0.0883		True	likely_benign
+55147	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43082529	A	G	NM_007294.4(BRCA1):c.4232T>C (p.Met1411Thr)				0.0148572	0.8963		True	likely_pathogenic
+55154	B/LB	Benign	reviewed by expert panel	germline	43082506	C	G	NM_007294.4(BRCA1):c.4255G>C (p.Glu1419Gln)				-0.138732	0.1131		True	likely_benign
+55193	B/LB	Benign	reviewed by expert panel	germline	43076570	T	G	NM_007294.4(BRCA1):c.4402A>C (p.Asn1468His)				-0.196663	0.1123		True	likely_benign
+55235	B/LB	Benign	reviewed by expert panel	germline	43074406	C	T	NM_007294.4(BRCA1):c.4600G>A (p.Val1534Met)				-0.206147	0.089		True	likely_benign
+55245	B/LB	Benign	reviewed by expert panel	germline	43074370	C	T	NM_007294.4(BRCA1):c.4636G>A (p.Asp1546Asn)				-0.231261	0.0763		True	likely_benign
+55246	B/LB	Benign	reviewed by expert panel	germline	43074370	C	A	NM_007294.4(BRCA1):c.4636G>T (p.Asp1546Tyr)				0.00850945	0.0776		True	likely_benign
+55247	B/LB	Benign	reviewed by expert panel	germline	43099859	G	C	NM_007294.4(BRCA1):c.463C>G (p.Gln155Glu)				0.10548	0.0946		True	likely_benign
+55259	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43071232	G	A	NM_007294.4(BRCA1):c.4682C>T (p.Thr1561Ile)				0.12085	0.1583		True	likely_benign
+55262	B/LB	Benign	reviewed by expert panel	germline	43071223	A	G	NM_007294.4(BRCA1):c.4691T>C (p.Leu1564Pro)				0.339011	0.1809		True	likely_benign
+55272	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43071185	A	G	NM_007294.4(BRCA1):c.4729T>C (p.Ser1577Pro)				0.0320603	0.1243		True	likely_benign
+55279	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43071164	C	A	NM_007294.4(BRCA1):c.4750G>T (p.Ala1584Ser)				-0.0190543	0.093		True	likely_benign
+55284	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43071148	C	T	NM_007294.4(BRCA1):c.4766G>A (p.Arg1589His)				-0.169487	0.0638		True	likely_benign
+55301	B/LB	Benign	reviewed by expert panel	germline	43071074	G	A	NM_007294.4(BRCA1):c.4840C>T (p.Pro1614Ser)				-0.197798	0.0853		True	likely_benign
+55314	B/LB	Benign	reviewed by expert panel	germline	43071004	G	A	NM_007294.4(BRCA1):c.4910C>T (p.Pro1637Leu)				0.189468	0.1163		True	likely_benign
+55333	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43070950	G	A	NM_007294.4(BRCA1):c.4964C>T (p.Ser1655Phe)				0.511335	0.894		True	likely_pathogenic
+55339	B/LB	Benign	reviewed by expert panel	germline	43070929	A	G	NM_007294.4(BRCA1):c.4985T>C (p.Phe1662Ser)				-0.0894503	0.1159		True	likely_benign
+55361	B/LB	Benign	reviewed by expert panel	germline	43067638	C	T	NM_007294.4(BRCA1):c.5044G>A (p.Glu1682Lys)				0.0630275	0.0849		True	likely_benign
+55364	P/LP	Pathogenic	reviewed by expert panel	germline	43067629	T	C	NM_007294.4(BRCA1):c.5053A>G (p.Thr1685Ala)				0.363421	0.523		True	ambiguous
+55365	P/LP	Pathogenic	reviewed by expert panel	germline	43067628	G	A	NM_007294.4(BRCA1):c.5054C>T (p.Thr1685Ile)				0.391819	0.9339		True	likely_pathogenic
+55366	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067624	A	T	NM_007294.4(BRCA1):c.5058T>A (p.His1686Gln)				0.336014	0.9361		True	likely_pathogenic
+55373	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067610	G	C	NM_007294.4(BRCA1):c.5072C>G (p.Thr1691Arg)				0.350645	0.9075		True	likely_pathogenic
+55383	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063951	T	A	NM_007294.4(BRCA1):c.5075A>T (p.Asp1692Val)				0.5352	0.8804		True	likely_pathogenic
+55392	P/LP	Pathogenic	reviewed by expert panel	germline	43063937	A	G	NM_007294.4(BRCA1):c.5089T>C (p.Cys1697Arg)				0.398132	0.9586		True	likely_pathogenic
+55393	B/LB	Benign	reviewed by expert panel	germline	43099814	G	A	NM_007294.4(BRCA1):c.508C>T (p.Arg170Trp)				0.0172941	0.0909		True	likely_benign
+55396	P/LP	Pathogenic	reviewed by expert panel	germline	43063931	G	A	NM_007294.4(BRCA1):c.5095C>T (p.Arg1699Trp)				0.429093	0.8237		True	likely_pathogenic
+55398	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063930	C	A	NM_007294.4(BRCA1):c.5096G>T (p.Arg1699Leu)				0.422372	0.9302		True	likely_pathogenic
+55399	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063928	T	C	NM_007294.4(BRCA1):c.5098A>G (p.Thr1700Ala)				0.410708	0.9022		True	likely_pathogenic
+55406	B/LB	Benign	reviewed by expert panel	germline	43063909	C	G	NM_007294.4(BRCA1):c.5117G>C (p.Gly1706Ala)				0.234626	0.4904		True	ambiguous
+55407	P/LP	Pathogenic	reviewed by expert panel	germline	43063903	G	T	NM_007294.4(BRCA1):c.5123C>A (p.Ala1708Glu)				0.423173	0.9712		True	likely_pathogenic
+55412	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063888	A	G	NM_007294.4(BRCA1):c.5138T>C (p.Val1713Ala)				0.404041	0.8076		True	likely_pathogenic
+55413	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063885	A	C	NM_007294.4(BRCA1):c.5141T>G (p.Val1714Gly)				0.493523	0.8598		True	likely_pathogenic
+55414	P/LP	Pathogenic	reviewed by expert panel	germline	43063883	T	G	NM_007294.4(BRCA1):c.5143A>C (p.Ser1715Arg)				0.341552	0.9947		True	likely_pathogenic
+55415	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063883	T	A	NM_007294.4(BRCA1):c.5143A>T (p.Ser1715Cys)				0.347004	0.4778		True	ambiguous
+55416	P/LP	Pathogenic	reviewed by expert panel	germline	43063882	C	T	NM_007294.4(BRCA1):c.5144G>A (p.Ser1715Asn)				-0.0458948	0.8066		True	likely_pathogenic
+55418	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063881	G	C	NM_007294.4(BRCA1):c.5145C>G (p.Ser1715Arg)				0.333424	0.9947		True	likely_pathogenic
+55435	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063372	C	A	NM_007294.4(BRCA1):c.5154G>T (p.Trp1718Cys)				0.537591	0.9803		True	likely_pathogenic
+55438	B/LB	Benign	reviewed by expert panel	germline	43063368	T	C	NM_007294.4(BRCA1):c.5158A>G (p.Thr1720Ala)				-0.000295152	0.1171		True	likely_benign
+55453	B/LB	Benign	reviewed by expert panel	germline	43057131	T	C	NM_007294.4(BRCA1):c.5198A>G (p.Asp1733Gly)				0.109605	0.1426		True	likely_benign
+55456	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057122	A	C	NM_007294.4(BRCA1):c.5207T>G (p.Val1736Gly)				0.421506	0.8835		True	likely_pathogenic
+55461	P/LP	Pathogenic	reviewed by expert panel	germline	43057117	C	T	NM_007294.4(BRCA1):c.5212G>A (p.Gly1738Arg)				0.365406	0.9885		True	likely_pathogenic
+55462	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057116	C	T	NM_007294.4(BRCA1):c.5213G>A (p.Gly1738Glu)				0.364464	0.9804		True	likely_pathogenic
+55464	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057114	C	A	NM_007294.4(BRCA1):c.5215G>T (p.Asp1739Tyr)				0.370091	0.9504		True	likely_pathogenic
+55465	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057113	T	C	NM_007294.4(BRCA1):c.5216A>G (p.Asp1739Gly)				0.353632	0.9767		True	likely_pathogenic
+55466	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057113	T	A	NM_007294.4(BRCA1):c.5216A>T (p.Asp1739Val)				0.370714	0.9773		True	likely_pathogenic
+55476	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057086	C	T	NM_007294.4(BRCA1):c.5243G>A (p.Gly1748Asp)				0.364365	0.9733		True	likely_pathogenic
+55481	B/LB	Benign	reviewed by expert panel	germline	43057077	C	T	NM_007294.4(BRCA1):c.5252G>A (p.Arg1751Gln)				0.354186	0.1842		True	likely_benign
+55482	P/LP	Likely pathogenic	reviewed by expert panel	germline	43057077	C	G	NM_007294.4(BRCA1):c.5252G>C (p.Arg1751Pro)				0.365615	0.9699		True	likely_pathogenic
+55483	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057075	C	G	NM_007294.4(BRCA1):c.5254G>C (p.Ala1752Pro)				0.328277	0.97		True	likely_pathogenic
+55488	P/LP	Likely pathogenic	reviewed by expert panel	germline	43057071	C	G	NM_007294.4(BRCA1):c.5258G>C (p.Arg1753Thr)				0.355584	0.9447		True	likely_pathogenic
+55505	P/LP	Pathogenic	reviewed by expert panel	germline	43051113	A	G	NM_007294.4(BRCA1):c.5282T>C (p.Phe1761Ser)				0.467586	0.9848		True	likely_pathogenic
+55510	P/LP	Pathogenic	reviewed by expert panel	germline	43051104	A	G	NM_007294.4(BRCA1):c.5291T>C (p.Leu1764Pro)				0.389575	0.9211		True	likely_pathogenic
+55530	P/LP	Pathogenic	reviewed by expert panel	germline	43051063	C	T	NM_007294.4(BRCA1):c.5332G>A (p.Asp1778Asn)				-0.105502	0.1166		True	likely_benign
+55541	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43049188	A	G	NM_007294.4(BRCA1):c.5339T>C (p.Leu1780Pro)				0.407448	0.9858		True	likely_pathogenic
+55550	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43049165	C	A	NM_007294.4(BRCA1):c.5362G>T (p.Gly1788Cys)				0.52932	0.8435		True	likely_pathogenic
+55552	P/LP	Likely pathogenic	reviewed by expert panel	germline	43049162	C	T	NM_007294.4(BRCA1):c.5365G>A (p.Ala1789Thr)				0.442858	0.6958		True	likely_pathogenic
+55559	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124044	A	T	NM_007294.4(BRCA1):c.53T>A (p.Met18Lys)				0.311958	0.9577		True	likely_pathogenic
+55568	B/LB	Benign	reviewed by expert panel	germline	43047699	A	T	NM_007294.4(BRCA1):c.5411T>A (p.Val1804Asp)				-0.555191	0.1058		True	likely_benign
+55573	P/LP	Likely pathogenic	reviewed by expert panel	germline	43047685	C	A	NM_007294.4(BRCA1):c.5425G>T (p.Val1809Phe)				-0.143995	0.8344		True	likely_pathogenic
+55578	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047678	T	C	NM_007294.4(BRCA1):c.5432A>G (p.Gln1811Arg)				0.192033	0.8434		True	likely_pathogenic
+55585	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43047654	T	C	NM_007294.4(BRCA1):c.5456A>G (p.Asn1819Ser)				-0.216971	0.0566		True	likely_benign
+55588	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047643	C	T	NM_007294.4(BRCA1):c.5467G>A (p.Ala1823Thr)				0.117902	0.0828		True	likely_benign
+55598	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045773	C	T	NM_007294.4(BRCA1):c.5497G>A (p.Val1833Met)				0.481856	0.6595		True	likely_pathogenic
+55607	P/LP	Pathogenic	reviewed by expert panel	germline	43045761	A	C	NM_007294.4(BRCA1):c.5509T>G (p.Trp1837Gly)				0.533023	0.9091		True	likely_pathogenic
+55611	P/LP	Pathogenic	reviewed by expert panel	germline	43045757	A	T	NM_007294.4(BRCA1):c.5513T>A (p.Val1838Glu)				0.423137	0.9708		True	likely_pathogenic
+55614	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045743	C	G	NM_007294.4(BRCA1):c.5527G>C (p.Ala1843Pro)				0.285773	0.9644		True	likely_pathogenic
+55615	B/LB	Benign	reviewed by expert panel	germline	43045739	A	C	NM_007294.4(BRCA1):c.5531T>G (p.Leu1844Arg)				0.278615	0.2129		True	likely_benign
+55627	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045712	T	C	NM_007294.4(BRCA1):c.5558A>G (p.Tyr1853Cys)				0.465654	0.704		True	likely_pathogenic
+55631	P/LP	Likely pathogenic	reviewed by expert panel	germline	43045709	A	G	NM_007294.4(BRCA1):c.5561T>C (p.Leu1854Pro)				0.406711	0.8666		True	likely_pathogenic
+55632	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43045704	G	A	NM_007294.4(BRCA1):c.5566C>T (p.Pro1856Ser)				-0.105526	0.1017		True	likely_benign
+55634	B/LB	Benign	reviewed by expert panel	germline	43045694	G	C	NM_007294.4(BRCA1):c.5576C>G (p.Pro1859Arg)				0.174563	0.0905		True	likely_benign
+55635	B/LB	Benign	reviewed by expert panel	germline	43097280	G	T	NM_007294.4(BRCA1):c.557C>A (p.Ser186Tyr)				0.304786	0.3649		True	ambiguous
+55637	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43045685	T	A	NM_007294.4(BRCA1):c.5585A>T (p.His1862Leu)				0.0794636	0.094		True	likely_benign
+55656	P/LP	Pathogenic	reviewed by expert panel	germline	43124032	A	G	NM_007294.4(BRCA1):c.65T>C (p.Leu22Ser)				0.358136	0.9757		True	likely_pathogenic
+55674	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124027	A	G	NM_007294.4(BRCA1):c.70T>C (p.Cys24Arg)				0.561289	0.9994		True	likely_pathogenic
+55677	B/LB	Benign	reviewed by expert panel	germline	43094815	T	C	NM_007294.4(BRCA1):c.716A>G (p.His239Arg)				0.12161	0.0737		True	likely_benign
+55678	P/LP	Likely pathogenic	reviewed by expert panel	germline	43124026	C	T	NM_007294.4(BRCA1):c.71G>A (p.Cys24Tyr)				0.554777	0.9956		True	likely_pathogenic
+55720	B/LB	Benign	reviewed by expert panel	germline	43094720	C	T	NM_007294.4(BRCA1):c.811G>A (p.Val271Met)				0.0586118	0.1523		True	likely_benign
+55725	B/LB	Benign	reviewed by expert panel	germline	43094708	C	T	NM_007294.4(BRCA1):c.823G>A (p.Gly275Ser)				0.132503	0.1854		True	likely_benign
+55726	B/LB	Benign	reviewed by expert panel	germline	43094707	C	T	NM_007294.4(BRCA1):c.824G>A (p.Gly275Asp)				0.175722	0.328		True	likely_benign
+55731	B/LB	Benign	reviewed by expert panel	germline	43094692	G	C	NM_007294.4(BRCA1):c.839C>G (p.Ala280Gly)				0.128716	0.2244		True	likely_benign
+55743	B/LB	Benign	reviewed by expert panel	germline	43094640	C	T	NM_007294.4(BRCA1):c.891G>A (p.Met297Ile)				0.0692858	0.4204		True	ambiguous
+91592	B/LB	Benign	reviewed by expert panel	germline	43093006	T	C	NM_007294.4(BRCA1):c.2525A>G (p.Glu842Gly)				-0.0777507	0.0882		True	likely_benign
+91632	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43074462	C	T	NM_007294.4(BRCA1):c.4544G>A (p.Gly1515Glu)				-0.0556802	0.0983		True	likely_benign
+91649	P/LP	Pathogenic	reviewed by expert panel	germline	43049170	A	G	NM_007294.4(BRCA1):c.5357T>C (p.Leu1786Pro)				0.407069	0.9609		True	likely_pathogenic
+91656	P/LP	Pathogenic	reviewed by expert panel	germline	43045754	A	G	NM_007294.4(BRCA1):c.5516T>C (p.Leu1839Ser)				0.405121	0.9413		True	likely_pathogenic
+96893	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094530	G	T	NM_007294.4(BRCA1):c.1001C>A (p.Pro334His)				0.0470915	0.1463		True	likely_benign
+96917	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091713	T	C	NM_007294.4(BRCA1):c.3818A>G (p.Gln1273Arg)				0.0217606	0.0872		True	likely_benign
+96949	P/LP	Likely pathogenic	reviewed by expert panel	germline	43049188	A	C	NM_007294.4(BRCA1):c.5339T>G (p.Leu1780Arg)				0.404472	0.9398		True	likely_pathogenic
+125791	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063362	A	G	NM_007294.4(BRCA1):c.5164T>C (p.Ser1722Pro)				0.440089	0.9865		True	likely_pathogenic
+183179	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067625	T	C	NM_007294.4(BRCA1):c.5057A>G (p.His1686Arg)				0.378152	0.9307		True	likely_pathogenic
+183951	B/LB	Benign	reviewed by expert panel	germline	43045698	T	G	NM_007294.4(BRCA1):c.5572A>C (p.Ile1858Leu)				-0.00549416	0.0858		True	likely_benign
+187051	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43093301	C	T	NM_007294.4(BRCA1):c.2230G>A (p.Ala744Thr)				-0.269362	0.0694		True	likely_benign
+184709	B/LB	Benign	reviewed by expert panel	germline	43094534	T	C	NM_007294.4(BRCA1):c.997A>G (p.Thr333Ala)				-0.0561156	0.0957		True	likely_benign
+185705	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106456	C	A	NM_007294.4(BRCA1):c.212G>T (p.Arg71Met)				0.372736	0.9667		True	likely_pathogenic
+183950	B/LB	Benign	reviewed by expert panel	germline	43115727	T	G	NM_007294.4(BRCA1):c.133A>C (p.Lys45Gln)				0.0943477	0.5107		True	ambiguous
+186913	P/LP	Likely pathogenic	reviewed by expert panel	germline	43115759	G	A	NM_007294.4(BRCA1):c.101C>T (p.Pro34Leu)				0.450189	0.9811		True	likely_pathogenic
+220258	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43104882	T	C	NM_007294.4(BRCA1):c.287A>G (p.Asp96Gly)				0.49339	0.9201		True	likely_pathogenic
+224433	B/LB	Likely benign	reviewed by expert panel	germline	43090970	A	G	NM_007294.4(BRCA1):c.4159T>C (p.Ser1387Pro)				0.148379	0.1618		True	likely_benign
+224427	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106476	A	C	NM_007294.4(BRCA1):c.192T>G (p.Cys64Trp)				0.546141	0.9941		True	likely_pathogenic
+225711	P/LP	Likely pathogenic	reviewed by expert panel	germline	43057127	A	C	NM_007294.4(BRCA1):c.5202T>G (p.Phe1734Leu)				0.27191	0.982		True	likely_pathogenic
+232047	P/LP	Likely pathogenic	reviewed by expert panel	germline	43057129	A	T	NM_007294.4(BRCA1):c.5200T>A (p.Phe1734Ile)				0.242362	0.8768		True	likely_pathogenic
+232915	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063918	T	C	NM_007294.4(BRCA1):c.5108A>G (p.Tyr1703Cys)				0.415402	0.9672		True	likely_pathogenic
+232793	P/LP	Likely pathogenic	reviewed by expert panel	germline	43090944	C	G	NM_007294.4(BRCA1):c.4185G>C (p.Gln1395His)				0.165184	0.6773		True	likely_pathogenic
+233288	B/LB	Benign	reviewed by expert panel	germline	43092733	C	G	NM_007294.4(BRCA1):c.2798G>C (p.Gly933Ala)				-0.251786	0.0985		True	likely_benign
+231852	B/LB	Benign	reviewed by expert panel	germline	43094372	A	T	NM_007294.4(BRCA1):c.1159T>A (p.Ser387Thr)				0.151034	0.1241		True	likely_benign
+232600	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094792	T	C	NM_007294.4(BRCA1):c.739A>G (p.Asn247Asp)				-0.0148837	0.1202		True	likely_benign
+230862	P/LP	Likely pathogenic	reviewed by expert panel	germline	43115738	T	A	NM_007294.4(BRCA1):c.122A>T (p.His41Leu)				0.570694	0.9849		True	likely_pathogenic
+232955	P/LP	Likely pathogenic	reviewed by expert panel	germline	43124023	G	A	NM_007294.4(BRCA1):c.74C>T (p.Pro25Leu)				0.352363	0.9779		True	likely_pathogenic
+240819	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057087	C	G	NM_007294.4(BRCA1):c.5242G>C (p.Gly1748Arg)				0.147215	0.9862		True	likely_pathogenic
+240811	B/LB	Benign	reviewed by expert panel	germline	43067658	G	A	NM_007294.4(BRCA1):c.5024C>T (p.Thr1675Ile)				0.021097	0.1126		True	likely_benign
+245697	P/LP	Pathogenic	reviewed by expert panel	germline	43076488	C	G	NM_007294.4(BRCA1):c.4484G>C (p.Arg1495Thr)				0.0988496	0.127		True	likely_benign
+245973	P/LP	Likely pathogenic	reviewed by expert panel	germline	43124065	A	C	NM_007294.4(BRCA1):c.32T>G (p.Val11Gly)				0.325211	0.7047		True	likely_pathogenic
+252884	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063919	A	C	NM_007294.4(BRCA1):c.5107T>G (p.Tyr1703Asp)				0.425974	0.9875		True	likely_pathogenic
+267219	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063910	C	G	NM_007294.4(BRCA1):c.5116G>C (p.Gly1706Arg)				0.389343	0.9885		True	likely_pathogenic
+267221	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43063910	C	T	NM_007294.4(BRCA1):c.5116G>A (p.Gly1706Arg)				0.389329	0.9885		True	likely_pathogenic
+267594	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43051098	A	T	NM_007294.4(BRCA1):c.5297T>A (p.Ile1766Asn)				0.160268	0.9422		True	likely_pathogenic
+267512	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106456	C	G	NM_007294.4(BRCA1):c.212G>C (p.Arg71Thr)				0.379546	0.9687		True	likely_pathogenic
+267497	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43115743	A	C	NM_007294.4(BRCA1):c.117T>G (p.Cys39Trp)				0.557186	0.9945		True	likely_pathogenic
+373826	P/LP	Likely pathogenic	reviewed by expert panel	germline	43070951	A	G	NM_007294.4(BRCA1):c.4963T>C (p.Ser1655Pro)				0.502346	0.9541		True	likely_pathogenic
+409353	P/LP	Likely pathogenic	reviewed by expert panel	germline	43115739	G	T	NM_007294.4(BRCA1):c.121C>A (p.His41Asn)				0.316993	0.9779		True	likely_pathogenic
+417832	P/LP	Pathogenic	reviewed by expert panel	germline/somatic	43051086	C	A	NM_007294.4(BRCA1):c.5309G>T (p.Gly1770Val)				0.366249	0.7912		True	likely_pathogenic
+421244	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045759	C	G	NM_007294.4(BRCA1):c.5511G>C (p.Trp1837Cys)				0.528222	0.9903		True	likely_pathogenic
+418671	P/LP	Likely pathogenic	reviewed by expert panel	germline	43115760	G	A	NM_007294.4(BRCA1):c.100C>T (p.Pro34Ser)				0.473967	0.9812		True	likely_pathogenic
+431194	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124094	C	T	NM_007294.4(BRCA1):c.3G>A (p.Met1Ile)				0.334364			True	
+433738	P/LP	Likely pathogenic	reviewed by expert panel	germline	43045713	A	T	NM_007294.4(BRCA1):c.5557T>A (p.Tyr1853Asn)				0.484916	0.8579		True	likely_pathogenic
+433721	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067622	A	C	NM_007294.4(BRCA1):c.5060T>G (p.Val1687Gly)				0.405761	0.931		True	likely_pathogenic
+440481	P/LP	Likely pathogenic	reviewed by expert panel	germline	43051113	A	C	NM_007294.4(BRCA1):c.5282T>G (p.Phe1761Cys)				0.466747	0.9276		True	likely_pathogenic
+462619	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091864	G	A	NM_007294.4(BRCA1):c.3667C>T (p.Leu1223Phe)				-0.0217285	0.1583		True	likely_benign
+462571	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106477	C	G	NM_007294.4(BRCA1):c.191G>C (p.Cys64Ser)				0.55711	0.9961		True	likely_pathogenic
+485376	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43067632	T	C	NM_007294.4(BRCA1):c.5050A>G (p.Thr1684Ala)				0.0818812	0.4919		True	ambiguous
+479229	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091596	G	C	NM_007294.4(BRCA1):c.3935C>G (p.Thr1312Ser)				-0.193754	0.0914		True	likely_benign
+479198	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094294	A	C	NM_007294.4(BRCA1):c.1237T>G (p.Leu413Val)				-0.0731394	0.0764		True	likely_benign
+481433	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43093324	T	C	NM_007294.4(BRCA1):c.2207A>G (p.Glu736Gly)				-0.294215	0.0811		True	likely_benign
+481469	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124017	C	A	NM_007294.4(BRCA1):c.80G>T (p.Cys27Phe)				0.536897	0.9898		True	likely_pathogenic
+506525	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091705	A	C	NM_007294.4(BRCA1):c.3826T>G (p.Leu1276Val)				-0.140532	0.0811		True	likely_benign
+531444	P/LP	Likely pathogenic	reviewed by expert panel	germline	43067626	G	A	NM_007294.4(BRCA1):c.5056C>T (p.His1686Tyr)				0.359631	0.5629		True	ambiguous
+531241	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124044	A	C	NM_007294.4(BRCA1):c.53T>G (p.Met18Arg)				0.315986	0.9646		True	likely_pathogenic
+531399	P/LP	Likely pathogenic	reviewed by expert panel	germline	43057093	G	C	NM_007294.4(BRCA1):c.5236C>G (p.His1746Asp)				0.373139	0.9545		True	likely_pathogenic
+531248	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43063358	A	G	NM_007294.4(BRCA1):c.5168T>C (p.Ile1723Thr)				0.172906	0.4528		True	ambiguous
+580736	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43115739	G	A	NM_007294.4(BRCA1):c.121C>T (p.His41Tyr)				0.571641	0.9728		True	likely_pathogenic
+627968	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063874	A	C	NM_007294.4(BRCA1):c.5152T>G (p.Trp1718Gly)				0.526195	0.8931		True	likely_pathogenic
+631061	P/LP	Likely pathogenic	reviewed by expert panel	germline	43063886	C	A	NM_007294.4(BRCA1):c.5140G>T (p.Val1714Phe)				0.482282	0.8333		True	likely_pathogenic
+628452	B/LB	Benign	reviewed by expert panel	germline	43092619	T	C	NM_007294.4(BRCA1):c.2912A>G (p.His971Arg)				-0.132788	0.0797		True	likely_benign
+662455	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43049167	C	T	NM_007294.4(BRCA1):c.5360G>A (p.Cys1787Tyr)				0.400341	0.9447		True	likely_pathogenic
+660456	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094057	T	C	NM_007294.4(BRCA1):c.1474A>G (p.Ile492Val)				-0.063936	0.0854		True	likely_benign
+651975	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43106529	A	G	NM_007294.4(BRCA1):c.139T>C (p.Cys47Arg)				0.578192	0.9984		True	likely_pathogenic
+649351	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124027	A	C	NM_007294.4(BRCA1):c.70T>G (p.Cys24Gly)				0.561294	0.9929		True	likely_pathogenic
+638952	P/LP	Likely pathogenic	reviewed by expert panel	germline	43124027	A	T	NM_007294.4(BRCA1):c.70T>A (p.Cys24Ser)				0.56129	0.9983		True	likely_pathogenic
+801086	P/LP	Likely pathogenic	reviewed by expert panel	germline	43057072	T	C	NM_007294.4(BRCA1):c.5257A>G (p.Arg1753Gly)				0.358682	0.9166		True	likely_pathogenic
+812551	B/LB	Benign	reviewed by expert panel	germline	43091450	T	A	NM_007294.4(BRCA1):c.4081A>T (p.Met1361Leu)				-0.199555	0.131		True	likely_benign
+812549	B/LB	Benign	reviewed by expert panel	germline	43094640	C	A	NM_007294.4(BRCA1):c.891G>T (p.Met297Ile)				0.0692759	0.4204		True	ambiguous
+824466	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091536	C	T	NM_007294.4(BRCA1):c.3995G>A (p.Gly1332Glu)				-0.234304	0.0659		True	likely_benign
+821868	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43104887	C	A	NM_007294.4(BRCA1):c.282G>T (p.Gln94His)				0.0709951	0.4389		True	ambiguous
+827453	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43124017	C	T	NM_007294.4(BRCA1):c.80G>A (p.Cys27Tyr)				0.535778	0.9955		True	likely_pathogenic
+853483	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045761	A	T	NM_007294.4(BRCA1):c.5509T>A (p.Trp1837Arg)				0.53302	0.9976		True	likely_pathogenic
+869004	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43045748	C	A	NM_007294.4(BRCA1):c.5522G>T (p.Ser1841Ile)				0.445295	0.9538		True	likely_pathogenic
+868922	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047643	C	A	NM_007294.4(BRCA1):c.5467G>T (p.Ala1823Ser)				-0.10333	0.0953		True	likely_benign
+867253	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057101	C	T	NM_007294.4(BRCA1):c.5228G>A (p.Gly1743Glu)				0.360228	0.9151		True	likely_pathogenic
+865165	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057117	C	G	NM_007294.4(BRCA1):c.5212G>C (p.Gly1738Arg)				0.36542	0.9885		True	likely_pathogenic
+867843	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43057123	C	A	NM_007294.4(BRCA1):c.5206G>T (p.Val1736Phe)				0.409852	0.931		True	likely_pathogenic
+864899	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067616	A	T	NM_007294.4(BRCA1):c.5066T>A (p.Met1689Lys)				0.313646	0.9317		True	likely_pathogenic
+867583	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43067626	G	C	NM_007294.4(BRCA1):c.5056C>G (p.His1686Asp)				0.38941	0.9197		True	likely_pathogenic
+865661	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43071017	T	C	NM_007294.4(BRCA1):c.4897A>G (p.Ser1633Gly)				-0.149789	0.0662		True	likely_benign
+868827	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43104882	T	A	NM_007294.4(BRCA1):c.287A>T (p.Asp96Val)				0.494888	0.9411		True	likely_pathogenic
+867463	P/LP	Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43115779	A	C	NM_007294.4(BRCA1):c.81T>G (p.Cys27Trp)				0.501262	0.9971		True	likely_pathogenic
+1708959	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091803	C	G	NM_007294.4(BRCA1):c.3728G>C (p.Arg1243Thr)				-0.150356	0.1089		True	likely_benign
+1709805	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43092473	G	A	NM_007294.4(BRCA1):c.3058C>T (p.Pro1020Ser)				-0.25895	0.0994		True	likely_benign
+1732593	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091981	C	T	NM_007294.4(BRCA1):c.3550G>A (p.Gly1184Arg)				-0.282732	0.1047		True	likely_benign
+1733143	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43091927	A	G	NM_007294.4(BRCA1):c.3604T>C (p.Tyr1202His)				-0.377334	0.0849		True	likely_benign
+1738154	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43104150	A	C	NM_007294.4(BRCA1):c.413T>G (p.Leu138Arg)				-0.00267919	0.0458		True	likely_benign
+1773294	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094063	G	A	NM_007294.4(BRCA1):c.1468C>T (p.Pro490Ser)				-0.0269875	0.1102		True	likely_benign
+1794958	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43092828	A	C	NM_007294.4(BRCA1):c.2703T>G (p.Phe901Leu)				-0.374594	0.1843		True	likely_benign
+1784220	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094458	A	G	NM_007294.4(BRCA1):c.1073T>C (p.Leu358Pro)				-0.12126	0.0496		True	likely_benign
+1797469	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43092629	G	C	NM_007294.4(BRCA1):c.2902C>G (p.Pro968Ala)				-0.375248	0.0584		True	likely_benign
+1796968	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43092670	A	T	NM_007294.4(BRCA1):c.2861T>A (p.Leu954Gln)				-0.343595	0.0849		True	likely_benign
+4625758	B/LB	Benign/Likely benign	criteria provided, multiple submitters, no conflicts	germline	43094577	A	C	NM_007294.4(BRCA1):c.954T>G (p.His318Gln)				0.0426118	0.092		True	likely_benign
+4828051	B/LB	Likely benign	criteria provided, multiple submitters, no conflicts	germline	43093031	C	T	NM_007294.4(BRCA1):c.2500G>A (p.Gly834Arg)				-0.321391	0.1184		True	likely_benign

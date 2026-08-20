@@ -1,0 +1,14 @@
+VariationID	label	sig	review	origin	pos38	ref38	alt38	name	bd37_pos	bd_ref_ok	bd_alt_ok	bayesdel_noAF	am_pathogenicity	revel_score	g37_allele_consistent	am_class
+37597	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43076488	C	T	NM_007294.4(BRCA1):c.4484G>A (p.Arg1495Lys)				0.0367853	0.1077		True	likely_benign
+37598	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43076488	C	A	NM_007294.4(BRCA1):c.4484G>T (p.Arg1495Met)				0.272623	0.1566		True	likely_benign
+37604	P/LP	Pathogenic	reviewed by expert panel	germline	43074331	C	T	NM_007294.4(BRCA1):c.4675G>A (p.Glu1559Lys)				0.146727	0.1339		True	likely_benign
+37605	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43074331	C	G	NM_007294.4(BRCA1):c.4675G>C (p.Glu1559Gln)				0.124907	0.1408		True	likely_benign
+37614	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43071046	G	C	NM_007294.4(BRCA1):c.4868C>G (p.Ala1623Gly)				0.152656	0.1102		True	likely_benign
+37632	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline/somatic	43067608	C	T	NM_007294.4(BRCA1):c.5074G>A (p.Asp1692Asn)				-0.100257	0.2943		True	likely_benign
+37668	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047702	C	G	NM_007294.4(BRCA1):c.5408G>C (p.Gly1803Ala)				-0.15377	0.0886		True	likely_benign
+37670	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047676	G	C	NM_007294.4(BRCA1):c.5434C>G (p.Pro1812Ala)				-0.0970217	0.171		True	likely_benign
+37672	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047657	T	C	NM_007294.4(BRCA1):c.5453A>G (p.Asp1818Gly)				0.0921517	0.084		True	likely_benign
+55530	P/LP	Pathogenic	reviewed by expert panel	germline	43051063	C	T	NM_007294.4(BRCA1):c.5332G>A (p.Asp1778Asn)				-0.105502	0.1166		True	likely_benign
+55588	P/LP	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047643	C	T	NM_007294.4(BRCA1):c.5467G>A (p.Ala1823Thr)				0.117902	0.0828		True	likely_benign
+245697	P/LP	Pathogenic	reviewed by expert panel	germline	43076488	C	G	NM_007294.4(BRCA1):c.4484G>C (p.Arg1495Thr)				0.0988496	0.127		True	likely_benign
+868922	P/LP	Pathogenic	criteria provided, multiple submitters, no conflicts	germline	43047643	C	A	NM_007294.4(BRCA1):c.5467G>T (p.Ala1823Ser)				-0.10333	0.0953		True	likely_benign

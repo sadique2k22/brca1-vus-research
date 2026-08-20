@@ -18,3 +18,4 @@ Fig 16	fig16_domain_comparison.svg		src/figures.py	annotated/with-functional	SVG
 Fig 17	fig17_dace_region_coverage.svg		scripts/phase13_dace_analysis.py	Phase 13 derived (Dace 2025)	SVG+PNG	300 DPI
 Fig 18	fig18_dace_predictor_scatter.svg		scripts/phase13_dace_analysis.py	Phase 13 derived (Dace 2025)	SVG+PNG	300 DPI
 Fig 19	fig19_domain_contrast.svg		scripts/phase13_dace_analysis.py	Phase 13 derived (Dace 2025)	SVG+PNG	300 DPI
+Fig 20	fig20_phase13b_calibration.svg		scripts/phase13b_figure.py	Phase 13B derived (AM/BayesDel calibration)	SVG+PNG	300 DPI

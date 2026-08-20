@@ -21,6 +21,12 @@ data/raw/*.md5
 data/raw/*.zip
 *.zip
 
+# Phase 13B raw tables (regenerable from public sources; provenance in DATA_PROVENANCE.md)
+data/raw/bayesdel/*.txt
+data/raw/alphamissense/*.tsv.gz
+data/raw/revel/*.zip
+data/raw/revel/*.log
+
 # Regenerable intermediate files (re-derived from raw via src/clinvar.py)
 data/intermediate/*
 !data/intermediate/.gitkeep

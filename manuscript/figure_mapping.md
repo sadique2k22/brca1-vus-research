@@ -21,5 +21,6 @@
 | Figure 17 | fig17_dace_region_coverage | Dace 2025 HAP1 coverage of our VUS by region | Phase 13 derived | `scripts/phase13_dace_analysis.py` |
 | Figure 18 | fig18_dace_predictor_scatter | Predictor vs Dace score, central exons | Phase 13 derived | `scripts/phase13_dace_analysis.py` |
 | Figure 19 | fig19_domain_contrast | Correspondence contrast across domains | Phase 13 derived | `scripts/phase13_dace_analysis.py` |
+| Figure 20 | fig20_phase13b_calibration | In silico calibration AUC + AM/BayesDel domain contrast | Phase 13B derived | `scripts/phase13b_figure.py` |
 
 All figures are generated as SVG + 300-dpi PNG. Scientific figures are not modified by hand.

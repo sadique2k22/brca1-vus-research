@@ -1,0 +1,5 @@
+VariationID	label	sig	review	origin	pos38	ref38	alt38	name	bd37_pos	bd_ref_ok	bd_alt_ok	bayesdel_noAF	am_pathogenicity	revel_score	g37_allele_consistent	am_class
+37421	B/LB	Benign	reviewed by expert panel	germline	43106514	G	A	NM_007294.4(BRCA1):c.154C>T (p.Leu52Phe)				0.137696	0.6023		True	likely_pathogenic
+37615	B/LB	Benign	reviewed by expert panel	germline	43070959	A	G	NM_007294.4(BRCA1):c.4955T>C (p.Met1652Thr)				0.35653	0.6823		True	likely_pathogenic
+54228	B/LB	Benign	reviewed by expert panel	germline	43094148	A	T	NM_007294.4(BRCA1):c.1383T>A (p.Phe461Leu)				0.505239	0.9773		True	likely_pathogenic
+55067	B/LB	Benign	reviewed by expert panel	germline	43104166	G	A	NM_007294.4(BRCA1):c.397C>T (p.Arg133Cys)				0.422978	0.6827		True	likely_pathogenic
